@@ -1,0 +1,36 @@
+.footer {
+  padding: 15px 0;
+}
+
+.footer__wrap {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-top: 5px !important;
+}
+
+.footer__span {
+  position: absolute;
+  top: -50%;
+  left: 3%;
+  height: 1px;
+  width: 95%;
+  background: var(--black);
+  align-self: center;
+}
+
+.footer__info {
+  font-family: var(--RR);
+}
+
+.footer__content {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.footer__content span {
+  font-family: var(--RR);
+}

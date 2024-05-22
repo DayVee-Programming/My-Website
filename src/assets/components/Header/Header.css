@@ -1,0 +1,35 @@
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--white);
+  padding: 15px 0;
+}
+
+.header__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__logo {
+  cursor: pointer;
+}
+
+.header__logo-span {
+  font-size: 18px;  
+  color: var(--black);
+}
+
+.header__list {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header__list-item-link {
+  color: var(--black);
+  font-size: 18px;
+}

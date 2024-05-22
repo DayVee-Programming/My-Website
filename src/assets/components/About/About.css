@@ -1,0 +1,32 @@
+.about {
+  padding: 15px 0;
+}
+
+.about__wrap {
+  display: flex;
+  justify-content: center;
+  gap: 45px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about__pic {
+  display: flex;
+  background: url('../../images/web-development.jpg') center/cover no-repeat;
+  width: 500px;
+  height: 300px;
+  border-radius: 30px;
+  order: 1;
+}
+
+.about__main {
+  max-width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.about__main-text {
+  font-family: var(--RR);
+}
