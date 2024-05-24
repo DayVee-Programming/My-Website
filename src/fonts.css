@@ -1,11 +1,11 @@
 @font-face {
-  font-family: "Roboto-Regular";
+  font-family: "Poppins-Regular";
   font-weight: 400;
-  src: url(./assets/fonts/Roboto/Roboto-Regular.ttf), format("truetype");
+  src: url(./assets/fonts/Poppins/Poppins-Regular.ttf), format("truetype");
 }
 
 @font-face {
-  font-family: "Roboto-Bold";
+  font-family: "Poppins-Bold";
   font-weight: 700;
-  src: url(./assets/fonts/Roboto/Roboto-Bold.ttf), format("truetype");
+  src: url(./assets/fonts/Poppins/Poppins-Bold.ttf), format("truetype");
 }

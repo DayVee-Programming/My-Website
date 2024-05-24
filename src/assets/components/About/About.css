@@ -1,5 +1,6 @@
 .about {
-  padding: 15px 0;
+  padding-bottom: 80px;
+  scroll-margin-top: 50px;
 }
 
 .about__wrap {
@@ -12,11 +13,17 @@
 
 .about__pic {
   display: flex;
-  background: url('../../images/web-development.jpg') center/cover no-repeat;
   width: 500px;
   height: 300px;
-  border-radius: 30px;
   order: 1;
+}
+
+.about__pic-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 30px;
 }
 
 .about__main {

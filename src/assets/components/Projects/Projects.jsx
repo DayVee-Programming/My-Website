@@ -1,13 +1,12 @@
 import "./Projects.css";
-import github from "../../images/github.png";
-import live from "../../images/live.png";
+import { images } from "../../images/images.js";
 
 const Projects = ({ projectsProps }) => {
-  const generateDesc = () =>
-    projectsProps.cards.map((el) => (
+  const generateCards = () => {
+    return projectsProps.cards.map((el) => (
       <div key={el.id} className="projects__cards-card">
         <div className="projects__cards-card-pic">
-          <img src="#" alt="" className="projects__cards-card-pic-img" />
+          <img src={el.image} alt="" className="projects__cards-card-pic-img" />
         </div>
         <div className="projects__cards-card-desc">
           <h2 className="projects__cards-card-desc-title">{el.title}</h2>
@@ -23,21 +22,27 @@ const Projects = ({ projectsProps }) => {
             ))}
           </div>
           <div className="projects__cards-card-desc-source">
-            <a href="#" className="projects__cards-card-desc-source-link">
-              <p className="projects__cards-card-desc-source-link-text">
-                Live
-              </p>
+            <a
+              href={el.liveLink}
+              target="_blank"
+              className="projects__cards-card-desc-source-link"
+            >
+              <p className="projects__cards-card-desc-source-link-text">Live</p>
               <img
                 className="projects__cards-card-desc-source-link-img"
-                src={live}
+                src={images.live_icon}
                 alt=""
               />
             </a>
-            <a href="#" className="projects__cards-card-desc-source-link">
+            <a
+              href={el.codeLink}
+              target="_blank"
+              className="projects__cards-card-desc-source-link"
+            >
               <p className="projects__cards-card-desc-source-link-text">Code</p>
               <img
                 className="projects__cards-card-desc-source-link-img"
-                src={github}
+                src={images.github_icon}
                 alt=""
               />
             </a>
@@ -45,9 +50,10 @@ const Projects = ({ projectsProps }) => {
         </div>
       </div>
     ));
+  };
 
   return (
-    <div className="projects">
+    <div id="projects" className="projects">
       <div className="container projects__wrap">
         <div className="projects__desc">
           <p className="projects__desc-tag tag">Portfolio</p>
@@ -55,7 +61,7 @@ const Projects = ({ projectsProps }) => {
             Each project is a unique piece of development
           </h2>
         </div>
-        <div className="projects__cards">{generateDesc()}</div>
+        <div className="projects__cards">{generateCards()}</div>
       </div>
     </div>
   );

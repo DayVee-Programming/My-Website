@@ -1,5 +1,7 @@
+- texts (AI generated, etc.) inside websites
+- typing effect on home section
+- night mode
+- change md file for all websites
 - on the bottom right side notification with suggesting improvement or hiring, etc.
 - write your true feelings there like "Sometimes I like to make fun games"
-- typing effect on home section
 - hover effect with border color
-- night mode

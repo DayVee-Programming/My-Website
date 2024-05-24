@@ -1,5 +1,6 @@
 .projects {
-  padding: 15px 0;
+  padding-bottom: 80px;
+  scroll-margin-top: 50px;
 }
 
 .projects__wrap {
@@ -13,27 +14,31 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding-bottom: 15px;
 }
 
 .projects__cards {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 30px;
   align-items: center;
 }
 
 .projects__cards-card {
   display: flex;
-  gap: 15px;
+  gap: 30px;
   justify-content: space-between;
   align-items: center;
 }
 
 .projects__cards-card-pic {
   display: flex;
-  width: 350px;
+}
+
+.projects__cards-card-pic-img {
+  width: 450px;
   height: 350px;
-  border: 1px solid var(--black);
+  border-radius: 20px;
 }
 
 .projects__cards-card-desc {
