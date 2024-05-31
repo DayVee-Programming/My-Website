@@ -1,6 +1,6 @@
 .about {
   padding-bottom: 80px;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 60px;
 }
 
 .about__wrap {
@@ -36,4 +36,5 @@
 
 .about__main-text {
   font-family: var(--RR);
+  font-size: 22px;
 }

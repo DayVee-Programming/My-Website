@@ -5,8 +5,17 @@ const Contact = ({ contactProps }) => {
   const [result, setResult] = useState("");
   const generateLinks = () => {
     return contactProps.links.map((el) => (
-      <a key={el.id} href="#" className="contact__main-socials-link">
-        <img className="contact__main-socials-link-img" src={el.value} alt="" />
+      <a key={el.id} href={el.link} target="_blank" className="contact__main-socials-link">
+        <div className="contact__main-socials-link-top">
+          <img
+            className="contact__main-socials-link-top-img"
+            src={el.value}
+            alt=""
+          />
+          <span className="contact__main-socials-link-top-span">
+            {el.appName}
+          </span>
+        </div>
         <span className="contact__main-socials-link-text">{el.text}</span>
       </a>
     ));

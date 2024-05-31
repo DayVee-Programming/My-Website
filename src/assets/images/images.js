@@ -17,7 +17,9 @@ import pokemon from "./pokemon.png";
 import simon from "./simon.png";
 import soundtrack from "./soundtrack.png";
 import zone from "./zone.png";
-import edusity from './edusity.png'
+import edusity from "./edusity.png";
+import sass from "./sass.png";
+import selfie from "./selfie.jpg";
 
 export const images = {
   antools,
@@ -40,4 +42,6 @@ export const images = {
   soundtrack,
   zone,
   edusity,
+  sass,
+  selfie,
 };

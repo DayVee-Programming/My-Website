@@ -1,6 +1,6 @@
 .projects {
   padding-bottom: 80px;
-  scroll-margin-top: 50px;
+  scroll-margin-top: 65px;
 }
 
 .projects__wrap {
@@ -20,15 +20,14 @@
 .projects__cards {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  align-items: center;
+  gap: 50px;
 }
 
 .projects__cards-card {
   display: flex;
   gap: 30px;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 }
 
 .projects__cards-card-pic {
@@ -36,8 +35,9 @@
 }
 
 .projects__cards-card-pic-img {
-  width: 450px;
-  height: 350px;
+  max-width: 650px;
+  width: 100%;
+  min-height: 250px;
   border-radius: 20px;
 }
 
@@ -62,6 +62,7 @@
   font-family: var(--RR);
   text-align: center;
   padding-bottom: 25px;
+  font-size: 22px;
 }
 
 .projects__cards-card-desc-stack {
@@ -71,7 +72,7 @@
 }
 
 .projects__cards-card-desc-stack-span {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .projects__cards-card-desc-source {
@@ -89,9 +90,31 @@
 
 .projects__cards-card-desc-source-link-text {
   font-family: var(--RR);
-  font-size: 18px;
+  font-size: 25px;
 }
 
 .projects__cards-card-desc-source-link-img {
   width: 40px;
+}
+
+@media screen and (max-width: 992px) {
+  .projects__cards {
+    gap: 70px;
+  }
+  
+  .projects__cards-card {
+    flex-wrap: wrap;
+  }
+
+  .projects__cards-card:nth-child(odd) .projects__cards-card-desc {
+    order: -1;
+  }
+
+  .projects__cards-card-desc {
+    gap: 15px;
+  }
+
+  .projects__cards-card-desc-text {
+    padding-bottom: 10px;
+  }
 }

@@ -23,6 +23,8 @@
 
 .footer__info {
   font-family: var(--RR);
+  font-size: 20px;
+  text-align: center;
 }
 
 .footer__content {
@@ -33,4 +35,16 @@
 
 .footer__content span {
   font-family: var(--RR);
+  font-size: 20px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__wrap {
+    flex-direction: column;
+  }
+
+  .footer__span {
+    top: -30%;
+  }
 }

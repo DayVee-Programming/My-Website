@@ -19,7 +19,7 @@
 }
 
 .header__logo-span {
-  font-size: 18px;  
+  font-size: clamp(1rem, 0.802rem + 0.99vw, 1.563rem);
   color: var(--black);
 }
 
@@ -31,5 +31,15 @@
 
 .header__list-item-link {
   color: var(--black);
-  font-size: 18px;
+  font-size: clamp(1rem, 0.802rem + 0.99vw, 1.563rem);
+}
+
+@media screen and (max-width: 480px) {
+  .header__wrap {
+    gap: 10px;
+  }
+
+  .header__list {
+    gap: 10px;
+  }
 }

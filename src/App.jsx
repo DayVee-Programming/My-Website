@@ -29,42 +29,54 @@ const App = () => {
   });
   const [bannerProps, setBannerProps] = useState({
     title: "Front-End Developer 👋",
-    text: `Hi, I'm Davronbek Reyimbaev. A passionate front-end developer based in Tashkent, Uzbekistan 🎈`,
+    text: `Hi, I'm Davronbek Reyimbaev. A passionate front-end developer based in Uzbekistan 🎈`,
     stackImages: [
       {
         id: 1,
         value: images.html_icon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         id: 2,
         value: images.css_icon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
       {
         id: 3,
         value: images.js_icon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         id: 4,
         value: images.typescript_icon,
+        link: "https://www.typescriptlang.org/",
       },
       {
         id: 5,
         value: images.react_icon,
+        link: "https://react.dev/",
+      },
+      {
+        id: 6,
+        value: images.sass,
+        link: "https://sass-lang.com/",
       },
     ],
     profileImages: [
       {
         id: 1,
         value: images.github_icon,
+        link: "https://github.com/DayVee-Programming",
       },
       {
         id: 2,
         value: images.linkedIn_icon,
+        link: "https://www.linkedin.com/in/dayvee-programming-7b7664228/",
       },
     ],
   });
   const [aboutProps, setAboutProps] = useState({
-    title: "A passionate front-end developer based in Tashkent, Uzbekistan 🎈",
+    title: "Love coding 💻",
     text: `I'm a highly motivated junior front-end developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating user-friendly and responsive web interfaces. While I'm new to the professional world, I'm a quick learner and eager to contribute to a team environment. I'm always looking for opportunities to expand my knowledge and take on new challenges in the ever-evolving world of web development.`,
     image: images.webDevelopment,
   });
@@ -155,17 +167,21 @@ const App = () => {
   });
   const [contactProps, setContactProps] = useState({
     title: "Send me a message 📧",
-    text: `Feel free to reach out through contact form or find our contact information below. Your feedback, questions, and suggestions are important to us as we strive to provide exceptional service to our university community.`,
+    text: `Feel free to reach out through social media app, email or contact form below.`,
     links: [
       {
         id: 1,
         value: images.telegram_icon,
-        text: "Telegram: @Davron1702",
+        appName: "Telegram:",
+        text: "@Davron1702",
+        link: "https://telegram.org/",
       },
       {
         id: 2,
         value: images.gmail_icon,
-        text: "Email: davronbek4business@gmail.com",
+        appName: "Email:",
+        text: "davronbek4business@gmail.com",
+        link: "https://g.co/kgs/yaSxgYn",
       },
     ],
   });

@@ -1,9 +1,10 @@
+import { images } from "../../images/images";
 import "./Banner.css";
 
 const Banner = ({ bannerProps }) => {
   const generateStackLinks = () => {
     return bannerProps.stackImages.map((el) => (
-      <a href="#" key={el.id} className="banner__stack-links-link">
+      <a href={el.link} target="_blank" key={el.id} className="banner__stack-links-link">
         <img src={el.value} alt="" className="banner__stack-links-link-img" />
       </a>
     ));
@@ -12,7 +13,7 @@ const Banner = ({ bannerProps }) => {
     return bannerProps.profileImages.map((img) => (
       <a
         key={img.id}
-        href="https://github.com/DayVee-Programming"
+        href={img.link}
         target="_blank"
         className="banner__main-content-links-link"
       >
@@ -37,7 +38,7 @@ const Banner = ({ bannerProps }) => {
             </div>
           </div>
           <div className="banner__main-pic">
-            <img src="#" alt="" className="banner__main-pic-img" />
+            <img src={images.selfie} alt="" className="banner__main-pic-img" />
           </div>
         </div>
         <div className="banner__stack">
