@@ -1,49 +1,36 @@
-import { images } from "../../images/images";
+import { images } from "../../images/images.js";
 import "./Banner.css";
+import BannerContentLink from "./BannerContentLink.jsx";
+import BannerStackLink from "./BannerStackLink.jsx";
 
-const Banner = ({ bannerProps }) => {
-  const generateStackLinks = () => {
-    return bannerProps.stackImages.map((el) => (
-      <a href={el.link} target="_blank" key={el.id} className="banner__stack-links-link">
-        <img src={el.value} alt="" className="banner__stack-links-link-img" />
-      </a>
-    ));
-  };
-  const generateProfileLinks = () => {
-    return bannerProps.profileImages.map((img) => (
-      <a
-        key={img.id}
-        href={img.link}
-        target="_blank"
-        className="banner__main-content-links-link"
-      >
-        <img
-          className="banner__main-content-links-link-img"
-          src={img.value}
-          alt=""
-        />
-      </a>
-    ));
-  };
-
+const Banner = ({ banner }) => {
   return (
     <div id="banner" className="banner">
       <div className="container banner__wrap">
         <div className="banner__main">
           <div className="banner__main-content">
-            <h1 className="banner__main-content-title">{bannerProps.title}</h1>
-            <p className="banner__main-content-text">{bannerProps.text}</p>
+            <h1 className="banner__main-content-title">
+              Front-End Developer 👋
+            </h1>
+            <p className="banner__main-content-text">
+              Hi, I'm Davronbek Reyimbaev. A passionate front-end developer
+              based in Uzbekistan 🎈
+            </p>
             <div className="banner__main-content-links">
-              {generateProfileLinks()}
+              {banner.profileImages?.map((img) => (
+                <BannerContentLink img={img} key={img.id} />
+              ))}
             </div>
           </div>
-          <div className="banner__main-pic">
-            <img src={images.selfie} alt="" className="banner__main-pic-img" />
-          </div>
+          <img src={images.selfie} alt="" className="banner__main-img" />
         </div>
         <div className="banner__stack">
           <p className="banner__stack-text">Tech Stack</p>
-          <div className="banner__stack-links">{generateStackLinks()}</div>
+          <div className="banner__stack-links">
+            {banner.stackImages?.map((img) => (
+              <BannerStackLink img={img} key={img.id} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

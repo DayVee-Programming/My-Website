@@ -1,23 +1,18 @@
 import "./Header.css";
+import HeaderListItem from "./HeaderListItem.jsx";
 
-const NavBar = ({ headerProps }) => {
-  const generateItems = () => {
-    return headerProps.links.map((el) => (
-      <li key={el.id} className="header__list-item">
-        <a className="header__list-item-link" href={el.toSection}>
-          {el.value}
-        </a>
-      </li>
-    ));
-  };
-
+const NavBar = ({ header }) => {
   return (
     <header className="header">
       <div className="container header__wrap">
         <a href="#banner" className="header__logo">
           <span className="header__logo-span">Home</span>
         </a>
-        <ul className="header__list">{generateItems()}</ul>
+        <ul className="header__list">
+          {header.links?.map((link) => (
+            <HeaderListItem link={link} key={link.id} />
+          ))}
+        </ul>
       </div>
     </header>
   );

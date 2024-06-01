@@ -65,13 +65,13 @@
   font-size: 22px;
 }
 
-.projects__cards-card-desc-stack {
+.projects__cards-card-desc-list {
   display: flex;
   gap: 15px;
   align-items: center;
 }
 
-.projects__cards-card-desc-stack-span {
+.projects__cards-card-desc-list-item {
   font-size: 25px;
 }
 

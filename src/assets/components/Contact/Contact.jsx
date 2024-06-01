@@ -1,25 +1,9 @@
 import "./Contact.css";
 import { useState } from "react";
+import ContactLink from "./ContactLink.jsx";
 
-const Contact = ({ contactProps }) => {
+const Contact = ({ contact }) => {
   const [result, setResult] = useState("");
-  const generateLinks = () => {
-    return contactProps.links.map((el) => (
-      <a key={el.id} href={el.link} target="_blank" className="contact__main-socials-link">
-        <div className="contact__main-socials-link-top">
-          <img
-            className="contact__main-socials-link-top-img"
-            src={el.value}
-            alt=""
-          />
-          <span className="contact__main-socials-link-top-span">
-            {el.appName}
-          </span>
-        </div>
-        <span className="contact__main-socials-link-text">{el.text}</span>
-      </a>
-    ));
-  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setResult("Sending...");
@@ -45,9 +29,16 @@ const Contact = ({ contactProps }) => {
       <div className="container contact__wrap">
         <div className="contact__main">
           <p className="contact__main-tag tag">Contact</p>
-          <h2 className="contact__main-title title">{contactProps.title}</h2>
-          <p className="contact__main-text">{contactProps.text}</p>
-          <div className="contact__main-socials">{generateLinks()}</div>
+          <h2 className="contact__main-title title">Send me a message 📧</h2>
+          <p className="contact__main-text">
+            Feel free to reach out through social media app, email or contact
+            form below.
+          </p>
+          <div className="contact__main-socials">
+            {contact.links?.map((link) => (
+              <ContactLink link={link} key={link.id} />
+            ))}
+          </div>
         </div>
         <form className="contact__form" onSubmit={handleSubmit}>
           <label className="contact__form-label">Your name</label>

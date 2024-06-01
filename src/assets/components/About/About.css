@@ -11,19 +11,15 @@
   flex-wrap: wrap;
 }
 
-.about__pic {
-  display: flex;
-  width: 500px;
-  height: 300px;
-  order: 1;
-}
-
-.about__pic-img {
+.about__img {
+  max-width: 500px;
   width: 100%;
+  max-height: 400px;
   height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 30px;
+  order: 1;
 }
 
 .about__main {
