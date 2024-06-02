@@ -4,7 +4,7 @@ import HeaderListItem from "./HeaderListItem.jsx";
 const NavBar = ({ header }) => {
   return (
     <header className="header">
-      <div className="container header__wrap">
+      <nav className="container header__wrap">
         <a href="#banner" className="header__logo">
           <span className="header__logo-span">Home</span>
         </a>
@@ -13,7 +13,7 @@ const NavBar = ({ header }) => {
             <HeaderListItem link={link} key={link.id} />
           ))}
         </ul>
-      </div>
+      </nav>
     </header>
   );
 };

@@ -192,7 +192,7 @@ const App = () => {
         value: images.telegram_icon,
         appName: "Telegram:",
         text: "@Davron1702",
-        link: "https://telegram.org/",
+        link: "https://t.me/Davron1702",
       },
       {
         id: 2,
