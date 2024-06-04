@@ -1,4 +1,3 @@
-import "./Projects.css";
 import ProjectCard from "./ProjectCard.jsx";
 
 const Projects = ({ projects }) => {

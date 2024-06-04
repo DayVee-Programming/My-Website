@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { images } from "./assets/images/images.js";
-import Header from "./assets/components/Header/Header.jsx";
-import Banner from "./assets/components/Banner/Banner.jsx";
-import About from "./assets/components/About/About.jsx";
-import Projects from "./assets/components/Projects/Projects.jsx";
-import Contact from "./assets/components/Contact/Contact.jsx";
-import Footer from "./assets/components/Footer/Footer.jsx";
+import NavBar from "./components/Navbar.jsx";
+import Banner from "./components/Banner.jsx";
+import About from "./components/About.jsx";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 const App = () => {
   const [header, setHeader] = useState({
@@ -87,7 +87,7 @@ const App = () => {
       {
         id: Math.random(),
         title: "Zone 🎥",
-        text: `Zone has over 15 year exprience in business consulting arena.`,
+        text: `Zone has over 15 year experience in business consulting arena.`,
         list: [
           { id: 1, value: "HTML" },
           { id: 2, value: "CSS" },
@@ -206,7 +206,7 @@ const App = () => {
 
   return (
     <>
-      <Header header={header} />
+      <NavBar header={header} />
       <Banner banner={banner} />
       <About />
       <Projects projects={projects} />

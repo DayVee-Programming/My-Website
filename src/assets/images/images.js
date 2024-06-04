@@ -1,4 +1,4 @@
-import css_icon from "./icons/css3.png"
+import css_icon from "./icons/css3.png";
 import github_icon from "./icons/github.png";
 import gmail_icon from "./icons/gmail.png";
 import html_icon from "./icons/html5.png";

@@ -1,5 +1,4 @@
-import { images } from "../../images/images.js";
-import "./Banner.css";
+import { images } from "../assets/images/images.js";
 import BannerContentLink from "./BannerContentLink.jsx";
 import BannerStackLink from "./BannerStackLink.jsx";
 

@@ -1,5 +1,4 @@
-import "./Header.css";
-import HeaderListItem from "./HeaderListItem.jsx";
+import NavbarListItem from "./NavbarListItem.jsx";
 
 const NavBar = ({ header }) => {
   return (
@@ -10,7 +9,7 @@ const NavBar = ({ header }) => {
         </a>
         <ul className="header__list">
           {header.links?.map((link) => (
-            <HeaderListItem link={link} key={link.id} />
+            <NavbarListItem link={link} key={link.id} />
           ))}
         </ul>
       </nav>

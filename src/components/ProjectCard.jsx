@@ -1,4 +1,4 @@
-import { images } from "../../images/images.js";
+import { images } from "../assets/images/images.js";
 import ProjectCardItem from "./ProjectCardItem.jsx";
 
 const ProjectCard = ({ card }) => {
