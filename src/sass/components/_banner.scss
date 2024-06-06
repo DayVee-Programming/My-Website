@@ -1,28 +1,31 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
 .banner {
-  padding: 125px 0 60px;
+  padding: rem(125) 0 rem(60);
 
   &__wrap {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+    gap: rem(60);
   }
 
   &__main {
     width: 100%;
     display: flex;
     justify-content: center;
-    gap: 45px;
+    gap: rem(45);
     align-items: center;
     flex-wrap: wrap;
 
     &-content {
-      max-width: 500px;
+      max-width: rem(500);
       width: 100%;
       display: flex;
       flex-direction: column;
-      gap: 30px;
+      gap: rem(30);
 
       &-title {
         font-size: clamp(2rem, 1.824rem + 0.88vw, 2.5rem);
@@ -36,49 +39,47 @@
 
       &-links {
         display: flex;
-        gap: 15px;
+        gap: rem(15);
         align-items: center;
         justify-content: center;
       }
     }
 
     &-img {
-      max-width: 275px;
+      max-width: rem(275);
       width: 100%;
-      max-height: 325px;
+      max-height: rem(325);
       height: 100%;
-      border: 1px solid var(--black);
-      border-radius: 30px;
+      border: rem(1) solid $black;
+      border-radius: rem(30);
     }
   }
 
   &__stack {
     display: flex;
-    gap: 15px;
+    gap: rem(15);
     justify-content: space-between;
     align-items: center;
 
     &-text {
       font-weight: 700;
-      border-right: 2px solid var(--gray);
-      padding-right: 15px;
+      border-right: rem(2) solid $gray;
+      padding-right: rem(15);
       text-align: center;
-      font-size: 22px;
+      font-size: rem(22);
     }
 
     &-links {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: 30px;
+      gap: rem(30);
       align-items: center;
-      padding-left: 45px;
+      padding-left: rem(45);
 
-      @media screen and (max-width: 768px) {
-        & {
-          grid-template-columns: repeat(3, 1fr);
-          padding-left: 10px;
-          gap: 15px;
-        }
+      @include breakpoint(770) {
+        grid-template-columns: repeat(3, 1fr);
+        padding-left: rem(10);
+        gap: rem(15);
       }
     }
   }

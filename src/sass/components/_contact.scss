@@ -1,64 +1,65 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
 .contact {
-  padding-bottom: 80px;
-  scroll-margin-top: 60px;
+  padding-bottom: rem(80);
+  scroll-margin-top: rem(60);
 
   &__wrap {
     display: flex;
-    gap: 30px;
+    gap: rem(30);
     align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   &__main {
-    max-width: 500px;
+    max-width: rem(500);
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: rem(15);
 
     &-text {
       font-weight: 400;
-      font-size: 22px;
+      font-size: rem(22);
     }
 
     &-socials {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: rem(15);
 
       &-link {
         font-weight: 400;
         display: flex;
-        gap: 10px;
+        gap: rem(10);
         align-items: center;
         flex-wrap: wrap;
 
-        @media screen and (max-width: 480px) {
-          & {
-            flex-direction: column;
-            align-items: flex-start;
-          }
+        @include breakpoint(xsm) {
+          flex-direction: column;
+          align-items: flex-start;
         }
 
         &-top {
           display: flex;
-          gap: 15px;
+          gap: rem(15);
           align-items: center;
 
           &-img {
-            width: 40px;
+            width: rem(40);
           }
 
           &-span {
             font-weight: 400;
-            color: var(--black);
-            font-size: 20px;
+            color: $black;
+            font-size: rem(20);
           }
         }
 
         &-text {
-          color: var(--black);
+          color: $black;
           font-weight: 400;
           font-size: clamp(1.063rem, 0.997rem + 0.33vw, 1.25rem);
         }
@@ -67,23 +68,23 @@
   }
 
   &__form {
-    max-width: 500px;
+    max-width: rem(500);
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: rem(10);
 
     &-label {
       font-weight: 400;
-      font-size: 20px;
+      font-size: rem(20);
     }
 
     &-input,
     &-textarea {
-      padding: 5px;
+      padding: rem(5);
       font-weight: 400;
-      font-size: 18px;
-      color: var(--gray);
+      font-size: rem(18);
+      color: $gray;
       outline: none;
     }
 
@@ -93,20 +94,20 @@
 
     &-span {
       font-weight: 400;
-      font-size: 16px;
-      color: var(--gray);
+      font-size: rem(16);
+      color: $gray;
     }
 
     &-btn {
-      padding: 10px 5px;
+      padding: rem(10) rem(5);
       border: none;
-      max-width: 170px;
+      max-width: rem(170);
       width: 100%;
-      background: var(--blue);
-      color: var(--white);
-      border-radius: 10px;
+      background: $blue;
+      color: $white;
+      border-radius: rem(10);
       font-weight: 400;
-      font-size: 20px;
+      font-size: rem(20);
       margin: 0 auto;
       cursor: pointer;
     }

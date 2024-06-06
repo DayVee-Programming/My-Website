@@ -1,0 +1,41 @@
+@use "sass:math";
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + rem;
+  } @else {
+    @error "Use numbers and don't use units.";
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16) + em;
+  } @else {
+    @error "Use numbers and don't use units.";
+  }
+}
+
+$breakpoints-up: (
+  "xsm": em(480),
+  "sm": em(576),
+  "md": em(768),
+  "lg": em(992),
+  "xlg": em(1200),
+  "xxlg": em(1400),
+);
+
+@mixin breakpoint($size) {
+  @if type-of($size) == "number" {
+    @media screen and (max-width: #{$size / 16}em) {
+      @content;
+    }
+  } @else {
+    @if not map-has-key($breakpoints-up, $size) {
+      @error "Please use a valid breakpoint value or a number.";
+    }
+    @media screen and (max-width: map-get($breakpoints-up, $size)) {
+      @content;
+    }
+  }
+}

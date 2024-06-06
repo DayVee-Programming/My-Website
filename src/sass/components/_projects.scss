@@ -1,74 +1,71 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
 .projects {
-  padding-bottom: 80px;
-  scroll-margin-top: 65px;
+  padding-bottom: rem(80);
+  scroll-margin-top: rem(65);
 
   &__wrap {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: rem(15);
     align-items: center;
   }
 
   &__desc {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding-bottom: 15px;
+    gap: rem(15);
+    padding-bottom: rem(15);
   }
 
   &__cards {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: rem(50);
 
-    @media screen and (max-width: 992px) {
-      & {
-        gap: 70px;
-      }
+    @include breakpoint(lg) {
+      gap: rem(70);
     }
 
     &-card {
       display: flex;
-      gap: 30px;
+      gap: rem(30);
       align-items: center;
       justify-content: center;
 
-      @media screen and (max-width: 992px) {
-        & {
-          flex-wrap: wrap;
-        }
+      @include breakpoint(lg) {
+        flex-wrap: wrap;
       }
 
       &-pic {
         display: flex;
 
         &-img {
-          max-width: 650px;
+          max-width: rem(650);
           width: 100%;
-          min-height: 250px;
-          border-radius: 20px;
+          min-height: rem(250);
+          border-radius: rem(20);
         }
       }
 
       &-desc {
-        max-width: 400px;
+        max-width: rem(400);
         width: 100%;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: rem(20);
         align-items: center;
 
         .projects__cards-card:nth-child(even) & {
           order: -1;
         }
 
-        @media screen and (max-width: 992px) {
+        @include breakpoint(lg) {
+          gap: rem(15);
+
           .projects__cards-card:nth-child(odd) & {
             order: -1;
-          }
-
-          & {
-            gap: 15px;
           }
         }
 
@@ -80,71 +77,47 @@
         &-text {
           font-weight: 400;
           text-align: center;
-          padding-bottom: 25px;
-          font-size: 22px;
+          padding-bottom: rem(25);
+          font-size: rem(22);
 
-          @media screen and (max-width: 992px) {
-            & {
-              padding-bottom: 10px;
-            }
+          @include breakpoint(lg) {
+            padding-bottom: rem(10);
           }
         }
 
         &-list {
           display: flex;
-          gap: 15px;
+          gap: rem(15);
           align-items: center;
 
           &-item {
             font-weight: 700;
-            font-size: 25px;
+            font-size: rem(25);
           }
         }
 
         &-source {
           display: flex;
-          gap: 50px;
+          gap: rem(50);
           align-items: center;
 
           &-link {
             display: flex;
-            gap: 5px;
+            gap: rem(5);
             align-items: center;
-            color: var(--black);
+            color: $black;
 
             &-text {
               font-weight: 400;
-              font-size: 25px;
+              font-size: rem(25);
             }
 
             &-img {
-              width: 40px;
+              width: rem(40);
             }
           }
         }
       }
-    }
-  }
-
-  @media screen and (max-width: 992px) {
-    &__cards {
-      gap: 70px;
-    }
-
-    &__cards-card {
-      flex-wrap: wrap;
-    }
-
-    &__cards-card:nth-child(odd) &__cards-card-desc {
-      order: -1;
-    }
-
-    &__cards-card-desc {
-      gap: 15px;
-    }
-
-    &__cards-card-desc-text {
-      padding-bottom: 10px;
     }
   }
 }

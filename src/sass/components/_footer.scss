@@ -1,18 +1,19 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
 .footer {
-  padding: 15px 0;
+  padding: rem(15) 0;
 
   &__wrap {
     display: flex;
-    gap: 15px;
+    gap: rem(15);
     justify-content: space-between;
     align-items: center;
     position: relative;
-    padding-top: 5px !important;
+    padding-top: rem(5) !important;
 
-    @media screen and (max-width: 768px) {
-      & {
-        flex-direction: column;
-      }
+    @include breakpoint(md) {
+      flex-direction: column;
     }
   }
 
@@ -20,32 +21,30 @@
     position: absolute;
     top: -50%;
     left: 3%;
-    height: 1px;
+    height: rem(1);
     width: 95%;
-    background: var(--black);
+    background: $black;
     align-self: center;
 
-    @media screen and (max-width: 768px) {
-      & {
-        top: -30%;
-      }
+    @include breakpoint(md) {
+      top: -30%;
     }
   }
 
   &__info {
     font-weight: 400;
-    font-size: 20px;
+    font-size: rem(20);
     text-align: center;
   }
 
   &__content {
     display: flex;
-    gap: 15px;
+    gap: rem(15);
     align-items: center;
 
-    & span {
+    span {
       font-weight: 400;
-      font-size: 20px;
+      font-size: rem(20);
       text-align: center;
     }
   }
