@@ -23,6 +23,15 @@ span {
   font-weight: inherit;
 }
 
+[data-theme="light"] {
+  
+}
+
+.app-container {
+  color: $black;
+  background: $white;
+}
+
 .container {
   width: min(100%, rem(1230));
   height: 100%;

@@ -206,9 +206,10 @@ const App = () => {
       },
     ],
   });
+  const [theme, setTheme] = useState("light");
 
   return (
-    <>
+    <div data-theme={theme} className="app-container">
       <NavBar header={header} />
       <main>
         <Banner banner={banner} />
@@ -217,7 +218,7 @@ const App = () => {
         <Contact contact={contact} />
       </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

@@ -1,3 +1,4 @@
+import { ImSun } from "react-icons/im";
 import NavbarListItem from "./NavbarListItem.jsx";
 
 const NavBar = ({ header }) => {
@@ -11,6 +12,11 @@ const NavBar = ({ header }) => {
           {header.links?.map((link) => (
             <NavbarListItem link={link} key={link.id} />
           ))}
+          <li className="header__list-item">
+            <button className="header__list-item-btn">
+              <ImSun className="header__list-item-btn-img" />
+            </button>
+          </li>
         </ul>
       </nav>
     </header>

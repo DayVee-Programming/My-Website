@@ -45,6 +45,19 @@
         color: $black;
         font-size: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
       }
+
+      &-btn {
+        display: flex;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+
+        &-img {
+          width: rem(32);
+          height: rem(32);
+          color: $black;
+        }
+      }
     }
   }
 }
