@@ -19,6 +19,7 @@ import simon from "./simon.jpg";
 import soundtrack from "./soundtrack.jpg";
 import zone from "./zone.jpg";
 import edusity from "./edusity.jpg";
+import gitpod from "./gitpod.png";
 import selfie from "./selfie.jpg";
 
 export const images = {
@@ -43,5 +44,6 @@ export const images = {
   soundtrack,
   zone,
   edusity,
+  gitpod,
   selfie,
 };

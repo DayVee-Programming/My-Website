@@ -21,20 +21,19 @@
     flex-wrap: wrap;
 
     &-content {
-      max-width: rem(500);
-      width: 100%;
+      width: min(100%, rem(500));
       display: flex;
       flex-direction: column;
       gap: rem(30);
 
       &-title {
-        font-size: clamp(2rem, 1.824rem + 0.88vw, 2.5rem);
+        font-size: clamp(rem(32), 1.824rem + 0.88vw, rem(40));
         font-weight: 700;
       }
 
       &-text {
         font-weight: 400;
-        font-size: clamp(1.125rem, 0.971rem + 0.77vw, 1.563rem);
+        font-size: clamp(rem(18), 0.971rem + 0.77vw, rem(25));
       }
 
       &-links {
@@ -46,8 +45,7 @@
     }
 
     &-img {
-      max-width: rem(275);
-      width: 100%;
+      width: min(100%, rem(275));
       max-height: rem(325);
       height: 100%;
       border: rem(1) solid $black;

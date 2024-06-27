@@ -25,7 +25,7 @@
 
     &-span {
       font-weight: 700;
-      font-size: clamp(1rem, 0.802rem + 0.99vw, 1.563rem);
+      font-size: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
       color: $black;
     }
   }
@@ -39,10 +39,12 @@
       gap: rem(10);
     }
 
-    &-item-link {
-      font-weight: 700;
-      color: $black;
-      font-size: clamp(1rem, 0.802rem + 0.99vw, 1.563rem);
+    &-item {
+      &-link {
+        font-weight: 700;
+        color: $black;
+        font-size: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
+      }
     }
   }
 }

@@ -22,7 +22,7 @@ $breakpoints-up: (
   "md": em(768),
   "lg": em(992),
   "xlg": em(1200),
-  "xxlg": em(1400),
+  "2xlg": em(1400),
 );
 
 @mixin breakpoint($size) {

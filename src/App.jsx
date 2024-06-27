@@ -77,12 +77,15 @@ const App = () => {
     cards: [
       {
         id: Math.random(),
-        title: "Edusity 📚",
-        text: `Edusity's cutting edge curriculum is designed to empower students with the knowledge, skills, and experiences needed to excel in the dynamic field of education.`,
-        list: [{ id: 1, value: "React" }],
-        liveLink: "https://edusity-website.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/Edusity",
-        image: images.edusity,
+        title: "Gitpod 💻",
+        text: `With Gitpod spin up fresh, automated dev environments for each task, in the cloud, in seconds.`,
+        list: [
+          { id: 1, value: "React" },
+          { id: 2, value: "SASS" },
+        ],
+        liveLink: "https://gitpod-web.netlify.app/",
+        codeLink: "https://github.com/DayVee-Programming/Gitpod",
+        image: images.gitpod,
       },
       {
         id: Math.random(),
@@ -207,10 +210,12 @@ const App = () => {
   return (
     <>
       <NavBar header={header} />
-      <Banner banner={banner} />
-      <About />
-      <Projects projects={projects} />
-      <Contact contact={contact} />
+      <main>
+        <Banner banner={banner} />
+        <About />
+        <Projects projects={projects} />
+        <Contact contact={contact} />
+      </main>
       <Footer />
     </>
   );

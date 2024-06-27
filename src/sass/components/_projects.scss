@@ -39,19 +39,19 @@
       }
 
       &-pic {
+        width: min(100%, rem(650));
+        min-height: rem(250);
         display: flex;
 
         &-img {
-          max-width: rem(650);
           width: 100%;
-          min-height: rem(250);
+          height: 100%;
           border-radius: rem(20);
         }
       }
 
       &-desc {
-        max-width: rem(400);
-        width: 100%;
+        width: min(100%, rem(510));
         display: flex;
         flex-direction: column;
         gap: rem(20);
