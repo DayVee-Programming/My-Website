@@ -1,21 +1,53 @@
 import { ImSun } from "react-icons/im";
 import NavbarListItem from "./NavbarListItem.jsx";
+import { useContext } from "react";
+import { HomePage } from "../context/homePage.jsx";
+import { MdDarkMode } from "react-icons/md";
+import { GiHamburgerMenu } from "react-icons/gi";
+import NavbarMenuItem from "./NavbarMenuItem.jsx";
 
-const NavBar = ({ header }) => {
+const NavBar = ({ navbar }) => {
+  const { theme, setTheme } = useContext(HomePage);
+  const { isMenuOpen, setIsMenuOpen } = useContext(HomePage);
+
   return (
-    <header className="header">
-      <nav className="container header__wrap">
-        <a className="header__logo" onClick={() => scrollTo(0, 0)}>
-          <span className="header__logo-span">Home</span>
+    <header className="navbar">
+      <nav className="container navbar__wrap">
+        <a className="navbar__logo" onClick={() => scrollTo(0, 0)}>
+          <span className="navbar__logo-span">Home</span>
         </a>
-        <ul className="header__list">
-          {header.links?.map((link) => (
+        <ul className="navbar__list">
+          {navbar.links?.map((link) => (
             <NavbarListItem link={link} key={link.id} />
           ))}
-          <li className="header__list-item">
-            <button className="header__list-item-btn">
-              <ImSun className="header__list-item-btn-img" />
+        </ul>
+        <ul className="navbar__btns">
+          <li className="navbar__btns-item">
+            <button
+              className="navbar__btns-item-btn"
+              onClick={() =>
+                theme === "light" ? setTheme("dark") : setTheme("light")
+              }
+            >
+              {theme === "light" ? (
+                <MdDarkMode className="navbar__btns-item-btn-img moon" />
+              ) : (
+                <ImSun className="navbar__btns-item-btn-img sun" />
+              )}
             </button>
+          </li>
+          <li
+            className="navbar__btns-item"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <GiHamburgerMenu className="navbar__btns-item-img" />
+            {isMenuOpen && (
+              <ul className="navbar__btns-item-menu">
+                {navbar.links?.map((link) => (
+                  <NavbarMenuItem link={link} key={link.id} />
+                ))}
+              </ul>
+            )}
           </li>
         </ul>
       </nav>

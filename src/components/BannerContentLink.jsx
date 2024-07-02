@@ -1,4 +1,9 @@
+import { useContext } from "react";
+import { HomePage } from "../context/homePage";
+
 const BannerContentLink = ({ img }) => {
+  const { theme } = useContext(HomePage);
+
   return (
     <a
       href={img.link}
@@ -7,7 +12,7 @@ const BannerContentLink = ({ img }) => {
     >
       <img
         className="banner__main-content-links-link-img"
-        src={img.value}
+        src={theme === "dark" && img.value2 ? img.value2 : img.value}
         alt=""
       />
     </a>

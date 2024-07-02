@@ -6,9 +6,11 @@ import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import { HomePage } from "./context/homePage.jsx";
+import Blurs from "./components/Blurs.jsx";
 
 const App = () => {
-  const [header, setHeader] = useState({
+  const [navbar, setNavbar] = useState({
     links: [
       {
         id: 1,
@@ -31,44 +33,45 @@ const App = () => {
     stackImages: [
       {
         id: 1,
-        value: images.html_icon,
+        value: images.htmlIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
         id: 2,
-        value: images.css_icon,
+        value: images.cssIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
       {
         id: 3,
-        value: images.js_icon,
+        value: images.jsIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
         id: 4,
-        value: images.typescript_icon,
+        value: images.typescriptIcon,
         link: "https://www.typescriptlang.org/",
       },
       {
         id: 5,
-        value: images.react_icon,
+        value: images.reactIcon,
         link: "https://react.dev/",
       },
       {
         id: 6,
-        value: images.sass_icon,
+        value: images.sassIcon,
         link: "https://sass-lang.com/",
       },
     ],
     profileImages: [
       {
         id: 1,
-        value: images.github_icon,
+        value: images.githubIcon,
+        value2: images.githubIcon2,
         link: "https://github.com/DayVee-Programming",
       },
       {
         id: 2,
-        value: images.linkedIn_icon,
+        value: images.linkedInIcon,
         link: "https://www.linkedin.com/in/dayvee-programming-7b7664228/",
       },
     ],
@@ -192,14 +195,14 @@ const App = () => {
     links: [
       {
         id: 1,
-        value: images.telegram_icon,
+        value: images.telegramIcon,
         appName: "Telegram:",
         text: "@Davron1702",
         link: "https://t.me/Davron1702",
       },
       {
         id: 2,
-        value: images.gmail_icon,
+        value: images.gmailIcon,
         appName: "Email:",
         text: "davronbek4business@gmail.com",
         link: "https://g.co/kgs/yaSxgYn",
@@ -207,18 +210,30 @@ const App = () => {
     ],
   });
   const [theme, setTheme] = useState("light");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div data-theme={theme} className="app-container">
-      <NavBar header={header} />
-      <main>
-        <Banner banner={banner} />
-        <About />
-        <Projects projects={projects} />
-        <Contact contact={contact} />
-      </main>
-      <Footer />
-    </div>
+    <HomePage.Provider
+      value={{
+        theme,
+        setTheme,
+        isMenuOpen,
+        setIsMenuOpen,
+      }}
+    >
+      <div className="app-container" data-theme={theme}>
+        <NavBar navbar={navbar} />
+        <main>
+          <Banner banner={banner} />
+          <About />
+          <Projects projects={projects} />
+          <Contact contact={contact} />
+        </main>
+        <Footer />
+
+        {theme === "dark" && <Blurs />}
+      </div>
+    </HomePage.Provider>
   );
 };
 

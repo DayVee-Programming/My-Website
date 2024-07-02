@@ -27,13 +27,12 @@
       gap: rem(30);
 
       &-title {
-        font-size: clamp(rem(32), 1.824rem + 0.88vw, rem(40));
-        font-weight: 700;
+        font-size: $fsr-1;
+        font-weight: $fw-2;
       }
 
       &-text {
-        font-weight: 400;
-        font-size: clamp(rem(18), 0.971rem + 0.77vw, rem(25));
+        font-size: $fs-2;
       }
 
       &-links {
@@ -41,6 +40,13 @@
         gap: rem(15);
         align-items: center;
         justify-content: center;
+
+        &-link {
+          &-img {
+            width: rem(48);
+            height: rem(48);
+          }
+        }
       }
     }
 
@@ -48,7 +54,7 @@
       width: min(100%, rem(275));
       max-height: rem(325);
       height: 100%;
-      border: rem(1) solid $black;
+      border: rem(1) solid $clr-1;
       border-radius: rem(30);
     }
   }
@@ -60,11 +66,11 @@
     align-items: center;
 
     &-text {
-      font-weight: 700;
-      border-right: rem(2) solid $gray;
+      font-weight: $fw-2;
+      border-right: rem(2) solid $clr-3;
       padding-right: rem(15);
       text-align: center;
-      font-size: rem(22);
+      font-size: $fs-2;
     }
 
     &-links {

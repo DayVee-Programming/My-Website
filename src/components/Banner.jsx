@@ -1,8 +1,16 @@
+import clsx from "clsx";
 import { images } from "../assets/images/images.js";
 import BannerContentLink from "./BannerContentLink.jsx";
 import BannerStackLink from "./BannerStackLink.jsx";
+import { useContext } from "react";
+import { HomePage } from "../context/homePage.jsx";
 
 const Banner = ({ banner }) => {
+  const { theme } = useContext(HomePage);
+  const bannerMainContentText = clsx("banner__main-content-text", {
+    "dark-text": theme === "dark",
+  });
+
   return (
     <div id="banner" className="banner">
       <div className="container banner__wrap">
@@ -11,7 +19,7 @@ const Banner = ({ banner }) => {
             <h1 className="banner__main-content-title">
               Front-End Developer 👋
             </h1>
-            <p className="banner__main-content-text">
+            <p className={bannerMainContentText}>
               Hi, I'm Davronbek Reyimbaev. A passionate front-end developer
               based in Uzbekistan 🎈
             </p>

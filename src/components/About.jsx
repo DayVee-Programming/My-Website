@@ -1,6 +1,14 @@
+import { useContext } from "react";
 import { images } from "../assets/images/images.js";
+import { HomePage } from "../context/homePage.jsx";
+import clsx from "clsx";
 
 const About = () => {
+  const { theme } = useContext(HomePage);
+  const aboutMainText = clsx("about__main-text", {
+    "dark-text": theme === "dark",
+  });
+
   return (
     <div id="about" className="about">
       <div className="container about__wrap">
@@ -8,7 +16,7 @@ const About = () => {
         <div className="about__main">
           <p className="about__main-tag tag">About Me</p>
           <h2 className="about__main-title title">Love coding 💻</h2>
-          <p className="about__main-text">
+          <p className={aboutMainText}>
             I'm a highly motivated junior front-end developer with a strong
             foundation in HTML, CSS, and JavaScript. I'm passionate about
             creating user-friendly and responsive web interfaces. While I'm new

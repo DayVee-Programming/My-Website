@@ -23,7 +23,7 @@
     left: 3%;
     height: rem(1);
     width: 95%;
-    background: $black;
+    background: $clr-1;
     align-self: center;
 
     @include breakpoint(md) {
@@ -32,8 +32,7 @@
   }
 
   &__info {
-    font-weight: 400;
-    font-size: rem(20);
+    font-size: $fs-1;
     text-align: center;
   }
 
@@ -43,8 +42,7 @@
     align-items: center;
 
     span {
-      font-weight: 400;
-      font-size: rem(20);
+      font-size: $fs-1;
       text-align: center;
     }
   }
