@@ -1,13 +1,18 @@
 @use "../abstract" as *;
 @use "../base" as *;
 
-.header {
+.navbar {
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
-  background: $white;
   padding: rem(15) 0;
+  background: inherit;
+  z-index: 100;
+
+  @include breakpoint(sm) {
+    padding: rem(5) 0;
+  }
 
   &__wrap {
     display: flex;
@@ -24,9 +29,8 @@
     cursor: pointer;
 
     &-span {
-      font-weight: 700;
-      font-size: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
-      color: $black;
+      font-weight: $fw-2;
+      font-size: $fsr-2;
     }
   }
 
@@ -35,15 +39,85 @@
     gap: rem(15);
     align-items: center;
 
-    @include breakpoint(xsm) {
-      gap: rem(10);
+    @include breakpoint(sm) {
+      display: none;
     }
 
     &-item {
       &-link {
-        font-weight: 700;
-        color: $black;
-        font-size: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
+        font-weight: $fw-2;
+        font-size: $fsr-2;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: rem(15);
+    align-items: center;
+
+    &-item {
+      &:last-child {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+        @include breakpoint(sm) {
+          display: flex;
+        }
+      }
+
+      &-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: min(100%, rem(150));
+        padding: rem(50) rem(10);
+        z-index: 100;
+        background: $clr-4;
+
+        &-item {
+          padding: rem(20) rem(5);
+
+          &-link {
+            font-size: $fs-1;
+          }
+        }
+      }
+
+      &-img {
+        width: rem(25);
+        height: rem(25);
+        z-index: 110;
+      }
+
+      &-link {
+        font-weight: $fw-2;
+        font-size: $fsr-2;
+      }
+
+      &-btn {
+        display: flex;
+        cursor: pointer;
+        border: none;
+        background: transparent;
+        z-index: 110;
+        position: relative;
+        transition: 0.3s;
+
+        &-img {
+          width: rem(32);
+          height: rem(32);
+
+          &.sun {
+            fill: $clr-5;
+          }
+        }
       }
     }
   }

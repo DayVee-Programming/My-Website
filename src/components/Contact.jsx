@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import ContactLink from "./ContactLink.jsx";
+import clsx from "clsx";
+import { HomePage } from "../context/homePage.jsx";
 
 const Contact = ({ contact }) => {
+  const { theme } = useContext(HomePage);
   const [result, setResult] = useState("");
+  const contactMainText = clsx("contact__main-text", {
+    "dark-text": theme === "dark",
+  });
   const handleSubmit = async (e) => {
     e.preventDefault();
     setResult("Sending...");
@@ -29,7 +35,7 @@ const Contact = ({ contact }) => {
         <div className="contact__main">
           <p className="contact__main-tag tag">Contact</p>
           <h2 className="contact__main-title title">Send me a message 📧</h2>
-          <p className="contact__main-text">
+          <p className={contactMainText}>
             Feel free to reach out through social media app, email or contact
             form below.
           </p>
