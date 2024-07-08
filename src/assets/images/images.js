@@ -8,6 +8,7 @@ import linkedInIcon from "./linkedin.png";
 import liveIcon from "./live.png";
 import reactIcon from "./react.png";
 import telegramIcon from "./telegram.png";
+import whatsAppIcon from "./whatsapp.png";
 import typescriptIcon from "./typescript.png";
 import sassIcon from "./sass.png";
 import antools from "./antools.jpg";
@@ -35,6 +36,7 @@ export const images = {
   liveIcon,
   reactIcon,
   telegramIcon,
+  whatsAppIcon,
   typescriptIcon,
   sassIcon,
   webDevelopment,

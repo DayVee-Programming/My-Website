@@ -4,6 +4,10 @@
 .banner {
   padding: rem(125) 0 rem(60);
 
+  @include breakpoint(sm) {
+    padding: rem(100) 0 rem(60);
+  }
+
   &__wrap {
     display: flex;
     flex-direction: column;
@@ -32,7 +36,7 @@
       }
 
       &-text {
-        font-size: $fs-2;
+        font-size: $fsr-4;
       }
 
       &-links {

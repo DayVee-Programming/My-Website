@@ -28,6 +28,10 @@
       gap: rem(70);
     }
 
+    @include breakpoint(xsm) {
+      gap: rem(35);
+    }
+
     &-card {
       display: flex;
       gap: rem(30);
@@ -71,12 +75,13 @@
         &-title {
           font-weight: $fw-2;
           text-transform: uppercase;
+          font-size: $fsr-5;
         }
 
         &-text {
           text-align: center;
           padding-bottom: rem(25);
-          font-size: $fs-2;
+          font-size: $fsr-4;
 
           @include breakpoint(lg) {
             padding-bottom: rem(10);
@@ -90,7 +95,7 @@
 
           &-item {
             font-weight: $fw-2;
-            font-size: $fs-3;
+            font-size: $fsr-5;
           }
         }
 
@@ -105,7 +110,7 @@
             align-items: center;
 
             &-text {
-              font-size: $fs-3;
+              font-size: $fsr-5;
             }
 
             &-img {

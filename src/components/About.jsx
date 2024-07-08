@@ -21,9 +21,10 @@ const About = () => {
             foundation in HTML, CSS, and JavaScript. I'm passionate about
             creating user-friendly and responsive web interfaces. While I'm new
             to the professional world, I'm a quick learner and eager to
-            contribute to a team environment. I'm always looking for
-            opportunities to expand my knowledge and take on new challenges in
-            the ever-evolving world of web development.
+            contribute to a team environment. My toolbox is stocked with the
+            modern technologies like TypeScript, React, SASS. I'm always looking
+            for opportunities to expand my knowledge and take on new challenges
+            in the ever-evolving world of web development.
           </p>
         </div>
       </div>

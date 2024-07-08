@@ -207,6 +207,13 @@ const App = () => {
         text: "davronbek4business@gmail.com",
         link: "https://g.co/kgs/yaSxgYn",
       },
+      {
+        id: 3,
+        value: images.whatsAppIcon,
+        appName: "WhatsApp:",
+        text: "Davronbek Reyimbaev",
+        link: "https://wa.me/+99871380881",
+      },
     ],
   });
   const [theme, setTheme] = useState("light");

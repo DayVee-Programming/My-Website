@@ -13,7 +13,7 @@ const NavBar = ({ navbar }) => {
   return (
     <header className="navbar">
       <nav className="container navbar__wrap">
-        <a className="navbar__logo" onClick={() => scrollTo(0, 0)}>
+        <a className="navbar__logo" href="#">
           <span className="navbar__logo-span">Home</span>
         </a>
         <ul className="navbar__list">

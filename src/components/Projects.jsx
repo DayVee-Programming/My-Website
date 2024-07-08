@@ -5,7 +5,7 @@ const Projects = ({ projects }) => {
     <div id="projects" className="projects">
       <div className="container projects__wrap">
         <div className="projects__desc">
-          <p className="projects__desc-tag tag">Portfolio</p>
+          <p className="projects__desc-tag tag">Projects</p>
           <h2 className="projects__desc-title title">
             Each project is a unique piece of development 📋
           </h2>

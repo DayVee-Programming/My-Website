@@ -16,9 +16,11 @@ $fs-1: rem(20);
 $fs-2: rem(22);
 $fs-3: rem(25);
 $fs-4: rem(18);
-$fsr-1: clamp(rem(32), 1.824rem + 0.88vw, rem(40));
+$fsr-1: clamp(rem(28), 1.486rem + 1.32vw, rem(40));
 $fsr-2: clamp(rem(16), 0.802rem + 0.99vw, rem(25));
 $fsr-3: clamp(rem(16), 0.912rem + 0.44vw, rem(20));
+$fsr-4: clamp(rem(20), 1.206rem + 0.22vw, rem(22));
+$fsr-5: clamp(rem(20), 1.14rem + 0.55vw, rem(25));
 
 * {
   margin: 0;
@@ -76,7 +78,7 @@ img {
 }
 
 .title {
-  font-size: $fs-2;
+  font-size: $fsr-5;
   font-weight: $fw-2;
 }
 
