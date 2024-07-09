@@ -2,8 +2,8 @@
 @use "../base" as *;
 
 .projects {
-  padding-bottom: rem(80);
-  scroll-margin-top: rem(65);
+  padding: rem(100) 0 rem(80);
+  transition: 0.5s;
 
   &__wrap {
     display: flex;
@@ -12,10 +12,7 @@
     align-items: center;
   }
 
-  &__desc {
-    display: flex;
-    flex-direction: column;
-    gap: rem(15);
+  &__title {
     padding-bottom: rem(15);
   }
 

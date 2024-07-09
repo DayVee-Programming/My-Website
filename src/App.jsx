@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { images } from "./assets/images/images.js";
-import NavBar from "./components/Navbar.jsx";
-import Banner from "./components/Banner.jsx";
-import About from "./components/About.jsx";
-import Projects from "./components/Projects.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import Home from "./pages/Home.jsx";
+import About from "./pages/About.jsx";
+import Projects from "./pages/Projects.jsx";
+import Contact from "./pages/Contact.jsx";
 import { HomePage } from "./context/homePage.jsx";
-import Blurs from "./components/Blurs.jsx";
+import { Route, Routes } from "react-router-dom";
+import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
   const [navbar, setNavbar] = useState({
@@ -15,21 +14,21 @@ const App = () => {
       {
         id: 1,
         value: "About",
-        toSection: "#about",
+        path: "/about",
       },
       {
         id: 2,
         value: "Projects",
-        toSection: "#projects",
+        path: "/projects",
       },
       {
         id: 3,
         value: "Contact",
-        toSection: "#contact",
+        path: "/contact",
       },
     ],
   });
-  const [banner, setBanner] = useState({
+  const [home, setHome] = useState({
     stackImages: [
       {
         id: 1,
@@ -222,24 +221,27 @@ const App = () => {
   return (
     <HomePage.Provider
       value={{
+        navbar,
+        setNavbar,
+        home,
+        setHome,
+        projects,
+        setProjects,
+        contact,
+        setContact,
         theme,
         setTheme,
         isMenuOpen,
         setIsMenuOpen,
       }}
     >
-      <div className="app-container" data-theme={theme}>
-        <NavBar navbar={navbar} />
-        <main>
-          <Banner banner={banner} />
-          <About />
-          <Projects projects={projects} />
-          <Contact contact={contact} />
-        </main>
-        <Footer />
-
-        {theme === "dark" && <Blurs />}
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </HomePage.Provider>
   );
 };

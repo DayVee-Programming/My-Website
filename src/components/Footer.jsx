@@ -1,8 +1,17 @@
+import { useContext } from "react";
+import { HomePage } from "../context/homePage";
+import clsx from "clsx";
+
 const Footer = () => {
+  const { theme } = useContext(HomePage);
+  const footerSpan = clsx("footer__span", {
+    dark: theme === "dark",
+  });
+
   return (
-    <footer className="footer">
+    <footer className="footer" data-theme={theme}>
       <div className="container footer__wrap">
-        <span className="footer__span"></span>
+        <span className={footerSpan}></span>
         <p className="footer__info">
           ©️ 2024 DayVee Programming. All rights reserved.
         </p>

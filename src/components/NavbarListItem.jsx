@@ -1,7 +1,7 @@
 const NavbarListItem = ({ link }) => {
   return (
     <li className="navbar__list-item">
-      <a className="navbar__list-item-link" href={link.toSection}>
+      <a href={link.path} className="navbar__list-item-link">
         {link.value}
       </a>
     </li>

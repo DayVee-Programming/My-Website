@@ -6,14 +6,14 @@ import { MdDarkMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarMenuItem from "./NavbarMenuItem.jsx";
 
-const NavBar = ({ navbar }) => {
-  const { theme, setTheme } = useContext(HomePage);
+const NavBar = () => {
+  const { navbar, theme, setTheme } = useContext(HomePage);
   const { isMenuOpen, setIsMenuOpen } = useContext(HomePage);
 
   return (
-    <header className="navbar">
+    <header className="navbar"  data-theme={theme}>
       <nav className="container navbar__wrap">
-        <a className="navbar__logo" href="#">
+        <a href="/" className="navbar__logo">
           <span className="navbar__logo-span">Home</span>
         </a>
         <ul className="navbar__list">

@@ -7,8 +7,8 @@
   top: 0;
   left: 0;
   padding: rem(15) 0;
-  background: inherit;
   z-index: 100;
+  transition: 0.5s;
 
   @include breakpoint(sm) {
     padding: rem(5) 0;
@@ -79,7 +79,7 @@
         width: min(100%, rem(150));
         padding: rem(50) rem(10);
         z-index: 100;
-        background: $clr-4;
+        background: $clr-8;
 
         &-item {
           padding: rem(20) rem(5);

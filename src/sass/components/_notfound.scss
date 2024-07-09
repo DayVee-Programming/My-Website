@@ -1,0 +1,37 @@
+@use "../abstract" as *;
+@use "../base" as *;
+
+.notfound {
+  padding: rem(100) 0 rem(80);
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: $fsr-1;
+    padding-bottom: rem(20);
+  }
+
+  &__subtitle {
+    font-size: $fsr-5;
+    padding-bottom: rem(10);
+  }
+
+  &__text {
+    font-size: $fsr-3;
+    padding-bottom: rem(10);
+
+    &-link {
+      color: $clr-4;
+    }
+  }
+
+  &__link {
+    font-size: $fsr-3;
+    text-decoration: underline;
+  }
+}
