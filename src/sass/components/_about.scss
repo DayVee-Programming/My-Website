@@ -2,8 +2,8 @@
 @use "../base" as *;
 
 .about {
-  padding-bottom: rem(80);
-  scroll-margin-top: rem(60);
+  padding: rem(100) 0 rem(80);
+  transition: 0.5s;
 
   &__wrap {
     display: flex;

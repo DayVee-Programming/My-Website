@@ -2,13 +2,12 @@
 @use "../base" as *;
 
 .contact {
-  padding-bottom: rem(80);
-  scroll-margin-top: rem(60);
+  padding: rem(100) 0 rem(80);
+  transition: 0.5s;
 
   &__wrap {
     display: flex;
     gap: rem(30);
-    align-items: center;
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -70,7 +69,7 @@
     &-label {
       font-size: $fs-1;
     }
-    
+
     &-input,
     &-textarea {
       padding: rem(5);

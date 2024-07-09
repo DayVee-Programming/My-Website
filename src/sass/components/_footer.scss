@@ -3,6 +3,7 @@
 
 .footer {
   padding: rem(15) 0;
+  transition: 0.5s;
 
   &__wrap {
     display: flex;
@@ -28,6 +29,10 @@
 
     @include breakpoint(md) {
       top: -30%;
+    }
+
+    &.dark {
+      background: $clr-2;
     }
   }
 

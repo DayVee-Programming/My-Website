@@ -4,11 +4,11 @@
 $clr-1: #000;
 $clr-2: #fff;
 $clr-3: #808080;
-$clr-4: #0000ff;
+$clr-4: #3729f7;
 $clr-5: #ffff00;
 $clr-6: #dbd5d5;
 $clr-7: #e911e9;
-$clr-4: #3729f7;
+$clr-8: #7171f0;
 $ff-1: "Poppins", sans-serif;
 $fw-1: 400;
 $fw-2: 700;
@@ -59,22 +59,11 @@ img {
   color: $clr-1;
 }
 
-.app-container {
-  transition: 0.5s;  
-}
-
 .container {
   width: min(100%, rem(1230));
   height: 100%;
   margin-inline: auto;
   padding-inline: rem(15);
-}
-
-.tag {
-  text-transform: uppercase;
-  color: $clr-4;
-  font-size: $fs-3;
-  font-weight: $fw-2;
 }
 
 .title {
