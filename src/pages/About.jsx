@@ -9,7 +9,7 @@ import AboutStackLink from "../components/AboutStackLink.jsx";
 
 const About = () => {
   const { about, theme } = useContext(HomePage);
-  const aboutMainText = clsx("about__main-desc-text", {
+  const aboutMainDescText = clsx("about__main-desc-text", {
     "dark-text": theme === "dark",
   });
 
@@ -22,7 +22,7 @@ const About = () => {
             <img className="about__main-img" src={images.webDevelopment} alt="" />
             <div className="about__main-desc">
               <h2 className="about__main-desc-title title">Love coding 💻</h2>
-              <p className={aboutMainText}>
+              <p className={aboutMainDescText}>
                 I'm a highly motivated junior front-end developer with a strong
                 foundation in HTML, CSS, and JavaScript. I'm passionate about
                 creating user-friendly and responsive web interfaces. While I'm

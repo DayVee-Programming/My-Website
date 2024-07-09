@@ -8,7 +8,8 @@ import Footer from "../components/Footer.jsx";
 import Blurs from "../components/Blurs.jsx";
 
 const Home = () => {
-  const { home, theme } = useContext(HomePage);
+  const { home, theme, t } = useContext(HomePage);
+  const homeT = t("home", { returnObjects: true });
   const homeMainContentText = clsx("home__main-content-text", {
     "dark-text": theme === "dark",
   });
@@ -21,12 +22,9 @@ const Home = () => {
           <div className="home__main">
             <div className="home__main-content">
               <h1 className="home__main-content-title">
-                Front-End Developer 👋
+                {t(homeT.mainContentTitle)}
               </h1>
-              <p className={homeMainContentText}>
-                Hi, I'm Davronbek Reyimbaev. A passionate front-end developer
-                based in Uzbekistan 🎈
-              </p>
+              <p className={homeMainContentText}>{t(homeT.mainContentText)}</p>
               <div className="home__main-content-links">
                 {home.profileImages?.map((img) => (
                   <HomeContentLink img={img} key={img.id} />

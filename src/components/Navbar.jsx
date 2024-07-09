@@ -5,22 +5,57 @@ import { HomePage } from "../context/homePage.jsx";
 import { MdDarkMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarMenuItem from "./NavbarMenuItem.jsx";
+import { IoLanguage } from "react-icons/io5";
+import clsx from "clsx";
 
 const NavBar = () => {
-  const { navbar, theme, setTheme } = useContext(HomePage);
+  const {
+    navbar,
+    theme,
+    setTheme,
+    isDropdownOpen,
+    setIsDropdownOpen,
+    language,
+    setLanguage,
+    i18n,
+    t,
+  } = useContext(HomePage);
   const { isMenuOpen, setIsMenuOpen } = useContext(HomePage);
+  const navbarT = t("navbar", { returnObjects: true });
+  const navbarBtnsItemBtnImg = clsx("navbar__btns-item-btn-img", {
+    light: theme === "dark",
+  });
+
+  const changeLang = () => {
+    const currentLang = language === "en" ? "ru" : "en";
+    setLanguage(currentLang);
+    i18n.changeLanguage(currentLang);
+  };
+  const generateList = () => {
+    const navbarLng = {
+      links: [],
+    };
+    for (let i = 0; i < navbar.links.length; i++) {
+      const link = {
+        id: navbar.links[i].id,
+        value: navbar.links[i].value,
+        path: navbar.links[i].path,
+        valueT: navbarT.links[i].value,
+      };
+      navbarLng.links.push(link);
+    }
+    return navbarLng.links.map((link) => (
+      <NavbarListItem link={link} key={link.id} />
+    ));
+  };
 
   return (
-    <header className="navbar"  data-theme={theme}>
+    <header className="navbar" data-theme={theme}>
       <nav className="container navbar__wrap">
         <a href="/" className="navbar__logo">
-          <span className="navbar__logo-span">Home</span>
+          <span className="navbar__logo-span">{t(navbarT.logoSpan)}</span>
         </a>
-        <ul className="navbar__list">
-          {navbar.links?.map((link) => (
-            <NavbarListItem link={link} key={link.id} />
-          ))}
-        </ul>
+        <ul className="navbar__list">{generateList()}</ul>
         <ul className="navbar__btns">
           <li className="navbar__btns-item">
             <button
@@ -35,6 +70,34 @@ const NavBar = () => {
                 <ImSun className="navbar__btns-item-btn-img sun" />
               )}
             </button>
+            <button
+              className="navbar__btns-item-btn"
+              onClick={() => {
+                setIsDropdownOpen(!isDropdownOpen);
+              }}
+            >
+              <IoLanguage className={navbarBtnsItemBtnImg} />
+              {isDropdownOpen && (
+                <ul className="navbar__btns-item-btn-dropdown">
+                  {language === "ru" && (
+                    <li
+                      className="navbar__btns-item-btn-dropdown-item"
+                      onClick={() => changeLang()}
+                    >
+                      English
+                    </li>
+                  )}
+                  {language === "en" && (
+                    <li
+                      className="navbar__btns-item-btn-dropdown-item"
+                      onClick={() => changeLang()}
+                    >
+                      Русский
+                    </li>
+                  )}
+                </ul>
+              )}
+            </button>
           </li>
           <li
             className="navbar__btns-item"
@@ -42,7 +105,7 @@ const NavBar = () => {
           >
             <GiHamburgerMenu className="navbar__btns-item-img" />
             {isMenuOpen && (
-              <ul className="navbar__btns-item-menu">
+              <ul className={"navbar__btns-item-menu"}>
                 {navbar.links?.map((link) => (
                   <NavbarMenuItem link={link} key={link.id} />
                 ))}
