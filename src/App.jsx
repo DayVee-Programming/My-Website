@@ -75,6 +75,40 @@ const App = () => {
       },
     ],
   });
+  const [about, setAbout] = useState({
+    stackImages: [
+      {
+        id: 1,
+        value: images.htmlIcon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+      },
+      {
+        id: 2,
+        value: images.cssIcon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+      },
+      {
+        id: 3,
+        value: images.jsIcon,
+        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+      },
+      {
+        id: 4,
+        value: images.typescriptIcon,
+        link: "https://www.typescriptlang.org/",
+      },
+      {
+        id: 5,
+        value: images.reactIcon,
+        link: "https://react.dev/",
+      },
+      {
+        id: 6,
+        value: images.sassIcon,
+        link: "https://sass-lang.com/",
+      },
+    ],
+  })
   const [projects, setProjects] = useState({
     cards: [
       {
@@ -225,6 +259,8 @@ const App = () => {
         setNavbar,
         home,
         setHome,
+        about,
+        setAbout,
         projects,
         setProjects,
         contact,

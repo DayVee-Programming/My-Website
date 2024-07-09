@@ -4,6 +4,7 @@
 .home {
   padding: rem(125) 0 rem(60);
   transition: 0.5s;
+  min-height: 90svh;
 
   @include breakpoint(sm) {
     padding: rem(100) 0 rem(60);
@@ -61,35 +62,6 @@
       height: 100%;
       border: rem(1) solid $clr-1;
       border-radius: rem(30);
-    }
-  }
-
-  &__stack {
-    display: flex;
-    gap: rem(15);
-    justify-content: space-between;
-    align-items: center;
-
-    &-text {
-      font-weight: $fw-2;
-      border-right: rem(2) solid $clr-3;
-      padding-right: rem(15);
-      text-align: center;
-      font-size: $fs-2;
-    }
-
-    &-links {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: rem(30);
-      align-items: center;
-      padding-left: rem(45);
-
-      @include breakpoint(770) {
-        grid-template-columns: repeat(3, 1fr);
-        padding-left: rem(10);
-        gap: rem(15);
-      }
     }
   }
 }

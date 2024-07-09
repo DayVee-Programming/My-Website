@@ -1,7 +1,6 @@
 import clsx from "clsx";
 import { images } from "../assets/images/images.js";
 import HomeContentLink from "../components/HomeContentLink.jsx";
-import HomeStackLink from "../components/HomeStackLink.jsx";
 import { useContext } from "react";
 import { HomePage } from "../context/homePage.jsx";
 import NavBar from "../components/Navbar.jsx";
@@ -35,14 +34,6 @@ const Home = () => {
               </div>
             </div>
             <img src={images.selfie} alt="" className="home__main-img" />
-          </div>
-          <div className="home__stack">
-            <p className="home__stack-text">Tech Stack</p>
-            <div className="home__stack-links">
-              {home.stackImages?.map((img) => (
-                <HomeStackLink img={img} key={img.id} />
-              ))}
-            </div>
           </div>
         </div>
       </div>

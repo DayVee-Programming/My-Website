@@ -4,33 +4,72 @@
 .about {
   padding: rem(100) 0 rem(80);
   transition: 0.5s;
+  min-height: 90svh;
 
   &__wrap {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: rem(45);
     align-items: center;
     flex-wrap: wrap;
   }
 
-  &__img {
-    width: min(100%, rem(450));
-    max-height: rem(375);
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    border-radius: rem(30);
-    order: 1;
+  &__main {
+    display: flex;
+    justify-content: center;
+    gap: rem(45);
+    align-items: center;
+    flex-wrap: wrap;
+
+    &-img {
+      width: min(100%, rem(450));
+      max-height: rem(375);
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: rem(30);
+      order: 1;
+    }
+
+    &-desc {
+      width: min(100%, rem(450));
+      display: flex;
+      flex-direction: column;
+      gap: rem(15);
+
+      &-text {
+        font-size: $fsr-4;
+      }
+    }
   }
 
-  &__main {
-    width: min(100%, rem(450));
+  &__stack {
     display: flex;
-    flex-direction: column;
     gap: rem(15);
+    justify-content: space-between;
+    align-items: center;
 
     &-text {
-      font-size: $fsr-4;
+      font-weight: $fw-2;
+      border-right: rem(2) solid $clr-3;
+      padding-right: rem(15);
+      text-align: center;
+      font-size: $fs-2;
+    }
+
+    &-links {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: rem(30);
+      align-items: center;
+      padding-left: rem(45);
+
+      @include breakpoint(770) {
+        grid-template-columns: repeat(3, 1fr);
+        padding-left: rem(10);
+        gap: rem(15);
+      }
     }
   }
 }
