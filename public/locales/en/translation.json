@@ -17,6 +17,55 @@
     "mainContentTitle": "Front-End Developer 👋",
     "mainContentText": "Hi, I'm Davronbek Reyimbaev. A passionate front-end developer based in Uzbekistan 🎈"
   },
+  "about": {
+    "mainDescTitle": "Love coding 💻",
+    "mainDescText": "I'm a highly motivated junior front-end developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating user-friendly and responsive web interfaces. While I'm new to the professional world, I'm a quick learner and eager to contribute to a team environment. My toolbox is stocked with the modern technologies like TypeScript, React, SASS. I'm always looking for opportunities to expand my knowledge and take on new challenges in the ever-evolving world of web development.",
+    "stackText": "Tech Stack"
+  },
+  "projects": {
+    "title": "Each project is a unique piece of development 📋",
+    "cards": [
+      {
+        "text": "With Gitpod spin up fresh, automated dev environments for each task, in the cloud, in seconds."
+      },
+      {
+        "text": "Zone has over 15 year experience in business consulting arena."
+      },
+      {
+        "text": "Bluecollar Electrical services are trusted and reliable electricians who serve customers throughout United States Of America. They have extensive experience of domestic and business electrical installations."
+      },
+      {
+        "text": "Antools is a web collection of information on paid or free Design and Development tools."
+      },
+      {
+        "text": "The crypto portfolio app."
+      },
+      {
+        "text": "Nike is an athletic footwear and apparel corporation. It is the world's largest supplier of athletic shoes and apparel and a major manufacturer of sports equipment."
+      },
+      {
+        "text": "Soundtrack provides services to connect with visitors in real time."
+      },
+      {
+        "text": "Pokemon Fighter is an interactive game from Pokémon main game series."
+      },
+      {
+        "text": "Simon is an electronic game of short-term memory."
+      }
+    ]
+  },
+  "contact": {
+    "mainTitle": "Send me a message 📧",
+    "mainText": "Feel free to reach out through social media apps, email or contact form below.",
+    "formLabelName": "Your name",
+    "formLabelEmail": "Email",
+    "formLabelMessage": "Message",
+    "formTextarea": "Type your message here...",
+    "formSpanSend": "Sending...",
+    "formSpanSuccess": "Form submitted successfully",
+    "formSpanError": "Error",
+    "formBtn": "Submit"
+  },
   "footer": {
     "info": "©️ 2024 DayVee Programming. All rights reserved.",
     "contentServices": "Terms of Services",

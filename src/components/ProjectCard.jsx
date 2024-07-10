@@ -17,7 +17,7 @@ const ProjectCard = ({ card }) => {
       </div>
       <div className="projects__cards-card-desc">
         <h2 className="projects__cards-card-desc-title">{card.title}</h2>
-        <p className={projectsCardsCardDescText}>{card.text}</p>
+        <p className={projectsCardsCardDescText}>{card.textT}</p>
         <ul className="projects__cards-card-desc-list">
           {card.list?.map((item) => (
             <ProjectCardItem item={item} key={item.id} />

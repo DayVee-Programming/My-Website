@@ -31,7 +31,7 @@ const NavBar = () => {
     setLanguage(currentLang);
     i18n.changeLanguage(currentLang);
   };
-  const generateList = () => {
+  const generateList = (type) => {
     const navbarLng = {
       links: [],
     };
@@ -44,9 +44,15 @@ const NavBar = () => {
       };
       navbarLng.links.push(link);
     }
-    return navbarLng.links.map((link) => (
-      <NavbarListItem link={link} key={link.id} />
-    ));
+    if (type === "menu") {
+      return navbarLng.links.map((link) => (
+        <NavbarMenuItem link={link} key={link.id} />
+      ));
+    } else {
+      return navbarLng.links.map((link) => (
+        <NavbarListItem link={link} key={link.id} />
+      ));
+    }
   };
 
   return (
@@ -106,9 +112,7 @@ const NavBar = () => {
             <GiHamburgerMenu className="navbar__btns-item-img" />
             {isMenuOpen && (
               <ul className={"navbar__btns-item-menu"}>
-                {navbar.links?.map((link) => (
-                  <NavbarMenuItem link={link} key={link.id} />
-                ))}
+                {generateList("menu")}
               </ul>
             )}
           </li>

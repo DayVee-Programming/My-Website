@@ -8,7 +8,8 @@ import Blurs from "../components/Blurs.jsx";
 import AboutStackLink from "../components/AboutStackLink.jsx";
 
 const About = () => {
-  const { about, theme } = useContext(HomePage);
+  const { about, theme, t } = useContext(HomePage);
+  const aboutT = t("about", { returnObjects: true });
   const aboutMainDescText = clsx("about__main-desc-text", {
     "dark-text": theme === "dark",
   });
@@ -19,23 +20,20 @@ const About = () => {
       <div id="about" className="about" data-theme={theme}>
         <div className="container about__wrap">
           <div className="about__main">
-            <img className="about__main-img" src={images.webDevelopment} alt="" />
+            <img
+              className="about__main-img"
+              src={images.webDevelopment}
+              alt=""
+            />
             <div className="about__main-desc">
-              <h2 className="about__main-desc-title title">Love coding 💻</h2>
-              <p className={aboutMainDescText}>
-                I'm a highly motivated junior front-end developer with a strong
-                foundation in HTML, CSS, and JavaScript. I'm passionate about
-                creating user-friendly and responsive web interfaces. While I'm
-                new to the professional world, I'm a quick learner and eager to
-                contribute to a team environment. My toolbox is stocked with the
-                modern technologies like TypeScript, React, SASS. I'm always
-                looking for opportunities to expand my knowledge and take on new
-                challenges in the ever-evolving world of web development.
-              </p>
+              <h2 className="about__main-desc-title title">
+                {t(aboutT.mainDescTitle)}
+              </h2>
+              <p className={aboutMainDescText}>{t(aboutT.mainDescText)}</p>
             </div>
           </div>
           <div className="about__stack">
-            <p className="about__stack-text">Tech Stack</p>
+            <p className="about__stack-text">{t(aboutT.stackText)}</p>
             <div className="about__stack-links">
               {about.stackImages?.map((img) => (
                 <AboutStackLink img={img} key={img.id} />
