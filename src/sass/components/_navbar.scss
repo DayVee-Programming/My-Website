@@ -57,6 +57,9 @@
     align-items: center;
 
     &-item {
+      display: flex;
+      gap: rem(15);
+
       &:last-child {
         display: none;
         justify-content: center;
@@ -110,12 +113,41 @@
         position: relative;
         transition: 0.3s;
 
+        &:last-child {
+          position: relative;
+        }
+
         &-img {
           width: rem(32);
           height: rem(32);
 
+          &.light {
+            fill: $clr-2;
+          }
+
           &.sun {
             fill: $clr-5;
+          }
+        }
+
+        &-dropdown {
+          position: absolute;
+          top: rem(50);
+          right: rem(-15);
+          display: flex;
+          flex-direction: column;
+          gap: rem(15);
+          background: $clr-8;
+          border-radius: rem(10);
+
+          @include breakpoint(sm) {
+            top: rem(30);
+          }
+
+          &-item {
+            padding: rem(5) rem(10);
+            color: $clr-2;
+            font-size: $fsr-3;
           }
         }
       }

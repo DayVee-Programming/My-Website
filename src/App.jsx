@@ -7,6 +7,7 @@ import Contact from "./pages/Contact.jsx";
 import { HomePage } from "./context/homePage.jsx";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound.jsx";
+import { useTranslation } from "react-i18next";
 
 const App = () => {
   const [navbar, setNavbar] = useState({
@@ -108,7 +109,7 @@ const App = () => {
         link: "https://sass-lang.com/",
       },
     ],
-  })
+  });
   const [projects, setProjects] = useState({
     cards: [
       {
@@ -251,6 +252,9 @@ const App = () => {
   });
   const [theme, setTheme] = useState("light");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { i18n, t } = useTranslation();
+  const [language, setLanguage] = useState(i18n.language);
 
   return (
     <HomePage.Provider
@@ -269,6 +273,12 @@ const App = () => {
         setTheme,
         isMenuOpen,
         setIsMenuOpen,
+        isDropdownOpen,
+        setIsDropdownOpen,
+        language,
+        setLanguage,
+        i18n,
+        t,
       }}
     >
       <Routes>
