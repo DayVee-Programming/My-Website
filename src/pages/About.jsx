@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { images } from "../assets/images/images.js";
-import { HomePage } from "../context/homePage.jsx";
+import { AppContext } from "../context/appContext.jsx";
 import clsx from "clsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -8,7 +8,7 @@ import Blurs from "../components/Blurs.jsx";
 import AboutStackLink from "../components/AboutStackLink.jsx";
 
 const About = () => {
-  const { about, theme, t } = useContext(HomePage);
+  const { about, theme, t } = useContext(AppContext);
   const aboutT = t("about", { returnObjects: true });
   const aboutMainDescText = clsx("about__main-desc-text", {
     "dark-text": theme === "dark",

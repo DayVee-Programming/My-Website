@@ -2,13 +2,13 @@ import clsx from "clsx";
 import { images } from "../assets/images/images.js";
 import HomeContentLink from "../components/HomeContentLink.jsx";
 import { useContext } from "react";
-import { HomePage } from "../context/homePage.jsx";
+import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Blurs from "../components/Blurs.jsx";
 
 const Home = () => {
-  const { home, theme, t } = useContext(HomePage);
+  const { home, theme, t } = useContext(AppContext);
   const homeT = t("home", { returnObjects: true });
   const homeMainContentText = clsx("home__main-content-text", {
     "dark-text": theme === "dark",

@@ -1,9 +1,9 @@
 import { useContext } from "react";
-import { HomePage } from "../context/homePage";
+import { AppContext } from "../context/appContext";
 import clsx from "clsx";
 
 const Footer = () => {
-  const { theme, t } = useContext(HomePage);
+  const { theme, t } = useContext(AppContext);
   const footerT = t("footer", { returnObjects: true });
   const footerSpan = clsx("footer__span", {
     dark: theme === "dark",

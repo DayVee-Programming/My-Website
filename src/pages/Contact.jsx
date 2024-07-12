@@ -1,13 +1,13 @@
 import { useContext, useState } from "react";
 import ContactLink from "../components/ContactLink.jsx";
 import clsx from "clsx";
-import { HomePage } from "../context/homePage.jsx";
+import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Blurs from "../components/Blurs.jsx";
 
 const Contact = () => {
-  const { contact, theme, t } = useContext(HomePage);
+  const { contact, theme, t } = useContext(AppContext);
   const contactT = t("contact", { returnObjects: true });
   const [result, setResult] = useState("");
   const contactMainText = clsx("contact__main-text", {

@@ -1,10 +1,10 @@
 import { useContext } from "react";
-import { HomePage } from "../context/homePage";
+import { AppContext } from "../context/appContext";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const NotFound = () => {
-  const { theme } = useContext(HomePage);
+  const { theme } = useContext(AppContext);
 
   return (
     <>

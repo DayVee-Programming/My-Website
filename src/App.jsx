@@ -4,7 +4,7 @@ import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
-import { HomePage } from "./context/homePage.jsx";
+import { AppContext } from "./context/appContext.jsx";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound.jsx";
 import { useTranslation } from "react-i18next";
@@ -257,7 +257,7 @@ const App = () => {
   const [language, setLanguage] = useState(i18n.language);
 
   return (
-    <HomePage.Provider
+    <AppContext.Provider
       value={{
         navbar,
         setNavbar,
@@ -288,7 +288,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </HomePage.Provider>
+    </AppContext.Provider>
   );
 };
 

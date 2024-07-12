@@ -40,14 +40,25 @@
         flex-wrap: wrap;
       }
 
+      &:hover &-pic {
+        transform: scale(1.05);
+      }
+
       &-pic {
         width: min(100%, rem(650));
         min-height: rem(250);
         display: flex;
         z-index: 10;
+        transition: 0.3s;
+        animation: scale 1s;
 
         &-img {
           border-radius: rem(20);
+          box-shadow: 0 0 rem(10) $clr-1;
+
+          &.light {
+            box-shadow: 0 0 rem(10) $clr-2;
+          }
         }
       }
 
@@ -107,8 +118,13 @@
             gap: rem(5);
             align-items: center;
 
+            &:hover &-text {
+              letter-spacing: rem(4);
+            }
+
             &-text {
               font-size: $fsr-5;
+              transition: 0.3s;
             }
 
             &-img {

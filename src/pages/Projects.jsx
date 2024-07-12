@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import ProjectCard from "../components/ProjectCard.jsx";
-import { HomePage } from "../context/homePage.jsx";
+import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Blurs from "../components/Blurs.jsx";
 
 const Projects = () => {
-  const { projects, theme, t } = useContext(HomePage);
+  const { projects, theme, t } = useContext(AppContext);
   const projectsT = t("projects", { returnObjects: true });
 
   const generateCards = () => {

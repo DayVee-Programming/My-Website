@@ -48,9 +48,14 @@
         justify-content: center;
 
         &-link {
+          &:hover &-img {
+            transform: scale(1.1);
+          }
+
           &-img {
             width: rem(48);
             height: rem(48);
+            transition: 0.3s;
           }
         }
       }

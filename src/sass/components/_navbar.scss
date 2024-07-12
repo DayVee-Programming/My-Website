@@ -31,6 +31,11 @@
     &-span {
       font-weight: $fw-2;
       font-size: $fsr-5;
+      transition: 0.3s;
+
+      &:hover {
+        color: $clr-8;
+      }
     }
   }
 
@@ -47,6 +52,11 @@
       &-link {
         font-weight: $fw-2;
         font-size: $fsr-2;
+        transition: 0.3s;
+
+        &:hover {
+          color: $clr-8;
+        }
       }
     }
   }
@@ -65,6 +75,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        cursor: pointer;
 
         @include breakpoint(sm) {
           display: flex;
@@ -83,6 +94,33 @@
         padding: rem(50) rem(10);
         z-index: 100;
         background: $clr-8;
+        animation: slide-left 0.7s forwards;
+
+        @keyframes slide-left {
+          0% {
+            transform: translateX(50%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+        }
+
+        .closed {
+          animation: slide-right 0.7s forwards;
+        }
+
+        @keyframes slide-right {
+          0% {
+            transform: translateX(0);
+            opacity: 1;
+          }
+          100% {
+            transform: translateX(50%);
+            opacity: 0;
+          }
+        }
 
         &-item {
           padding: rem(20) rem(5);
@@ -121,12 +159,34 @@
           width: rem(32);
           height: rem(32);
 
+          &:hover {
+            fill: $clr-5;
+            transition: 0.3s;
+
+            &:hover {
+              fill: $clr-8;
+            }
+          }
+
           &.light {
             fill: $clr-2;
           }
 
           &.sun {
             fill: $clr-5;
+            transition: 0.3s;
+
+            &:hover {
+              fill: $clr-8;
+            }
+          }
+
+          &.moon {
+            transition: 0.3s;
+
+            &:hover {
+              fill: $clr-8;
+            }
           }
         }
 
@@ -139,9 +199,26 @@
           gap: rem(15);
           background: $clr-8;
           border-radius: rem(10);
+          animation: slide-up 1s forwards;
+          transition: 0.3s;
+
+          &:hover {
+            box-shadow: 0 0 rem(7) $clr-8;
+          }
 
           @include breakpoint(sm) {
             top: rem(30);
+          }
+
+          @keyframes slide-up {
+            0% {
+              transform: translateY(100%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateY(0);
+              opacity: 1;
+            }
           }
 
           &-item {

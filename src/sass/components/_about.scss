@@ -70,6 +70,14 @@
         padding-left: rem(10);
         gap: rem(15);
       }
+
+      &-link {
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(rem(-7));
+        }
+      }
     }
   }
 }

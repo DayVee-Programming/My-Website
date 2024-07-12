@@ -1,7 +1,7 @@
 import { ImSun } from "react-icons/im";
 import NavbarListItem from "./NavbarListItem.jsx";
 import { useContext } from "react";
-import { HomePage } from "../context/homePage.jsx";
+import { AppContext } from "../context/appContext.jsx";
 import { MdDarkMode } from "react-icons/md";
 import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarMenuItem from "./NavbarMenuItem.jsx";
@@ -19,11 +19,14 @@ const NavBar = () => {
     setLanguage,
     i18n,
     t,
-  } = useContext(HomePage);
-  const { isMenuOpen, setIsMenuOpen } = useContext(HomePage);
+  } = useContext(AppContext);
+  const { isMenuOpen, setIsMenuOpen } = useContext(AppContext);
   const navbarT = t("navbar", { returnObjects: true });
   const navbarBtnsItemBtnImg = clsx("navbar__btns-item-btn-img", {
     light: theme === "dark",
+  });
+  const navbarBtnsItemMenu = clsx("navbar__btns-item-menu", {
+    closed: !isMenuOpen,
   });
 
   const changeLang = () => {
@@ -111,9 +114,7 @@ const NavBar = () => {
           >
             <GiHamburgerMenu className="navbar__btns-item-img" />
             {isMenuOpen && (
-              <ul className={"navbar__btns-item-menu"}>
-                {generateList("menu")}
-              </ul>
+              <ul className={navbarBtnsItemMenu}>{generateList("menu")}</ul>
             )}
           </li>
         </ul>

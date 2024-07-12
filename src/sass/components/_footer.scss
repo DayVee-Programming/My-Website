@@ -46,6 +46,10 @@
     gap: rem(30);
     align-items: center;
 
+    @include breakpoint(sm) {
+      gap: rem(10);
+    }
+
     span {
       font-size: $fsr-3;
       text-align: center;
