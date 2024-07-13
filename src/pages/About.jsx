@@ -4,7 +4,6 @@ import { AppContext } from "../context/appContext.jsx";
 import clsx from "clsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import Blurs from "../components/Blurs.jsx";
 import AboutStackLink from "../components/AboutStackLink.jsx";
 
 const About = () => {
@@ -13,6 +12,9 @@ const About = () => {
   const aboutMainDescText = clsx("about__main-desc-text", {
     "dark-text": theme === "dark",
   });
+  const aboutMainImg = clsx("about__main-img", {
+    light: theme === "dark",
+  });
 
   return (
     <>
@@ -20,11 +22,7 @@ const About = () => {
       <div id="about" className="about" data-theme={theme}>
         <div className="container about__wrap">
           <div className="about__main">
-            <img
-              className="about__main-img"
-              src={images.webDevelopment}
-              alt=""
-            />
+            <img className={aboutMainImg} src={images.webDevelopment} alt="" />
             <div className="about__main-desc">
               <h2 className="about__main-desc-title title">
                 {t(aboutT.mainDescTitle)}
@@ -43,8 +41,6 @@ const About = () => {
         </div>
       </div>
       <Footer />
-
-      {theme === "dark" && <Blurs />}
     </>
   );
 };

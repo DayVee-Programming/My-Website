@@ -3,7 +3,7 @@
 
 .contact {
   padding: rem(100) 0 rem(80);
-  transition: 0.5s;
+  transition: 0.3s;
   min-height: 90svh;
 
   &__wrap {
@@ -13,7 +13,7 @@
     justify-content: center;
   }
 
-  &__main {
+  &__address {
     width: min(100%, rem(500));
     display: flex;
     flex-direction: column;

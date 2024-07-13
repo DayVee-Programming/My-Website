@@ -3,7 +3,7 @@
 
 .projects {
   padding: rem(100) 0 rem(80);
-  transition: 0.5s;
+  transition: 0.3s;
   min-height: 90svh;
 
   &__wrap {
@@ -105,6 +105,10 @@
           &-item {
             font-weight: $fw-2;
             font-size: $fsr-5;
+
+            &.light {
+              color: $clr-8;
+            }
           }
         }
 

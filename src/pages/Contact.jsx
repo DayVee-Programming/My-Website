@@ -4,13 +4,12 @@ import clsx from "clsx";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import Blurs from "../components/Blurs.jsx";
 
 const Contact = () => {
   const { contact, theme, t } = useContext(AppContext);
   const contactT = t("contact", { returnObjects: true });
   const [result, setResult] = useState("");
-  const contactMainText = clsx("contact__main-text", {
+  const contactAddressText = clsx("contact__address-text", {
     "dark-text": theme === "dark",
   });
 
@@ -39,17 +38,17 @@ const Contact = () => {
       <NavBar />
       <div id="contact" className="contact" data-theme={theme}>
         <div className="container contact__wrap">
-          <div className="contact__main">
-            <h2 className="contact__main-title title">
+          <address className="contact__address">
+            <h2 className="contact__address-title title">
               {t(contactT.mainTitle)}
             </h2>
-            <p className={contactMainText}>{t(contactT.mainText)}</p>
-            <div className="contact__main-socials">
+            <p className={contactAddressText}>{t(contactT.mainText)}</p>
+            <div className="contact__address-socials">
               {contact.links?.map((link) => (
                 <ContactLink link={link} key={link.id} />
               ))}
             </div>
-          </div>
+          </address>
           <form className="contact__form" onSubmit={handleSubmit}>
             <label className="contact__form-label">
               {t(contactT.formLabelName)}
@@ -85,8 +84,6 @@ const Contact = () => {
         </div>
       </div>
       <Footer />
-
-      {theme === "dark" && <Blurs />}
     </>
   );
 };

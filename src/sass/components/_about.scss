@@ -3,7 +3,7 @@
 
 .about {
   padding: rem(100) 0 rem(80);
-  transition: 0.5s;
+  transition: 0.3s;
   min-height: 90svh;
 
   &__wrap {
@@ -30,6 +30,10 @@
       object-position: center;
       border-radius: rem(30);
       order: 1;
+
+      &.light {
+        box-shadow: 0 0 rem(10) $clr-2;
+      }
     }
 
     &-desc {
@@ -75,7 +79,7 @@
         transition: 0.3s;
 
         &:hover {
-          transform: translateY(rem(-7));
+          transform: translateY(rem(-10));
         }
       }
     }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { images } from "./assets/images/images.js";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -250,11 +250,17 @@ const App = () => {
       },
     ],
   });
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme"))
+  );
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
+
+  useEffect(() => {
+    if (!theme) localStorage.setItem("theme", JSON.stringify("light"));
+  }, []);
 
   return (
     <AppContext.Provider

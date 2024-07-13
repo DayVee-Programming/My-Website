@@ -28,11 +28,21 @@
 
     &-link {
       color: $clr-4;
+      transition: 0.3s;
+
+      &:hover {
+        letter-spacing: 0.1rem;
+      }
     }
   }
 
   &__link {
     font-size: $fsr-3;
     text-decoration: underline;
+    transition: 0.3s;
+
+    &:hover {
+      letter-spacing: 0.1rem;
+    }
   }
 }

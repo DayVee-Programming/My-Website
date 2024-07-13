@@ -5,13 +5,15 @@ import { useContext } from "react";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import Blurs from "../components/Blurs.jsx";
 
 const Home = () => {
   const { home, theme, t } = useContext(AppContext);
   const homeT = t("home", { returnObjects: true });
   const homeMainContentText = clsx("home__main-content-text", {
     "dark-text": theme === "dark",
+  });
+  const homeMainImg = clsx("home__main-img", {
+    light: theme === "dark",
   });
 
   return (
@@ -31,13 +33,11 @@ const Home = () => {
                 ))}
               </div>
             </div>
-            <img src={images.selfie} alt="" className="home__main-img" />
+            <img src={images.selfie} alt="" className={homeMainImg} />
           </div>
         </div>
       </div>
       <Footer />
-
-      {theme === "dark" && <Blurs />}
     </>
   );
 };

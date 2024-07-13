@@ -3,7 +3,7 @@
 
 .home {
   padding: rem(125) 0 rem(60);
-  transition: 0.5s;
+  transition: 0.3s;
   min-height: 90svh;
 
   @include breakpoint(sm) {
@@ -67,6 +67,10 @@
       height: 100%;
       border: rem(1) solid $clr-1;
       border-radius: rem(30);
+
+      &.light {
+        box-shadow: 0 0 rem(10) $clr-2;
+      }
     }
   }
 }

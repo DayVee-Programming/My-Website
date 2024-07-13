@@ -29,6 +29,15 @@ const NavBar = () => {
     closed: !isMenuOpen,
   });
 
+  const changeTheme = () => {
+    if (theme === "light") {
+      localStorage.setItem("theme", JSON.stringify("dark"));
+      setTheme(JSON.parse(localStorage.getItem("theme")));
+    } else {
+      localStorage.setItem("theme", JSON.stringify("light"));
+      setTheme(JSON.parse(localStorage.getItem("theme")));
+    }
+  };
   const changeLang = () => {
     const currentLang = language === "en" ? "ru" : "en";
     setLanguage(currentLang);
@@ -69,9 +78,7 @@ const NavBar = () => {
           <li className="navbar__btns-item">
             <button
               className="navbar__btns-item-btn"
-              onClick={() =>
-                theme === "light" ? setTheme("dark") : setTheme("light")
-              }
+              onClick={() => changeTheme()}
             >
               {theme === "light" ? (
                 <MdDarkMode className="navbar__btns-item-btn-img moon" />

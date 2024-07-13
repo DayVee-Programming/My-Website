@@ -1,5 +1,17 @@
+import { useContext } from "react";
+import { AppContext } from "../context/appContext";
+import clsx from "clsx";
+
 const ProjectCardItem = ({ item }) => {
-  return <li className="projects__cards-card-desc-list-item">{item.value}</li>;
+  const { theme } = useContext(AppContext);
+  const projectsCardsCardDescListItem = clsx(
+    "projects__cards-card-desc-list-item",
+    {
+      light: theme,
+    }
+  );
+
+  return <li className={projectsCardsCardDescListItem}>{item.value}</li>;
 };
 
 export default ProjectCardItem;

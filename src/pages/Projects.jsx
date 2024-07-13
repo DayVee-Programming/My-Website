@@ -3,7 +3,6 @@ import ProjectCard from "../components/ProjectCard.jsx";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import Blurs from "../components/Blurs.jsx";
 
 const Projects = () => {
   const { projects, theme, t } = useContext(AppContext);
@@ -37,14 +36,10 @@ const Projects = () => {
       <div id="projects" className="projects" data-theme={theme}>
         <div className="container projects__wrap">
           <h2 className="projects__title title">{t(projectsT.title)}</h2>
-          <div className="projects__cards">
-            {generateCards()}
-          </div>
+          <div className="projects__cards">{generateCards()}</div>
         </div>
       </div>
       <Footer />
-
-      {theme === "dark" && <Blurs />}
     </>
   );
 };
