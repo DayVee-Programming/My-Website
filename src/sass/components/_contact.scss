@@ -8,7 +8,7 @@
 
   &__wrap {
     display: flex;
-    gap: rem(30);
+    gap: rem(40);
     flex-wrap: wrap;
     justify-content: center;
   }
@@ -50,6 +50,13 @@
 
           &-img {
             width: rem(40);
+            height: rem(40);
+            border-radius: rem(10);
+            transition: 0.3s;
+
+            &.light {
+              background: $clr-2;
+            }
           }
 
           &-span {

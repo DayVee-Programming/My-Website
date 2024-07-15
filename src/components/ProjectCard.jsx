@@ -12,6 +12,12 @@ const ProjectCard = ({ card }) => {
   const projectsCardsCardPicImg = clsx("projects__cards-card-pic-img", {
     light: theme === "dark",
   });
+  const projectsCardsCardDescSourceLinkImg = clsx(
+    "projects__cards-card-desc-source-link-img",
+    {
+      light: theme === "dark",
+    }
+  );
 
   return (
     <div key={card.id} className="projects__cards-card">
@@ -34,7 +40,7 @@ const ProjectCard = ({ card }) => {
           >
             <p className="projects__cards-card-desc-source-link-text">Live</p>
             <img
-              className="projects__cards-card-desc-source-link-img"
+              className={projectsCardsCardDescSourceLinkImg}
               src={images.liveIcon}
               alt=""
             />
@@ -46,8 +52,8 @@ const ProjectCard = ({ card }) => {
           >
             <p className="projects__cards-card-desc-source-link-text">Code</p>
             <img
-              className="projects__cards-card-desc-source-link-img"
-              src={theme === "light" ? images.githubIcon : images.githubIcon2}
+              className={projectsCardsCardDescSourceLinkImg}
+              src={images.githubIcon}
               alt=""
             />
           </a>

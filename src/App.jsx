@@ -109,6 +109,50 @@ const App = () => {
         link: "https://sass-lang.com/",
       },
     ],
+    toolsImages: [
+      {
+        id: 1,
+        value: images.viteIcon,
+        link: "https://vitejs.dev/",
+      },
+      {
+        id: 2,
+        value: images.figmaIcon,
+        link: "https://www.figma.com/",
+      },
+      {
+        id: 3,
+        value: images.npmIcon,
+        link: "https://www.npmjs.com/",
+      },
+      {
+        id: 4,
+        value: images.gitIcon,
+        link: "https://www.git-scm.com/",
+      },
+      {
+        id: 5,
+        value: images.bemIcon,
+        link: "https://en.bem.info/methodology/",
+      },
+    ],
+    interestsImages: [
+      {
+        id: 1,
+        value: images.videoGamesIcon,
+        link: `https://en.wikipedia.org/wiki/Video_game`,
+      },
+      {
+        id: 2,
+        value: images.chessIcon,
+        link: `https://en.wikipedia.org/wiki/Chess`,
+      },
+      {
+        id: 3,
+        value: images.cardGamesIcon,
+        link: `https://en.wikipedia.org/wiki/Card_game`,
+      },
+    ],
   });
   const [projects, setProjects] = useState({
     cards: [
@@ -250,14 +294,30 @@ const App = () => {
       },
     ],
   });
-  const [theme, setTheme] = useState(
-    JSON.parse(localStorage.getItem("theme"))
-  );
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [emailResult, emailSetResult] = useState("");
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
 
+  const sendEmail = async (e, lngObj) => {
+    e.preventDefault();
+    emailSetResult(t(lngObj.formSpanSend));
+    const formData = new FormData(e.target);
+    formData.append("access_key", "7b5d61c7-68fa-4fb3-956e-27668a1a72b4");
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+    const data = await res.json();
+    if (data.success) {
+      emailSetResult(t(lngObj.formSpanSuccess));
+      e.target.reset();
+    } else {
+      emailSetResult(data.message);
+    }
+  };
   useEffect(() => {
     if (!theme) localStorage.setItem("theme", JSON.stringify("light"));
   }, []);
@@ -285,6 +345,9 @@ const App = () => {
         setLanguage,
         i18n,
         t,
+        emailResult,
+        emailSetResult,
+        sendEmail,
       }}
     >
       <Routes>

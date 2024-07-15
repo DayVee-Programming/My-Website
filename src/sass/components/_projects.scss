@@ -119,7 +119,7 @@
 
           &-link {
             display: flex;
-            gap: rem(5);
+            gap: rem(10);
             align-items: center;
 
             &:hover &-text {
@@ -133,6 +133,13 @@
 
             &-img {
               width: rem(40);
+              height: rem(40);
+              border-radius: rem(10);
+              transition: 0.3s;
+
+              &.light {
+                background: $clr-2;
+              }
             }
           }
         }

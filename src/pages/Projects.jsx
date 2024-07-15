@@ -13,17 +13,11 @@ const Projects = () => {
       cards: [],
     };
     for (let i = 0; i < projects.cards.length; i++) {
-      const link = {
-        id: projects.cards[i].id,
-        title: projects.cards[i].title,
-        text: projects.cards[i].text,
-        list: projects.cards[i].list,
-        liveLink: projects.cards[i].liveLink,
-        codeLink: projects.cards[i].codeLink,
-        image: projects.cards[i].image,
+      const lngObj = {
         textT: projectsT.cards[i].text,
       };
-      projectsLng.cards.push(link);
+      const link = Object.assign(projects.cards[i], lngObj);
+      projectsLng.cards = [...projectsLng.cards, link];
     }
     return projectsLng.cards?.map((card) => (
       <ProjectCard card={card} key={card.id} />

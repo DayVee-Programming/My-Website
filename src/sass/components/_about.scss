@@ -81,6 +81,69 @@
         &:hover {
           transform: translateY(rem(-10));
         }
+
+        &-img {
+          width: rem(48);
+          height: rem(48);
+          border-radius: rem(10);
+
+          &.light {
+            background: $clr-2;
+          }
+        }
+      }
+    }
+  }
+
+  &__interests {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: rem(40);
+    padding-top: rem(50);
+
+    &-cards {
+      display: flex;
+      align-items: center;
+      gap: rem(30);
+
+      @include breakpoint(xsm) {
+        flex-direction: column;
+      }
+
+      &-item {
+        &-link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: rem(10);
+          border: rem(2) solid $clr-1;
+          padding: rem(10);
+          border-radius: rem(10);
+          cursor: pointer;
+          transition: 0.3s;
+
+          &:hover {
+            transform: translateY(rem(15));
+          }
+
+          &.light {
+            background: $clr-2;
+          }
+
+          &-img {
+            width: rem(90);
+            height: rem(90);
+          }
+
+          &-text {
+            font-size: $fsr-4;
+
+            &.light {
+              color: $clr-1;
+            }
+          }
+        }
       }
     }
   }

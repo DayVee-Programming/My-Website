@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import ContactLink from "../components/ContactLink.jsx";
 import clsx from "clsx";
 import { AppContext } from "../context/appContext.jsx";
@@ -6,32 +6,11 @@ import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 
 const Contact = () => {
-  const { contact, theme, t } = useContext(AppContext);
+  const { contact, theme, t, emailResult, sendEmail } = useContext(AppContext);
   const contactT = t("contact", { returnObjects: true });
-  const [result, setResult] = useState("");
   const contactAddressText = clsx("contact__address-text", {
     "dark-text": theme === "dark",
   });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setResult(t(contactT.formSpanSend));
-    const formData = new FormData(e.target);
-    console.log(formData);
-    formData.append("access_key", "7b5d61c7-68fa-4fb3-956e-27668a1a72b4");
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await res.json();
-    if (data.success) {
-      setResult(t(contactT.formSpanSuccess));
-      e.target.reset();
-    } else {
-      console.log(t(contactT.formSpanError), data);
-      setResult(data.message);
-    }
-  };
 
   return (
     <>
@@ -49,7 +28,10 @@ const Contact = () => {
               ))}
             </div>
           </address>
-          <form className="contact__form" onSubmit={handleSubmit}>
+          <form
+            className="contact__form"
+            onSubmit={(e) => sendEmail(e, contactT)}
+          >
             <label className="contact__form-label">
               {t(contactT.formLabelName)}
             </label>
@@ -78,7 +60,7 @@ const Contact = () => {
               name="message"
               required
             ></textarea>
-            <span className="contact__form-span">{result}</span>
+            <span className="contact__form-span">{emailResult}</span>
             <button className="contact__form-btn">{t(contactT.formBtn)}</button>
           </form>
         </div>

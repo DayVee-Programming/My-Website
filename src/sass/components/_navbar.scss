@@ -31,7 +31,6 @@
     &-span {
       font-weight: $fw-2;
       font-size: $fsr-5;
-      transition: 0.3s;
 
       &:hover {
         color: $clr-8;
@@ -94,7 +93,7 @@
         padding: rem(50) rem(10);
         z-index: 100;
         background: $clr-8;
-        animation: slide-left 0.7s forwards;
+        animation: slide-left 0.5s forwards;
 
         @keyframes slide-left {
           0% {
@@ -105,10 +104,6 @@
             transform: translateX(0);
             opacity: 1;
           }
-        }
-
-        .closed {
-          animation: slide-right 0.7s forwards;
         }
 
         @keyframes slide-right {
@@ -130,7 +125,7 @@
             transition: 0.3s;
 
             &:hover {
-              letter-spacing: 0.1rem;
+              padding-right: rem(10);
             }
           }
         }

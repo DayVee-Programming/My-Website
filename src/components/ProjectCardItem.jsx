@@ -7,7 +7,7 @@ const ProjectCardItem = ({ item }) => {
   const projectsCardsCardDescListItem = clsx(
     "projects__cards-card-desc-list-item",
     {
-      light: theme,
+      light: theme === "dark",
     }
   );
 

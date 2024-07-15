@@ -1,6 +1,5 @@
 import cssIcon from "./css3.png";
 import githubIcon from "./github.svg";
-import githubIcon2 from "./github2.svg";
 import gmailIcon from "./gmail.png";
 import htmlIcon from "./html5.png";
 import jsIcon from "./javascript.png";
@@ -11,6 +10,11 @@ import telegramIcon from "./telegram.png";
 import whatsAppIcon from "./whatsapp.png";
 import typescriptIcon from "./typescript.png";
 import sassIcon from "./sass.png";
+import figmaIcon from "./figma.svg";
+import viteIcon from "./vite.svg";
+import bemIcon from "./bem.svg";
+import gitIcon from "./git.svg";
+import npmIcon from "./npm.svg";
 import antools from "./antools.jpg";
 import webDevelopment from "./web-development.jpg";
 import blueCollar from "./blue-collar.jpg";
@@ -23,12 +27,14 @@ import zone from "./zone.jpg";
 import edusity from "./edusity.jpg";
 import gitpod from "./gitpod.png";
 import selfie from "./selfie.jpg";
+import videoGamesIcon from "./video-games.png";
+import chessIcon from "./chess.svg";
+import cardGamesIcon from "./card-games.png";
 
 export const images = {
   antools,
   cssIcon,
   githubIcon,
-  githubIcon2,
   gmailIcon,
   htmlIcon,
   jsIcon,
@@ -39,6 +45,11 @@ export const images = {
   whatsAppIcon,
   typescriptIcon,
   sassIcon,
+  figmaIcon,
+  viteIcon,
+  bemIcon,
+  gitIcon,
+  npmIcon,
   webDevelopment,
   blueCollar,
   crypAppy,
@@ -50,4 +61,7 @@ export const images = {
   edusity,
   gitpod,
   selfie,
+  videoGamesIcon,
+  chessIcon,
+  cardGamesIcon,
 };

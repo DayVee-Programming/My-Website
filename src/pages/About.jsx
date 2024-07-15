@@ -5,6 +5,7 @@ import clsx from "clsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import AboutStackLink from "../components/AboutStackLink.jsx";
+import AboutInterestsItem from "../components/AboutInterestsItem.jsx";
 
 const About = () => {
   const { about, theme, t } = useContext(AppContext);
@@ -15,6 +16,21 @@ const About = () => {
   const aboutMainImg = clsx("about__main-img", {
     light: theme === "dark",
   });
+  const generateInterests = () => {
+    const aboutLng = {
+      interestsImages: [],
+    };
+    for (let i = 0; i < about.interestsImages.length; i++) {
+      const lngObj = {
+        textT: aboutT.interests[i].text,
+      };
+      const link = Object.assign(about.interestsImages[i], lngObj);
+      aboutLng.interestsImages = [...aboutLng.interestsImages, link];
+    }
+    return aboutLng.interestsImages?.map((interest) => (
+      <AboutInterestsItem interest={interest} key={interest.id} />
+    ));
+  };
 
   return (
     <>
@@ -37,6 +53,20 @@ const About = () => {
                 <AboutStackLink img={img} key={img.id} />
               ))}
             </div>
+          </div>
+          <div className="about__stack">
+            <p className="about__stack-text">{t(aboutT.toolsText)}</p>
+            <div className="about__stack-links">
+              {about.toolsImages?.map((img) => (
+                <AboutStackLink img={img} key={img.id} />
+              ))}
+            </div>
+          </div>
+          <div className="about__interests">
+            <h2 className="about__interests-title title">
+              {t(aboutT.interestsText)}
+            </h2>
+            <ul className="about__interests-cards">{generateInterests()}</ul>
           </div>
         </div>
       </div>

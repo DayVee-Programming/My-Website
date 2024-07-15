@@ -1,8 +1,15 @@
 import { useContext } from "react";
 import { AppContext } from "../context/appContext";
+import clsx from "clsx";
 
 const BannerContentLink = ({ img }) => {
   const { theme } = useContext(AppContext);
+  const homeMainContentLinksLinkImg = clsx(
+    "home__main-content-links-link-img",
+    {
+      light: theme === "dark",
+    }
+  );
 
   return (
     <a
@@ -10,11 +17,7 @@ const BannerContentLink = ({ img }) => {
       target="_blank"
       className="home__main-content-links-link"
     >
-      <img
-        className="home__main-content-links-link-img"
-        src={theme === "dark" && img.value2 ? img.value2 : img.value}
-        alt=""
-      />
+      <img className={homeMainContentLinksLinkImg} src={img.value} alt="" />
     </a>
   );
 };
