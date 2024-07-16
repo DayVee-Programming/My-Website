@@ -83,5 +83,12 @@
     "info": "©️ 2024 DayVee Programming. All rights reserved.",
     "contentServices": "Terms of Services",
     "contentPolicy": "Privacy Policy"
+  },
+  "notfound": {
+    "title": "404 Error",
+    "subtitle": "Sorry, I can’t find what you’re looking for.",
+    "text1": "If you think this is an error on my part, please",
+    "text2": "email me.",
+    "link": "Go Home"
   }
 }

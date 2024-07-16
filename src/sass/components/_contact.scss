@@ -28,45 +28,47 @@
       flex-direction: column;
       gap: rem(15);
 
-      &-link {
-        display: flex;
-        gap: rem(10);
-        align-items: center;
-        flex-wrap: wrap;
-
-        &:hover &-top-span {
-          letter-spacing: rem(2);
-        }
-
-        @include breakpoint(xsm) {
-          flex-direction: column;
-          align-items: flex-start;
-        }
-
-        &-top {
+      &-item {
+        &-link {
           display: flex;
-          gap: rem(15);
+          gap: rem(10);
           align-items: center;
+          flex-wrap: wrap;
 
-          &-img {
-            width: rem(40);
-            height: rem(40);
-            border-radius: rem(10);
-            transition: 0.3s;
+          &:hover &-top-span {
+            letter-spacing: rem(2);
+          }
 
-            &.light {
-              background: $clr-2;
+          @include breakpoint(xsm) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          &-top {
+            display: flex;
+            gap: rem(15);
+            align-items: center;
+
+            &-img {
+              width: rem(40);
+              height: rem(40);
+              border-radius: rem(10);
+              transition: 0.3s;
+
+              &.light {
+                background: $clr-2;
+              }
+            }
+
+            &-span {
+              font-size: $fs-1;
+              transition: 0.3s;
             }
           }
 
-          &-span {
-            font-size: $fs-1;
-            transition: 0.3s;
+          &-text {
+            font-size: $fsr-3;
           }
-        }
-
-        &-text {
-          font-size: $fsr-3;
         }
       }
     }

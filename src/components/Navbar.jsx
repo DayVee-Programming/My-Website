@@ -1,5 +1,4 @@
 import { ImSun } from "react-icons/im";
-import NavbarListItem from "./NavbarListItem.jsx";
 import { useContext } from "react";
 import { AppContext } from "../context/appContext.jsx";
 import { MdDarkMode } from "react-icons/md";
@@ -7,6 +6,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import NavbarMenuItem from "./NavbarMenuItem.jsx";
 import { IoLanguage } from "react-icons/io5";
 import clsx from "clsx";
+import NavbarNavItem from "./NavbarNavItem.jsx";
 
 const NavBar = () => {
   const {
@@ -31,11 +31,11 @@ const NavBar = () => {
 
   const changeTheme = () => {
     if (theme === "light") {
-      localStorage.setItem("theme", JSON.stringify("dark"));
-      setTheme(JSON.parse(localStorage.getItem("theme")));
+      localStorage.theme = JSON.stringify("dark");
+      setTheme(JSON.parse(localStorage.theme));
     } else {
-      localStorage.setItem("theme", JSON.stringify("light"));
-      setTheme(JSON.parse(localStorage.getItem("theme")));
+      localStorage.theme = JSON.stringify("light");
+      setTheme(JSON.parse(localStorage.theme));
     }
   };
   const changeLang = () => {
@@ -43,18 +43,16 @@ const NavBar = () => {
     setLanguage(currentLang);
     i18n.changeLanguage(currentLang);
   };
-  const generateList = (type) => {
+  const generateNavbarItems = (type) => {
     const navbarLng = {
       links: [],
     };
-    for (let i = 0; i < navbar.links.length; i++) {
-      const link = {
-        id: navbar.links[i].id,
-        value: navbar.links[i].value,
-        path: navbar.links[i].path,
+    for (let i = 0; i < navbar.navLinks.length; i++) {
+      const lngObj = {
         valueT: navbarT.links[i].value,
       };
-      navbarLng.links.push(link);
+      const link = Object.assign(navbar.navLinks[i], lngObj);
+      navbarLng.links = [...navbarLng.links, link];
     }
     if (type === "menu") {
       return navbarLng.links.map((link) => (
@@ -62,7 +60,7 @@ const NavBar = () => {
       ));
     } else {
       return navbarLng.links.map((link) => (
-        <NavbarListItem link={link} key={link.id} />
+        <NavbarNavItem link={link} key={link.id} />
       ));
     }
   };
@@ -73,7 +71,7 @@ const NavBar = () => {
         <a href="/" className="navbar__logo">
           <span className="navbar__logo-span">{t(navbarT.logoSpan)}</span>
         </a>
-        <ul className="navbar__list">{generateList()}</ul>
+        <ul className="navbar__navlinks">{generateNavbarItems()}</ul>
         <ul className="navbar__btns">
           <li className="navbar__btns-item">
             <button
@@ -121,7 +119,7 @@ const NavBar = () => {
           >
             <GiHamburgerMenu className="navbar__btns-item-img" />
             {isMenuOpen && (
-              <ul className={navbarBtnsItemMenu}>{generateList("menu")}</ul>
+              <ul className={navbarBtnsItemMenu}>{generateNavbarItems("menu")}</ul>
             )}
           </li>
         </ul>

@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import ContactLink from "../components/ContactLink.jsx";
+import ContactSocialsItem from "../components/ContactSocialsItem.jsx";
 import clsx from "clsx";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
@@ -22,11 +22,11 @@ const Contact = () => {
               {t(contactT.mainTitle)}
             </h2>
             <p className={contactAddressText}>{t(contactT.mainText)}</p>
-            <div className="contact__address-socials">
-              {contact.links?.map((link) => (
-                <ContactLink link={link} key={link.id} />
+            <ul className="contact__address-socials">
+              {contact.socialsLinks?.map((link) => (
+                <ContactSocialsItem link={link} key={link.id} />
               ))}
-            </div>
+            </ul>
           </address>
           <form
             className="contact__form"

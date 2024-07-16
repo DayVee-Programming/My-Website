@@ -75,20 +75,22 @@
         gap: rem(15);
       }
 
-      &-link {
+      &-item {
         transition: 0.3s;
 
         &:hover {
           transform: translateY(rem(-10));
         }
 
-        &-img {
-          width: rem(48);
-          height: rem(48);
-          border-radius: rem(10);
+        &-link {
+          &-img {
+            width: rem(48);
+            height: rem(48);
+            border-radius: rem(10);
 
-          &.light {
-            background: $clr-2;
+            &.light {
+              background: $clr-2;
+            }
           }
         }
       }

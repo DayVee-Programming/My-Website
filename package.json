@@ -20,8 +20,10 @@
     "react-i18next": "^14.1.2",
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1",
+    "react-spinners": "^0.14.1",
     "sass": "^1.77.4",
-    "typed.js": "^2.1.0"
+    "typed.js": "^2.1.0",
+    "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",

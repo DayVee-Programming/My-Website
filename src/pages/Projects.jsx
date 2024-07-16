@@ -1,8 +1,8 @@
 import { useContext } from "react";
-import ProjectCard from "../components/ProjectCard.jsx";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
+import ProjectsCard from "../components/ProjectsCard.jsx";
 
 const Projects = () => {
   const { projects, theme, t } = useContext(AppContext);
@@ -20,7 +20,7 @@ const Projects = () => {
       projectsLng.cards = [...projectsLng.cards, link];
     }
     return projectsLng.cards?.map((card) => (
-      <ProjectCard card={card} key={card.id} />
+      <ProjectsCard card={card} key={card.id} />
     ));
   };
 
@@ -30,7 +30,7 @@ const Projects = () => {
       <div id="projects" className="projects" data-theme={theme}>
         <div className="container projects__wrap">
           <h2 className="projects__title title">{t(projectsT.title)}</h2>
-          <div className="projects__cards">{generateCards()}</div>
+          <ul className="projects__cards">{generateCards()}</ul>
         </div>
       </div>
       <Footer />

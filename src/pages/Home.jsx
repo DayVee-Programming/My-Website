@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { images } from "../assets/images/images.js";
-import HomeContentLink from "../components/HomeContentLink.jsx";
 import { useContext, useEffect, useRef } from "react";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
 import Typed from "typed.js";
 import HomeListItem from "../components/HomeListItem.jsx";
+import HomeProfileItem from "../components/HomeProfileItem.jsx";
 
 const Home = () => {
   const { home, theme, t, navbar } = useContext(AppContext);
@@ -24,14 +24,12 @@ const Home = () => {
     const homeLng = {
       links: [],
     };
-    for (let i = 0; i < navbar.links.length; i++) {
-      const link = {
-        id: navbar.links[i].id,
-        value: navbar.links[i].value,
-        path: navbar.links[i].path,
+    for (let i = 0; i < navbar.navLinks.length; i++) {
+      const lngObj = {
         valueT: navbarT.links[i].value,
       };
-      homeLng.links.push(link);
+      const link = Object.assign(navbar.navLinks[i], lngObj);
+      homeLng.links = [...homeLng.links, link];
     }
     return homeLng.links.map((link) => (
       <HomeListItem link={link} key={link.id} />
@@ -58,11 +56,11 @@ const Home = () => {
               <h1 className="home__main-content-title" ref={title}></h1>
               <p className={homeMainContentText}>{t(homeT.mainContentText)}</p>
               <ul className="home__main-list">{generateList()}</ul>
-              <div className="home__main-content-links">
-                {home.profileImages?.map((img) => (
-                  <HomeContentLink img={img} key={img.id} />
+              <ul className="home__main-content-profile">
+                {home.profileLinks?.map((img) => (
+                  <HomeProfileItem img={img} key={img.id} />
                 ))}
-              </div>
+              </ul>
             </div>
             <img src={images.selfie} alt="" className={homeMainImg} />
           </div>

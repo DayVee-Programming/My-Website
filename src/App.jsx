@@ -8,147 +8,113 @@ import { AppContext } from "./context/appContext.jsx";
 import { Route, Routes } from "react-router-dom";
 import NotFound from "./pages/NotFound.jsx";
 import { useTranslation } from "react-i18next";
+import { v4 } from "uuid";
+import { GridLoader } from "react-spinners";
 
 const App = () => {
   const [navbar, setNavbar] = useState({
-    links: [
+    navLinks: [
       {
-        id: 1,
-        value: "About",
+        id: v4(),
         path: "/about",
       },
       {
-        id: 2,
-        value: "Projects",
+        id: v4(),
         path: "/projects",
       },
       {
-        id: 3,
-        value: "Contact",
+        id: v4(),
         path: "/contact",
       },
     ],
   });
   const [home, setHome] = useState({
-    stackImages: [
+    profileLinks: [
       {
-        id: 1,
-        value: images.htmlIcon,
-        link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
-      },
-      {
-        id: 2,
-        value: images.cssIcon,
-        link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
-      },
-      {
-        id: 3,
-        value: images.jsIcon,
-        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
-      },
-      {
-        id: 4,
-        value: images.typescriptIcon,
-        link: "https://www.typescriptlang.org/",
-      },
-      {
-        id: 5,
-        value: images.reactIcon,
-        link: "https://react.dev/",
-      },
-      {
-        id: 6,
-        value: images.sassIcon,
-        link: "https://sass-lang.com/",
-      },
-    ],
-    profileImages: [
-      {
-        id: 1,
+        id: v4(),
         value: images.githubIcon,
-        value2: images.githubIcon2,
         link: "https://github.com/DayVee-Programming",
       },
       {
-        id: 2,
+        id: v4(),
         value: images.linkedInIcon,
         link: "https://www.linkedin.com/in/dayvee-programming-7b7664228/",
       },
     ],
   });
   const [about, setAbout] = useState({
-    stackImages: [
+    stackLinks: [
       {
-        id: 1,
+        id: v4(),
         value: images.htmlIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
       },
       {
-        id: 2,
+        id: v4(),
         value: images.cssIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
       },
       {
-        id: 3,
+        id: v4(),
         value: images.jsIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
       },
       {
-        id: 4,
+        id: v4(),
         value: images.typescriptIcon,
         link: "https://www.typescriptlang.org/",
       },
       {
-        id: 5,
+        id: v4(),
         value: images.reactIcon,
         link: "https://react.dev/",
       },
       {
-        id: 6,
+        id: v4(),
         value: images.sassIcon,
         link: "https://sass-lang.com/",
       },
     ],
-    toolsImages: [
+    toolsLinks: [
       {
-        id: 1,
+        id: v4(),
         value: images.viteIcon,
         link: "https://vitejs.dev/",
       },
       {
-        id: 2,
+        id: v4(),
         value: images.figmaIcon,
         link: "https://www.figma.com/",
       },
       {
-        id: 3,
+        id: v4(),
         value: images.npmIcon,
         link: "https://www.npmjs.com/",
       },
       {
-        id: 4,
+        id: v4(),
         value: images.gitIcon,
         link: "https://www.git-scm.com/",
       },
       {
-        id: 5,
+        id: v4(),
         value: images.bemIcon,
         link: "https://en.bem.info/methodology/",
       },
     ],
-    interestsImages: [
+    interestsLinks: [
       {
-        id: 1,
+        id: v4(),
         value: images.videoGamesIcon,
         link: `https://en.wikipedia.org/wiki/Video_game`,
       },
       {
-        id: 2,
+        id: v4(),
         value: images.chessIcon,
         link: `https://en.wikipedia.org/wiki/Chess`,
       },
       {
-        id: 3,
+        id: v4(),
         value: images.cardGamesIcon,
         link: `https://en.wikipedia.org/wiki/Card_game`,
       },
@@ -157,111 +123,102 @@ const App = () => {
   const [projects, setProjects] = useState({
     cards: [
       {
-        id: Math.random(),
+        id: v4(),
         title: "Gitpod 💻",
-        text: `With Gitpod spin up fresh, automated dev environments for each task, in the cloud, in seconds.`,
         list: [
-          { id: 1, value: "React" },
-          { id: 2, value: "SASS" },
+          { id: v4(), value: "React" },
+          { id: v4(), value: "SASS" },
         ],
         liveLink: "https://gitpod-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Gitpod",
         image: images.gitpod,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Zone 🎥",
-        text: `Zone has over 15 year experience in business consulting arena.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
-          { id: 3, value: "JS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
+          { id: v4(), value: "JS" },
         ],
         liveLink: "https://zone-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Zone",
         image: images.zone,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "BlueCollar 👷",
-        text: `Bluecollar Electrical services are trusted and reliable electricians who serve customers throughout United States Of America. They have extensive experience of domestic and business electrical installations.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
         ],
         liveLink: "https://blue-collar-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Blue-Collar",
         image: images.blueCollar,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Antools 🛠️",
-        text: "Antool is a web collection of information on paid or free Design and Development tools.",
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
         ],
         liveLink: "https://antools-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Antools",
         image: images.antools,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "CrypAppy 💰",
-        text: `The crypto portfolio app.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
         ],
         liveLink: "https://crypappy-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/CrypAppy",
         image: images.crypAppy,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Nike 👟",
-        text: `Nike is an athletic footwear and apparel corporation. It is the world's largest supplier of athletic shoes and apparel and a major manufacturer of sports equipment.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
         ],
         liveLink: "https://nike-big-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Nike-Big",
         image: images.nike,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Soundtrack 🎧",
-        text: `Soundtrack provides services to connect with visitors in real time.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
         ],
         liveLink: "https://soundtrack-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Soundtrack",
         image: images.soundtrack,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Pokemon Fighter 🃏",
-        text: `Pokemon Fighter is an interactive game from Pokémon main game series.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
-          { id: 3, value: "JS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
+          { id: v4(), value: "JS" },
         ],
         liveLink: "https://pokemon-fighter-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Pokemon-Fighter",
         image: images.pokemon,
       },
       {
-        id: Math.random(),
+        id: v4(),
         title: "Simon 👨‍🔬",
-        text: `Simon is an electronic game of short-term memory.`,
         list: [
-          { id: 1, value: "HTML" },
-          { id: 2, value: "CSS" },
-          { id: 3, value: "JS" },
+          { id: v4(), value: "HTML" },
+          { id: v4(), value: "CSS" },
+          { id: v4(), value: "JS" },
         ],
         liveLink: "https://simon-game-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Simon-Game",
@@ -270,23 +227,23 @@ const App = () => {
     ],
   });
   const [contact, setContact] = useState({
-    links: [
+    socialsLinks: [
       {
-        id: 1,
+        id: v4(),
         value: images.telegramIcon,
         appName: "Telegram:",
         text: "@Davron1702",
         link: "https://t.me/Davron1702",
       },
       {
-        id: 2,
+        id: v4(),
         value: images.gmailIcon,
         appName: "Email:",
         text: "davronbek4business@gmail.com",
         link: "https://g.co/kgs/yaSxgYn",
       },
       {
-        id: 3,
+        id: v4(),
         value: images.whatsAppIcon,
         appName: "WhatsApp:",
         text: "Davronbek Reyimbaev",
@@ -294,16 +251,17 @@ const App = () => {
       },
     ],
   });
-  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
+  const [theme, setTheme] = useState(JSON.parse(localStorage.theme));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [emailResult, emailSetResult] = useState("");
+  const [emailResult, setEmailResult] = useState("");
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
+  const [loading, setLoading] = useState(false);
 
   const sendEmail = async (e, lngObj) => {
     e.preventDefault();
-    emailSetResult(t(lngObj.formSpanSend));
+    setEmailResult(t(lngObj.formSpanSend));
     const formData = new FormData(e.target);
     formData.append("access_key", "7b5d61c7-68fa-4fb3-956e-27668a1a72b4");
     const res = await fetch("https://api.web3forms.com/submit", {
@@ -312,14 +270,18 @@ const App = () => {
     });
     const data = await res.json();
     if (data.success) {
-      emailSetResult(t(lngObj.formSpanSuccess));
+      setEmailResult(t(lngObj.formSpanSuccess));
       e.target.reset();
     } else {
-      emailSetResult(data.message);
+      setEmailResult(data.message);
     }
   };
   useEffect(() => {
-    if (!theme) localStorage.setItem("theme", JSON.stringify("light"));
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
+    if (!theme) localStorage.theme = JSON.stringify("light");
   }, []);
 
   return (
@@ -346,17 +308,31 @@ const App = () => {
         i18n,
         t,
         emailResult,
-        emailSetResult,
+        setEmailResult,
         sendEmail,
+        v4,
       }}
     >
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      {loading ? (
+        <div className="loader" data-theme={theme}>
+          <GridLoader
+            className="gridloader"
+            color={"#7171f0"}
+            loading={loading}
+            size={30}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+        </div>
+      ) : (
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />{" "}
+        </Routes>
+      )}
     </AppContext.Provider>
   );
 };

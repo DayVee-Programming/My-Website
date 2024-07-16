@@ -9,6 +9,7 @@ $clr-5: #ffff00;
 $clr-6: #ecec2a;
 $clr-7: #e911e9;
 $clr-8: #7171f0;
+$clr-8-a70: #0000ff80;
 
 $ff-1: "Poppins", sans-serif;
 $fw-1: 400;
@@ -39,6 +40,23 @@ html {
 
 body {
   position: relative;
+
+  &::-webkit-scrollbar {
+    scrollbar-width: thin;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $clr-8;
+    border-radius: 100vw;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $clr-8-a70;
+  }
 }
 
 a {
@@ -78,4 +96,11 @@ address {
 
 .dark-text {
   color: $clr-6;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100svh;
 }

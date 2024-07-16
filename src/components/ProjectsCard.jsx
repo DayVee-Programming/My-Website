@@ -1,10 +1,10 @@
 import clsx from "clsx";
 import { images } from "../assets/images/images.js";
-import ProjectCardItem from "./ProjectCardItem.jsx";
 import { useContext } from "react";
 import { AppContext } from "../context/appContext.jsx";
+import ProjectsCardItem from "./ProjectsCardItem.jsx";
 
-const ProjectCard = ({ card }) => {
+const ProjectsCard = ({ card }) => {
   const { theme } = useContext(AppContext);
   const projectsCardsCardDescText = clsx("projects__cards-card-desc-text", {
     "dark-text": theme === "dark",
@@ -20,7 +20,7 @@ const ProjectCard = ({ card }) => {
   );
 
   return (
-    <div key={card.id} className="projects__cards-card">
+    <li key={card.id} className="projects__cards-card">
       <div className="projects__cards-card-pic">
         <img src={card.image} alt="" className={projectsCardsCardPicImg} />
       </div>
@@ -29,7 +29,7 @@ const ProjectCard = ({ card }) => {
         <p className={projectsCardsCardDescText}>{card.textT}</p>
         <ul className="projects__cards-card-desc-list">
           {card.list?.map((item) => (
-            <ProjectCardItem item={item} key={item.id} />
+            <ProjectsCardItem item={item} key={item.id} />
           ))}
         </ul>
         <div className="projects__cards-card-desc-source">
@@ -59,8 +59,8 @@ const ProjectCard = ({ card }) => {
           </a>
         </div>
       </div>
-    </div>
+    </li>
   );
 };
 
-export default ProjectCard;
+export default ProjectsCard;

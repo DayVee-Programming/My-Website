@@ -4,25 +4,24 @@ import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 const NotFound = () => {
-  const { theme } = useContext(AppContext);
+  const { theme, t } = useContext(AppContext);
+  const notfoundT = t("notfound", { returnObjects: true });
 
   return (
     <>
       <NavBar />
       <div className="notfound" data-theme={theme}>
         <div className="container notfound__wrap">
-          <h1 className="notfound__title">404 Error</h1>
-          <h2 className="notfound__subtitle">
-            Sorry, I can’t find what you’re looking for.
-          </h2>
+          <h1 className="notfound__title">{t(notfoundT.title)}</h1>
+          <h2 className="notfound__subtitle">{t(notfoundT.subtitle)}</h2>
           <p className="notfound__text">
-            If you think this is an error on my part, please&nbsp;
+            {t(notfoundT.text1)}&nbsp;
             <a className="notfound__text-link" href="https://g.co/kgs/yaSxgYn">
-              email me.
+              {t(notfoundT.text2)}
             </a>
           </p>
           <a href="/" className="notfound__link">
-            Go Home
+            {t(notfoundT.link)}
           </a>
         </div>
       </div>

@@ -4,8 +4,8 @@ import { AppContext } from "../context/appContext.jsx";
 import clsx from "clsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
-import AboutStackLink from "../components/AboutStackLink.jsx";
 import AboutInterestsItem from "../components/AboutInterestsItem.jsx";
+import AboutStackItem from "../components/AboutStackItem.jsx";
 
 const About = () => {
   const { about, theme, t } = useContext(AppContext);
@@ -16,18 +16,18 @@ const About = () => {
   const aboutMainImg = clsx("about__main-img", {
     light: theme === "dark",
   });
-  const generateInterests = () => {
+  const generateInterestsItems = () => {
     const aboutLng = {
-      interestsImages: [],
+      interestsLinks: [],
     };
-    for (let i = 0; i < about.interestsImages.length; i++) {
+    for (let i = 0; i < about.interestsLinks.length; i++) {
       const lngObj = {
         textT: aboutT.interests[i].text,
       };
-      const link = Object.assign(about.interestsImages[i], lngObj);
-      aboutLng.interestsImages = [...aboutLng.interestsImages, link];
+      const link = Object.assign(about.interestsLinks[i], lngObj);
+      aboutLng.interestsLinks = [...aboutLng.interestsLinks, link];
     }
-    return aboutLng.interestsImages?.map((interest) => (
+    return aboutLng.interestsLinks?.map((interest) => (
       <AboutInterestsItem interest={interest} key={interest.id} />
     ));
   };
@@ -48,25 +48,27 @@ const About = () => {
           </div>
           <div className="about__stack">
             <p className="about__stack-text">{t(aboutT.stackText)}</p>
-            <div className="about__stack-links">
-              {about.stackImages?.map((img) => (
-                <AboutStackLink img={img} key={img.id} />
+            <ul className="about__stack-links">
+              {about.stackLinks?.map((img) => (
+                <AboutStackItem img={img} key={img.id} />
               ))}
-            </div>
+            </ul>
           </div>
           <div className="about__stack">
             <p className="about__stack-text">{t(aboutT.toolsText)}</p>
-            <div className="about__stack-links">
-              {about.toolsImages?.map((img) => (
-                <AboutStackLink img={img} key={img.id} />
+            <ul className="about__stack-links">
+              {about.toolsLinks?.map((img) => (
+                <AboutStackItem img={img} key={img.id} />
               ))}
-            </div>
+            </ul>
           </div>
           <div className="about__interests">
             <h2 className="about__interests-title title">
               {t(aboutT.interestsText)}
             </h2>
-            <ul className="about__interests-cards">{generateInterests()}</ul>
+            <ul className="about__interests-cards">
+              {generateInterestsItems()}
+            </ul>
           </div>
         </div>
       </div>
