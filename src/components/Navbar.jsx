@@ -31,12 +31,11 @@ const NavBar = () => {
 
   const changeTheme = () => {
     if (theme === "light") {
-      localStorage.theme = JSON.stringify("dark");
-      setTheme(JSON.parse(localStorage.theme));
+      localStorage.setItem("theme", JSON.stringify("dark"));
     } else {
-      localStorage.theme = JSON.stringify("light");
-      setTheme(JSON.parse(localStorage.theme));
+      localStorage.setItem("theme", JSON.stringify("light"));
     }
+    setTheme(JSON.parse(localStorage.getItem("theme")));
   };
   const changeLang = () => {
     const currentLang = language === "en" ? "ru" : "en";
@@ -119,7 +118,9 @@ const NavBar = () => {
           >
             <GiHamburgerMenu className="navbar__btns-item-img" />
             {isMenuOpen && (
-              <ul className={navbarBtnsItemMenu}>{generateNavbarItems("menu")}</ul>
+              <ul className={navbarBtnsItemMenu}>
+                {generateNavbarItems("menu")}
+              </ul>
             )}
           </li>
         </ul>

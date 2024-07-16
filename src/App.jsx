@@ -251,7 +251,7 @@ const App = () => {
       },
     ],
   });
-  const [theme, setTheme] = useState(JSON.parse(localStorage.theme));
+  const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [emailResult, setEmailResult] = useState("");
@@ -281,7 +281,7 @@ const App = () => {
     setTimeout(() => {
       setLoading(false);
     }, 500);
-    if (!theme) localStorage.theme = JSON.stringify("light");
+    if (!theme) localStorage.setItem("theme", JSON.stringify("light"));
   }, []);
 
   return (
