@@ -45,16 +45,18 @@
       }
 
       &-pic {
-        width: min(100%, rem(650));
-        min-height: rem(250);
+        width: min(100%, rem(600));
+        min-height: rem(300);
         display: flex;
         z-index: 10;
         transition: 0.3s;
         animation: scale 1s;
+        object-fit: cover;
 
         &-img {
           border-radius: rem(20);
           box-shadow: 0 0 rem(10) $clr-1;
+          max-height: 500px;
 
           &.light {
             box-shadow: 0 0 rem(10) $clr-2;

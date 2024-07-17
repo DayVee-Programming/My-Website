@@ -23,10 +23,20 @@ const NavBar = () => {
   const { isMenuOpen, setIsMenuOpen } = useContext(AppContext);
   const navbarT = t("navbar", { returnObjects: true });
   const navbarBtnsItemBtnImg = clsx("navbar__btns-item-btn-img", {
+    "light-menu": isMenuOpen,
     light: theme === "dark",
   });
   const navbarBtnsItemMenu = clsx("navbar__btns-item-menu", {
     closed: !isMenuOpen,
+  });
+  const navbarBtnsItemBtnImgIcons = clsx("navbar__btns-item-btn-img", {
+    moon: theme === "light",
+    sun: theme === "dark",
+    "moon-menu": isMenuOpen,
+    "sun-menu": isMenuOpen,
+  });
+  const navbarBtnsTtemImg = clsx("navbar__btns-item-img", {
+    "light-menu": isMenuOpen,
   });
 
   const changeTheme = () => {
@@ -78,9 +88,9 @@ const NavBar = () => {
               onClick={() => changeTheme()}
             >
               {theme === "light" ? (
-                <MdDarkMode className="navbar__btns-item-btn-img moon" />
+                <MdDarkMode className={navbarBtnsItemBtnImgIcons} />
               ) : (
-                <ImSun className="navbar__btns-item-btn-img sun" />
+                <ImSun className={navbarBtnsItemBtnImgIcons} />
               )}
             </button>
             <button
@@ -116,7 +126,7 @@ const NavBar = () => {
             className="navbar__btns-item"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <GiHamburgerMenu className="navbar__btns-item-img" />
+            <GiHamburgerMenu className={navbarBtnsTtemImg} />
             {isMenuOpen && (
               <ul className={navbarBtnsItemMenu}>
                 {generateNavbarItems("menu")}
