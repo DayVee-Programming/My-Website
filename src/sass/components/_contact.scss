@@ -93,6 +93,7 @@
       outline: none;
       border: rem(1) solid $clr-1;
       transition: 0.3s;
+      border-radius: rem(5);
 
       &:focus {
         padding: rem(10);
@@ -119,9 +120,23 @@
       margin: 0 auto;
       cursor: pointer;
       transition: 0.3s;
+      z-index: 1;
+      position: relative;
+      overflow: hidden;
 
-      &:hover {
-        box-shadow: 0 0 rem(7) $clr-4;
+      &:hover::after {
+        height: 180%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        height: 0;
+        background: $clr-7;
+        z-index: -1;
+        transition: 0.5s;
+        border-radius: 0 0 50% 50%;
       }
     }
   }

@@ -72,22 +72,39 @@
       padding: rem(15) 0;
 
       &-item {
+        padding: rem(10);
+        border: rem(1) solid $clr-1;
+        transition: 0.3s;
+        border-radius: rem(5);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &:hover::after {
+          height: 180%;
+        }
+
+        &:hover &-link {
+          color: $clr-2;
+        }
+
+        &.light {
+          border-color: $clr-2;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          height: 0;
+          background: $clr-8;
+          z-index: -1;
+          transition: 0.5s;
+          border-radius: 0 0 50% 50%;
+        }
+
         &-link {
-          padding: rem(10);
-          border: rem(1) solid $clr-1;
-          transition: 0.3s;
           font-size: $fsr-4;
-          border-radius: rem(5);
-
-          &:hover {
-            background: $clr-8;
-            color: $clr-2;
-            border-color: $clr-2;
-          }
-
-          &.light {
-            border-color: $clr-2;
-          }
         }
       }
     }

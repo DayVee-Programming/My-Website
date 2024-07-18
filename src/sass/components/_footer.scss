@@ -22,9 +22,9 @@
     position: absolute;
     top: -50%;
     left: 3%;
-    height: rem(1);
+    height: rem(3);
     width: 95%;
-    background: $clr-1;
+    background: linear-gradient(90deg, $clr-4, $clr-7);
     align-self: center;
 
     @include breakpoint(md) {

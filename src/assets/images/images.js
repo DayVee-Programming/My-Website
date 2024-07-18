@@ -30,6 +30,9 @@ import selfie from "./selfie.jpg";
 import videoGamesIcon from "./video-games.png";
 import chessIcon from "./chess.svg";
 import cardGamesIcon from "./card-games.png";
+import logo from "./logo.svg";
+import logo2 from "./logo2.svg";
+import logo3 from "./logo3.png";
 
 export const images = {
   antools,
@@ -64,4 +67,7 @@ export const images = {
   videoGamesIcon,
   chessIcon,
   cardGamesIcon,
+  logo,
+  logo2,
+  logo3,
 };

@@ -7,6 +7,7 @@ import NavbarMenuItem from "./NavbarMenuItem.jsx";
 import { IoLanguage } from "react-icons/io5";
 import clsx from "clsx";
 import NavbarNavItem from "./NavbarNavItem.jsx";
+import { images } from "../assets/images/images.js";
 
 const NavBar = () => {
   const {
@@ -78,7 +79,11 @@ const NavBar = () => {
     <header className="navbar" data-theme={theme}>
       <nav className="container navbar__wrap">
         <a href="/" className="navbar__logo">
-          <span className="navbar__logo-span">{t(navbarT.logoSpan)}</span>
+          <img
+            className="navbar__logo-img"
+            src={theme === "light" ? images.logo : images.logo2}
+            alt=""
+          />
         </a>
         <ul className="navbar__navlinks">{generateNavbarItems()}</ul>
         <ul className="navbar__btns">

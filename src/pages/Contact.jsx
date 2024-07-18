@@ -37,7 +37,7 @@ const Contact = () => {
             </label>
             <input
               className="contact__form-input"
-              name="name"
+              name="user_name"
               required
               type="text"
             />
@@ -47,7 +47,7 @@ const Contact = () => {
             <input
               className="contact__form-input"
               type="email"
-              name="email"
+              name="user_email"
               required
             />
             <label className="contact__form-label">
@@ -61,7 +61,9 @@ const Contact = () => {
               required
             ></textarea>
             <span className="contact__form-span">{emailResult}</span>
-            <button className="contact__form-btn">{t(contactT.formBtn)}</button>
+            <button className="contact__form-btn" value="Send">
+              {t(contactT.formBtn)}
+            </button>
           </form>
         </div>
       </div>

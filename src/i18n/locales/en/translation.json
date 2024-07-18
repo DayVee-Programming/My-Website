@@ -70,8 +70,8 @@
   "contact": {
     "mainTitle": "Send me a message 📧",
     "mainText": "Feel free to reach out through social media apps, email or contact form below.",
-    "formLabelName": "Your name",
-    "formLabelEmail": "Email",
+    "formLabelName": "Your Name",
+    "formLabelEmail": "Your Email",
     "formLabelMessage": "Message",
     "formTextarea": "Type your message here...",
     "formSpanSend": "Sending...",

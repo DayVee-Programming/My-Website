@@ -56,7 +56,7 @@
         &-img {
           border-radius: rem(20);
           box-shadow: 0 0 rem(10) $clr-1;
-          max-height: 500px;
+          max-height: rem(500);
 
           &.light {
             box-shadow: 0 0 rem(10) $clr-2;
@@ -105,11 +105,14 @@
           align-items: center;
 
           &-item {
-            font-weight: $fw-2;
             font-size: $fsr-5;
+            background: $clr-9;
+            padding: rem(5) rem(10);
+            border-radius: rem(10);
 
             &.light {
               color: $clr-8;
+              background: none;
             }
           }
         }

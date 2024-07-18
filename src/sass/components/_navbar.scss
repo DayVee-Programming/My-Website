@@ -6,7 +6,7 @@
   width: 100%;
   top: 0;
   left: 0;
-  padding: rem(15) 0;
+  padding: rem(10) 0;
   z-index: 100;
   transition: 0.3s;
 
@@ -27,13 +27,15 @@
 
   &__logo {
     cursor: pointer;
+    display: flex;
 
-    &-span {
-      font-weight: $fw-2;
-      font-size: $fsr-5;
+    &-img {
+      width: rem(90);
+      height: rem(40);
 
-      &:hover {
-        color: $clr-8;
+      @include breakpoint(sm) {
+        width: rem(75);
+        height: rem(35);
       }
     }
   }
@@ -48,13 +50,25 @@
     }
 
     &-item {
+      &:hover &-link::after {
+        width: 100%;
+      }
+
       &-link {
         font-weight: $fw-2;
         font-size: $fsr-2;
         transition: 0.3s;
+        position: relative;
 
-        &:hover {
-          color: $clr-8;
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: rem(-3);
+          left: 0;
+          width: 0%;
+          height: rem(3);
+          background: linear-gradient(90deg, $clr-4, $clr-7);
+          transition: 0.3s;
         }
       }
     }

@@ -4,13 +4,13 @@ import clsx from "clsx";
 
 const HomeListItem = ({ link }) => {
   const { theme } = useContext(AppContext);
-  const homeMainListItemLink = clsx("home__main-list-item-link", {
+  const homeMainListItem = clsx("home__main-list-item", {
     light: theme === "dark",
   });
 
   return (
-    <li className="home__main-list-item">
-      <a href={link.path} className={homeMainListItemLink}>
+    <li className={homeMainListItem}>
+      <a href={link.path} className="home__main-list-item-link">
         {link.valueT}
       </a>
     </li>

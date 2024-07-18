@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound.jsx";
 import { useTranslation } from "react-i18next";
 import { v4 } from "uuid";
 import { GridLoader } from "react-spinners";
+import emailjs from "@emailjs/browser";
 
 const App = () => {
   const [navbar, setNavbar] = useState({
@@ -254,27 +255,26 @@ const App = () => {
   const [theme, setTheme] = useState(JSON.parse(localStorage.getItem("theme")));
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [emailResult, setEmailResult] = useState("");
+  const [emailResult, setEmailResult] = useState();
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
   const [loading, setLoading] = useState(false);
 
   const sendEmail = async (e, lngObj) => {
     e.preventDefault();
-    setEmailResult(t(lngObj.formSpanSend));
-    const formData = new FormData(e.target);
-    formData.append("access_key", "7b5d61c7-68fa-4fb3-956e-27668a1a72b4");
-    const res = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      body: formData,
-    });
-    const data = await res.json();
-    if (data.success) {
-      setEmailResult(t(lngObj.formSpanSuccess));
-      e.target.reset();
-    } else {
-      setEmailResult(data.message);
-    }
+    setEmailResult(t(lngObj.formSpanSend))
+    emailjs
+      .sendForm("service_af0pld9", "template_tl1wbb5", e.target, {
+        publicKey: "90nxu5zDRtHNocL71",
+      })
+      .then(
+        () => {
+          setEmailResult(t(lngObj.formSpanSuccess));
+        },
+        () => {
+          setEmailResult(t(lngObj.formSpanError));
+        }
+      );
   };
   useEffect(() => {
     setLoading(true);

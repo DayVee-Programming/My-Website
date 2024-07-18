@@ -20,6 +20,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources,
+    defaultLocale: "en",
     fallbackLng: "en",
     debug: false,
     interpolation: {
