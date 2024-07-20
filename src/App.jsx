@@ -5,7 +5,7 @@ import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
 import Contact from "./pages/Contact.jsx";
 import { AppContext } from "./context/appContext.jsx";
-import { Route, Routes } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import NotFound from "./pages/NotFound.jsx";
 import { useTranslation } from "react-i18next";
 import { v4 } from "uuid";
@@ -259,10 +259,32 @@ const App = () => {
   const { i18n, t } = useTranslation();
   const [language, setLanguage] = useState(i18n.language);
   const [loading, setLoading] = useState(false);
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/projects",
+      element: <Projects />,
+    },
+    {
+      path: "/contact",
+      element: <Contact />,
+    },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
+  ]);
 
   const sendEmail = async (e, lngObj) => {
     e.preventDefault();
-    setEmailResult(t(lngObj.formSpanSend))
+    setEmailResult(t(lngObj.formSpanSend));
     emailjs
       .sendForm("service_af0pld9", "template_tl1wbb5", e.target, {
         publicKey: "90nxu5zDRtHNocL71",
@@ -325,13 +347,7 @@ const App = () => {
           />
         </div>
       ) : (
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<NotFound />} />{" "}
-        </Routes>
+        <RouterProvider router={router} />
       )}
     </AppContext.Provider>
   );

@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../context/appContext";
 import NavBar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const NotFound = () => {
   const { theme, t } = useContext(AppContext);
@@ -20,9 +21,9 @@ const NotFound = () => {
               {t(notfoundT.text2)}
             </a>
           </p>
-          <a href="/" className="notfound__link">
+          <Link className="notfound__link" to="/">
             {t(notfoundT.link)}
-          </a>
+          </Link>
         </div>
       </div>
       <Footer />
