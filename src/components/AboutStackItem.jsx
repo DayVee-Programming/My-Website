@@ -16,6 +16,7 @@ const AboutStackItem = ({ img }) => {
         className="about__stack-links-item-link"
       >
         <img src={img.value} alt="" className={aboutStackLinksItemLinkImg} />
+        <span className="about__stack-links-item-link-info">{img.info}</span>
       </a>
     </li>
   );

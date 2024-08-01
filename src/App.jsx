@@ -49,31 +49,37 @@ const App = () => {
         id: v4(),
         value: images.htmlIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+        info: "HTML",
       },
       {
         id: v4(),
         value: images.cssIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+        info: "CSS",
       },
       {
         id: v4(),
         value: images.jsIcon,
         link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        info: "JavaScript",
       },
       {
         id: v4(),
         value: images.typescriptIcon,
         link: "https://www.typescriptlang.org/",
+        info: "TypeScript",
       },
       {
         id: v4(),
         value: images.reactIcon,
         link: "https://react.dev/",
+        info: "React",
       },
       {
         id: v4(),
         value: images.sassIcon,
         link: "https://sass-lang.com/",
+        info: "Sass",
       },
     ],
     toolsLinks: [
@@ -81,26 +87,37 @@ const App = () => {
         id: v4(),
         value: images.viteIcon,
         link: "https://vitejs.dev/",
+        info: "Vite",
+      },
+      {
+        id: v4(),
+        value: images.reduxIcon,
+        link: "https://redux-toolkit.js.org/",
+        info: "Redux Toolkit",
       },
       {
         id: v4(),
         value: images.figmaIcon,
         link: "https://www.figma.com/",
+        info: "Figma",
       },
       {
         id: v4(),
         value: images.npmIcon,
         link: "https://www.npmjs.com/",
+        info: "npm",
       },
       {
         id: v4(),
         value: images.gitIcon,
         link: "https://www.git-scm.com/",
+        info: "Git",
       },
       {
         id: v4(),
         value: images.bemIcon,
         link: "https://en.bem.info/methodology/",
+        info: "BEM",
       },
     ],
     interestsLinks: [
@@ -152,6 +169,7 @@ const App = () => {
         list: [
           { id: v4(), value: "HTML" },
           { id: v4(), value: "CSS" },
+          { id: v4(), value: "JS" },
         ],
         liveLink: "https://blue-collar-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Blue-Collar",
@@ -241,7 +259,7 @@ const App = () => {
         value: images.gmailIcon,
         appName: "Email:",
         text: "davronbek4business@gmail.com",
-        link: "https://g.co/kgs/yaSxgYn",
+        link: "mailto:davronbek4business@gmail.com",
       },
       {
         id: v4(),

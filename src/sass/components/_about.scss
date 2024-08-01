@@ -53,6 +53,11 @@
     gap: rem(15);
     justify-content: space-between;
     align-items: center;
+    padding-bottom: rem(20);
+
+    @include breakpoint(770) {
+      padding-bottom: rem(50);
+    }
 
     &-text {
       font-weight: $fw-2;
@@ -72,17 +77,24 @@
       @include breakpoint(770) {
         grid-template-columns: repeat(3, 1fr);
         padding-left: rem(10);
-        gap: rem(15);
+        gap: rem(60) rem(15);
       }
 
       &-item {
         transition: 0.3s;
+        position: relative;
+        padding-inline: rem(10);
 
-        &:hover {
-          transform: translateY(rem(-10));
+        &:hover &-link-info {
+          display: block;
         }
 
         &-link {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: rem(12);
+
           &-img {
             width: rem(48);
             height: rem(48);
@@ -90,6 +102,24 @@
 
             &.light {
               background: $clr-2;
+            }
+          }
+
+          &-info {
+            display: none;
+            width: 100%;
+            position: absolute;
+            bottom: rem(-35);
+            left: rem(0);
+            opacity: 1;
+            transition: 0.2s;
+            transition-behavior: allow-discrete;
+            height: rem(30);
+            text-align: center;
+            word-wrap: break-word;
+
+            @starting-style {
+              opacity: 0;
             }
           }
         }

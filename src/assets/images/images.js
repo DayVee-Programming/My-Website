@@ -12,12 +12,13 @@ import typescriptIcon from "./typescript.png";
 import sassIcon from "./sass.png";
 import figmaIcon from "./figma.svg";
 import viteIcon from "./vite.svg";
+import reduxIcon from "./redux.svg";
 import bemIcon from "./bem.svg";
 import gitIcon from "./git.svg";
 import npmIcon from "./npm.svg";
 import antools from "./antools.jpg";
 import webDevelopment from "./web-development.jpg";
-import blueCollar from "./blue-collar.jpg";
+import blueCollar from "./blue-collar.png";
 import crypAppy from "./crypappy.jpg";
 import nike from "./nike.jpg";
 import pokemon from "./pokemon.png";
@@ -50,6 +51,7 @@ export const images = {
   sassIcon,
   figmaIcon,
   viteIcon,
+  reduxIcon,
   bemIcon,
   gitIcon,
   npmIcon,
