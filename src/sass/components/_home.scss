@@ -5,6 +5,7 @@
   padding: rem(125) 0 rem(60);
   transition: 0.3s;
   min-height: 90svh;
+  position: relative;
 
   @include breakpoint(sm) {
     padding: rem(100) 0 rem(60);
@@ -39,6 +40,7 @@
 
       &-text {
         font-size: $fsr-4;
+        z-index: 1;
       }
 
       &-profile {
@@ -48,6 +50,8 @@
         justify-content: center;
 
         &-item {
+          z-index: 1;
+
           &-link {
             &:hover &-img {
               transform: scale(1.1);
@@ -115,10 +119,28 @@
       height: 100%;
       border: rem(1) solid $clr-1;
       border-radius: rem(30);
+      z-index: 1;
 
       &.light {
         box-shadow: 0 0 rem(10) $clr-2;
       }
+    }
+  }
+
+  .bg-el {
+    &.first {
+      top: 20%;
+      left: 5%;
+    }
+
+    &.second {
+      top: 86%;
+      left: 84%;
+    }
+
+    &.third {
+      top: 48%;
+      left: 54%;
     }
   }
 }

@@ -63,11 +63,13 @@
             &-span {
               font-size: $fs-1;
               transition: 0.3s;
+              z-index: 1;
             }
           }
 
           &-text {
             font-size: $fsr-3;
+            z-index: 1;
           }
         }
       }
@@ -138,6 +140,13 @@
         transition: 0.5s;
         border-radius: 0 0 50% 50%;
       }
+    }
+  }
+
+  .bg-el {
+    &.first {
+      top: 33%;
+      left: 44%;
     }
   }
 }

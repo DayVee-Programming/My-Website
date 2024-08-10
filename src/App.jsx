@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { images } from "./assets/images/images.js";
+import { images } from "./utils/images.js";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Projects from "./pages/Projects.jsx";
@@ -149,7 +149,11 @@ const App = () => {
         ],
         liveLink: "https://gitpod-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Gitpod",
-        image: images.gitpod,
+        images: [
+          { id: v4(), value: images.gitpod1 },
+          { id: v4(), value: images.gitpod2 },
+          { id: v4(), value: images.gitpod3 },
+        ],
       },
       {
         id: v4(),
@@ -161,7 +165,11 @@ const App = () => {
         ],
         liveLink: "https://zone-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Zone",
-        image: images.zone,
+        images: [
+          { id: v4(), value: images.zone1 },
+          { id: v4(), value: images.zone2 },
+          { id: v4(), value: images.zone3 },
+        ],
       },
       {
         id: v4(),
@@ -173,7 +181,12 @@ const App = () => {
         ],
         liveLink: "https://blue-collar-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Blue-Collar",
-        image: images.blueCollar,
+        images: [
+          { id: v4(), value: images.blueCollar1 },
+          { id: v4(), value: images.blueCollar2 },
+          { id: v4(), value: images.blueCollar3 },
+          { id: v4(), value: images.blueCollar4 },
+        ],
       },
       {
         id: v4(),
@@ -181,10 +194,15 @@ const App = () => {
         list: [
           { id: v4(), value: "HTML" },
           { id: v4(), value: "CSS" },
+          { id: v4(), value: "JS" },
         ],
         liveLink: "https://antools-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Antools",
-        image: images.antools,
+        images: [
+          { id: v4(), value: images.antools1 },
+          { id: v4(), value: images.antools2 },
+          { id: v4(), value: images.antools3 },
+        ],
       },
       {
         id: v4(),
@@ -195,7 +213,11 @@ const App = () => {
         ],
         liveLink: "https://crypappy-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/CrypAppy",
-        image: images.crypAppy,
+        images: [
+          { id: v4(), value: images.crypAppy1 },
+          { id: v4(), value: images.crypAppy2 },
+          { id: v4(), value: images.crypAppy3 },
+        ],
       },
       {
         id: v4(),
@@ -206,7 +228,11 @@ const App = () => {
         ],
         liveLink: "https://nike-big-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Nike-Big",
-        image: images.nike,
+        images: [
+          { id: v4(), value: images.nike1 },
+          { id: v4(), value: images.nike2 },
+          { id: v4(), value: images.nike3 },
+        ],
       },
       {
         id: v4(),
@@ -217,7 +243,11 @@ const App = () => {
         ],
         liveLink: "https://soundtrack-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Soundtrack",
-        image: images.soundtrack,
+        images: [
+          { id: v4(), value: images.soundtrack1 },
+          { id: v4(), value: images.soundtrack2 },
+          { id: v4(), value: images.soundtrack3 },
+        ],
       },
       {
         id: v4(),
@@ -229,7 +259,7 @@ const App = () => {
         ],
         liveLink: "https://pokemon-fighter-web.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Pokemon-Fighter",
-        image: images.pokemon,
+        images: [{ id: v4(), value: images.pokemon }],
       },
       {
         id: v4(),
@@ -241,7 +271,7 @@ const App = () => {
         ],
         liveLink: "https://simon-game-webs.netlify.app/",
         codeLink: "https://github.com/DayVee-Programming/Simon-Game",
-        image: images.simon,
+        images: [{ id: v4(), value: images.simon }],
       },
     ],
   });
@@ -323,6 +353,9 @@ const App = () => {
     }, 500);
     if (!theme) localStorage.setItem("theme", JSON.stringify("light"));
   }, []);
+  theme === "light"
+    ? document.body.classList.remove("active")
+    : document.body.classList.add("active");
 
   return (
     <AppContext.Provider

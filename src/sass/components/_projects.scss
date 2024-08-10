@@ -40,27 +40,43 @@
         flex-wrap: wrap;
       }
 
-      &:hover &-pic {
+      &:hover &-slider {
         transform: scale(1.05);
       }
 
-      &-pic {
+      &-slider {
         width: min(100%, rem(600));
         min-height: rem(300);
+        max-height: rem(500);
         display: flex;
         z-index: 10;
         transition: 0.3s;
         animation: scale 1s;
         object-fit: cover;
+        border-radius: rem(20);
+        box-shadow: 0 0 rem(10) $clr-1;
 
         &-img {
           border-radius: rem(20);
-          box-shadow: 0 0 rem(10) $clr-1;
-          max-height: rem(500);
+          object-fit: cover;
+        }
 
-          &.light {
-            box-shadow: 0 0 rem(10) $clr-2;
+        .slick-list {
+          display: -webkit-box;
+        }
+
+        .slick-slide {
+          & > div {
+            height: 100%;
           }
+        }
+
+        .slick-arrow {
+          display: none !important;
+        }
+
+        .slick-dots button::before {
+          font-size: 10px;
         }
       }
 
@@ -149,6 +165,33 @@
           }
         }
       }
+    }
+  }
+
+  .bg-el {
+    &.first {
+      top: 9%;
+      left: 87%;
+    }
+
+    &.second {
+      top: 28%;
+      left: 57%;
+    }
+
+    &.third {
+      top: 45%;
+      left: 87%;
+    }
+
+    &.fourth {
+      top: 66%;
+      left: 57%;
+    }
+
+    &.fifth {
+      top: 92%;
+      left: 85%;
     }
   }
 }

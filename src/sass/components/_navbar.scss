@@ -9,9 +9,15 @@
   padding: rem(10) 0;
   z-index: 100;
   transition: 0.3s;
+  border-bottom: rem(2) solid $clr-1;
+  border-radius: 0 0 0 rem(15);
 
   @include breakpoint(sm) {
     padding: rem(5) 0;
+  }
+
+  &.light {
+    border-color: $clr-2;
   }
 
   &__wrap {
@@ -63,11 +69,11 @@
         &::after {
           content: "";
           position: absolute;
-          bottom: rem(-3);
+          top: rem(-3);
           left: 0;
           width: 0%;
           height: rem(3);
-          background: linear-gradient(90deg, $clr-4, $clr-7);
+          background: $clr-4;
           transition: 0.3s;
         }
       }

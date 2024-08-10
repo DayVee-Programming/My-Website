@@ -1,6 +1,6 @@
 import clsx from "clsx";
-import { images } from "../assets/images/images.js";
-import { useContext, useEffect, useRef } from "react";
+import { images } from "../utils/images.js";
+import { useContext, useEffect, useRef, useState } from "react";
 import { AppContext } from "../context/appContext.jsx";
 import NavBar from "../components/Navbar.jsx";
 import Footer from "../components/Footer.jsx";
@@ -19,6 +19,8 @@ const Home = () => {
   });
   const navbarT = t("navbar", { returnObjects: true });
   const title = useRef(null);
+  const [showSecondEl, setShowSecondEl] = useState(false);
+  const [showThirdEl, setShowThirdEl] = useState(false);
 
   const generateList = () => {
     const homeLng = {
@@ -45,6 +47,14 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSecondEl(true);
+    }, 2000);
+    setTimeout(() => {
+      setShowThirdEl(true);
+    }, 4000);
+  }, []);
 
   return (
     <>
@@ -65,6 +75,9 @@ const Home = () => {
             <img src={images.selfie} alt="" className={homeMainImg} />
           </div>
         </div>
+        <div className="bg-el first"></div>
+        {showSecondEl && <div className="bg-el second"></div>}
+        {showThirdEl && <div className="bg-el third"></div>}
       </div>
       <Footer />
     </>

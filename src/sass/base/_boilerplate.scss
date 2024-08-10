@@ -58,6 +58,20 @@ body {
   &::-webkit-scrollbar-thumb:hover {
     background: $clr-8-a70;
   }
+
+  &.active {
+    &::-webkit-scrollbar-track {
+      background: $clr-1;
+    }
+
+    &::-webkit-scrollbar {
+      background: $clr-1;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: $clr-4;
+    }
+  }
 }
 
 a {
@@ -104,4 +118,26 @@ address {
   justify-content: center;
   align-items: center;
   height: 100svh;
+}
+
+.bg-el {
+  position: absolute;
+  width: rem(60);
+  height: rem(60);
+  border: rem(6) solid $clr-9;
+  animation: show 5s linear infinite;
+
+  @include breakpoint(xsm) {
+    display: none;
+  }
+
+  @keyframes show {
+    from {
+      transform: scale(0) translateY(0) rotate(0);
+    }
+
+    to {
+      transform: scale(1) translateY(rem(-20)) rotate(360deg);
+    }
+  }
 }

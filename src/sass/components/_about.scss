@@ -30,6 +30,7 @@
       object-position: center;
       border-radius: rem(30);
       order: 1;
+      z-index: 1;
 
       &.light {
         box-shadow: 0 0 rem(10) $clr-2;
@@ -44,6 +45,7 @@
 
       &-text {
         font-size: $fsr-4;
+        z-index: 1;
       }
     }
   }
@@ -80,10 +82,15 @@
         gap: rem(60) rem(15);
       }
 
+      @include breakpoint(xsm) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
       &-item {
         transition: 0.3s;
         position: relative;
         padding-inline: rem(10);
+        z-index: 1;
 
         &:hover &-link-info {
           display: block;
@@ -177,6 +184,23 @@
           }
         }
       }
+    }
+  }
+
+  .bg-el {
+    &.first {
+      top: 8%;
+      left: 85%;
+    }
+
+    &.second {
+      top: 43%;
+      left: 47%;
+    }
+
+    &.third {
+      top: 75%;
+      left: 13%;
     }
   }
 }

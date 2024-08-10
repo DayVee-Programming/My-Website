@@ -7,7 +7,7 @@ import NavbarMenuItem from "./NavbarMenuItem.jsx";
 import { IoLanguage } from "react-icons/io5";
 import clsx from "clsx";
 import NavbarNavItem from "./NavbarNavItem.jsx";
-import { images } from "../assets/images/images.js";
+import { images } from "../utils/images.js";
 
 const NavBar = () => {
   const {
@@ -23,7 +23,7 @@ const NavBar = () => {
   } = useContext(AppContext);
   const { isMenuOpen, setIsMenuOpen } = useContext(AppContext);
   const navbarT = t("navbar", { returnObjects: true });
-  const navbarBtnsItemBtnImg = clsx("navbar__btns-item-btn-img", {
+  const btnImgS = clsx("navbar__btns-item-btn-img", {
     "light-menu": isMenuOpen,
     light: theme === "dark",
   });
@@ -38,6 +38,9 @@ const NavBar = () => {
   });
   const navbarBtnsTtemImg = clsx("navbar__btns-item-img", {
     "light-menu": isMenuOpen,
+  });
+  const navbarS = clsx("navbar", {
+    light: theme === "dark",
   });
 
   const changeTheme = () => {
@@ -76,7 +79,7 @@ const NavBar = () => {
   };
 
   return (
-    <header className="navbar" data-theme={theme}>
+    <header className={navbarS} data-theme={theme}>
       <nav className="container navbar__wrap">
         <a href="/" className="navbar__logo">
           <img
@@ -104,7 +107,7 @@ const NavBar = () => {
                 setIsDropdownOpen(!isDropdownOpen);
               }}
             >
-              <IoLanguage className={navbarBtnsItemBtnImg} />
+              <IoLanguage className={btnImgS} />
               {isDropdownOpen && (
                 <ul className="navbar__btns-item-btn-dropdown">
                   {language === "ru" && (

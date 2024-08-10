@@ -66,6 +66,7 @@ const Contact = () => {
             </button>
           </form>
         </div>
+        <div className="bg-el first"></div>
       </div>
       <Footer />
     </>

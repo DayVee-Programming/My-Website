@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { images } from "../assets/images/images.js";
+import { useContext, useEffect, useState } from "react";
+import { images } from "../utils/images.js";
 import { AppContext } from "../context/appContext.jsx";
 import clsx from "clsx";
 import NavBar from "../components/Navbar.jsx";
@@ -16,6 +16,9 @@ const About = () => {
   const aboutMainImg = clsx("about__main-img", {
     light: theme === "dark",
   });
+  const [showSecondEl, setShowSecondEl] = useState(false);
+  const [showThirdEl, setShowThirdEl] = useState(false);
+
   const generateInterestsItems = () => {
     const aboutLng = {
       interestsLinks: [],
@@ -31,6 +34,14 @@ const About = () => {
       <AboutInterestsItem interest={interest} key={interest.id} />
     ));
   };
+  useEffect(() => {
+    setTimeout(() => {
+      setShowSecondEl(true);
+    }, 2000);
+    setTimeout(() => {
+      setShowThirdEl(true);
+    }, 4000);
+  }, []);
 
   return (
     <>
@@ -71,6 +82,9 @@ const About = () => {
             </ul>
           </div>
         </div>
+        <div className="bg-el first"></div>
+        {showSecondEl && <div className="bg-el second"></div>}
+        {showThirdEl && <div className="bg-el third"></div>}
       </div>
       <Footer />
     </>
