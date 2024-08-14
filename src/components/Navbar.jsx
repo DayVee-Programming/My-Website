@@ -27,16 +27,16 @@ const NavBar = () => {
     "light-menu": isMenuOpen,
     light: theme === "dark",
   });
-  const navbarBtnsItemMenu = clsx("navbar__btns-item-menu", {
+  const itemMenuS = clsx("navbar__btns-item-menu", {
     closed: !isMenuOpen,
   });
-  const navbarBtnsItemBtnImgIcons = clsx("navbar__btns-item-btn-img", {
+  const imgIconsS = clsx("navbar__btns-item-btn-img", {
     moon: theme === "light",
     sun: theme === "dark",
     "moon-menu": isMenuOpen,
     "sun-menu": isMenuOpen,
   });
-  const navbarBtnsTtemImg = clsx("navbar__btns-item-img", {
+  const itemImgS = clsx("navbar__btns-item-img", {
     "light-menu": isMenuOpen,
   });
   const navbarS = clsx("navbar", {
@@ -80,7 +80,7 @@ const NavBar = () => {
 
   return (
     <header className={navbarS} data-theme={theme}>
-      <nav className="container navbar__wrap">
+      <nav className="container navbar__wrapper">
         <a href="/" className="navbar__logo">
           <img
             className="navbar__logo-img"
@@ -96,9 +96,9 @@ const NavBar = () => {
               onClick={() => changeTheme()}
             >
               {theme === "light" ? (
-                <MdDarkMode className={navbarBtnsItemBtnImgIcons} />
+                <MdDarkMode className={imgIconsS} />
               ) : (
-                <ImSun className={navbarBtnsItemBtnImgIcons} />
+                <ImSun className={imgIconsS} />
               )}
             </button>
             <button
@@ -134,9 +134,9 @@ const NavBar = () => {
             className="navbar__btns-item"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <GiHamburgerMenu className={navbarBtnsTtemImg} />
+            <GiHamburgerMenu className={itemImgS} />
             {isMenuOpen && (
-              <ul className={navbarBtnsItemMenu}>
+              <ul className={itemMenuS}>
                 {generateNavbarItems("menu")}
               </ul>
             )}

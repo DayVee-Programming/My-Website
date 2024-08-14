@@ -10,10 +10,10 @@ import AboutStackItem from "../components/AboutStackItem.jsx";
 const About = () => {
   const { about, theme, t } = useContext(AppContext);
   const aboutT = t("about", { returnObjects: true });
-  const aboutMainDescText = clsx("about__main-desc-text", {
+  const descTextS = clsx("about__main-desc-text", {
     "dark-text": theme === "dark",
   });
-  const aboutMainImg = clsx("about__main-img", {
+  const mainImgS = clsx("about__main-img", {
     light: theme === "dark",
   });
   const [showSecondEl, setShowSecondEl] = useState(false);
@@ -47,14 +47,14 @@ const About = () => {
     <>
       <NavBar />
       <div id="about" className="about" data-theme={theme}>
-        <div className="container about__wrap">
+        <div className="container about__wrapper">
           <div className="about__main">
-            <img className={aboutMainImg} src={images.webDevelopment} alt="" />
+            <img className={mainImgS} src={images.webDevelopment} alt="" />
             <div className="about__main-desc">
               <h2 className="about__main-desc-title title">
                 {t(aboutT.mainDescTitle)}
               </h2>
-              <p className={aboutMainDescText}>{t(aboutT.mainDescText)}</p>
+              <p className={descTextS}>{t(aboutT.mainDescText)}</p>
             </div>
           </div>
           <div className="about__stack">

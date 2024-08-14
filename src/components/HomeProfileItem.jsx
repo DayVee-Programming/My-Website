@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const HomeProfileItem = ({ img }) => {
   const { theme } = useContext(AppContext);
-  const homeMainContentProfileItemLinkImg = clsx(
+  const linkImgS = clsx(
     "home__main-content-profile-item-link-img",
     {
       light: theme === "dark",
@@ -19,7 +19,7 @@ const HomeProfileItem = ({ img }) => {
         className="home__main-content-profile-item-link"
       >
         <img
-          className={homeMainContentProfileItemLinkImg}
+          className={linkImgS}
           src={img.value}
           alt=""
         />

@@ -11,7 +11,7 @@ import HomeProfileItem from "../components/HomeProfileItem.jsx";
 const Home = () => {
   const { home, theme, t, navbar } = useContext(AppContext);
   const homeT = t("home", { returnObjects: true });
-  const homeMainContentText = clsx("home__main-content-text", {
+  const contentTextS = clsx("home__main-content-text", {
     "dark-text": theme === "dark",
   });
   const homeMainImg = clsx("home__main-img", {
@@ -60,11 +60,11 @@ const Home = () => {
     <>
       <NavBar />
       <div id="home" className="home" data-theme={theme}>
-        <div className="container home__wrap">
+        <div className="container home__wrapper">
           <div className="home__main">
             <div className="home__main-content">
               <h1 className="home__main-content-title" ref={title}></h1>
-              <p className={homeMainContentText}>{t(homeT.mainContentText)}</p>
+              <p className={contentTextS}>{t(homeT.mainContentText)}</p>
               <ul className="home__main-list">{generateList()}</ul>
               <ul className="home__main-content-profile">
                 {home.profileLinks?.map((img) => (

@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <footer className={footerS} data-theme={theme}>
-      <div className="container footer__wrap">
+      <div className="container footer__wrapper">
         <p className="footer__info">{t(footerT.info)}</p>
         <div className="footer__content">
           <span className="footer__content-services">

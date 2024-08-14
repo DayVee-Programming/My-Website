@@ -40,7 +40,7 @@ const Projects = () => {
     <>
       <NavBar />
       <div id="projects" className="projects" data-theme={theme}>
-        <div className="container projects__wrap">
+        <div className="container projects__wrapper">
           <h2 className="projects__title title">{t(projectsT.title)}</h2>
           <ul className="projects__cards container">{generateCards()}</ul>
         </div>

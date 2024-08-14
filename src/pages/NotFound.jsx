@@ -12,7 +12,7 @@ const NotFound = () => {
     <>
       <NavBar />
       <div className="notfound" data-theme={theme}>
-        <div className="container notfound__wrap">
+        <div className="container notfound__wrapper">
           <h1 className="notfound__title">{t(notfoundT.title)}</h1>
           <h2 className="notfound__subtitle">{t(notfoundT.subtitle)}</h2>
           <p className="notfound__text">

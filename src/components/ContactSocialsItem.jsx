@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const ContactSocialsItem = ({ link }) => {
   const { theme } = useContext(AppContext);
-  const contactAddressSocialsItemLinkImg = clsx(
+  const linkImgS = clsx(
     "contact__address-socials-link-top-img",
     {
       light: theme === "dark",
@@ -20,7 +20,7 @@ const ContactSocialsItem = ({ link }) => {
       >
         <div className="contact__address-socials-item-link-top">
           <img
-            className={contactAddressSocialsItemLinkImg}
+            className={linkImgS}
             src={link.value}
             alt=""
           />

@@ -6,7 +6,7 @@
   transition: 0.3s;
   min-height: 90svh;
 
-  &__wrap {
+  &__wrapper {
     display: flex;
     flex-direction: column;
     gap: rem(15);
@@ -40,7 +40,7 @@
         flex-wrap: wrap;
       }
 
-      &:hover &-slider {
+      &:hover &-img {
         transform: scale(1.05);
       }
 
@@ -55,11 +55,6 @@
         object-fit: cover;
         border-radius: rem(20);
         box-shadow: 0 0 rem(10) $clr-1;
-
-        &-img {
-          border-radius: rem(20);
-          object-fit: cover;
-        }
 
         .slick-list {
           display: -webkit-box;
@@ -76,7 +71,21 @@
         }
 
         .slick-dots button::before {
-          font-size: 10px;
+          font-size: rem(10);
+        }
+      }
+
+      &-img {
+        width: min(100%, rem(600));
+        min-height: rem(300);
+        max-height: rem(400);
+        border-radius: rem(20);
+        box-shadow: 0 0 rem(10) $clr-1;
+        transition: 0.3s;
+        object-fit: cover;
+
+        &.light {
+          box-shadow: 0 0 rem(10) $clr-2;
         }
       }
 

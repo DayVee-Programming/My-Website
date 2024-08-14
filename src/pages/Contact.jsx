@@ -8,7 +8,7 @@ import Footer from "../components/Footer.jsx";
 const Contact = () => {
   const { contact, theme, t, emailResult, sendEmail } = useContext(AppContext);
   const contactT = t("contact", { returnObjects: true });
-  const contactAddressText = clsx("contact__address-text", {
+  const addressTextS = clsx("contact__address-text", {
     "dark-text": theme === "dark",
   });
 
@@ -16,12 +16,12 @@ const Contact = () => {
     <>
       <NavBar />
       <div id="contact" className="contact" data-theme={theme}>
-        <div className="container contact__wrap">
+        <div className="container contact__wrapper">
           <address className="contact__address">
             <h2 className="contact__address-title title">
               {t(contactT.mainTitle)}
             </h2>
-            <p className={contactAddressText}>{t(contactT.mainText)}</p>
+            <p className={addressTextS}>{t(contactT.mainText)}</p>
             <ul className="contact__address-socials">
               {contact.socialsLinks?.map((link) => (
                 <ContactSocialsItem link={link} key={link.id} />

@@ -4,7 +4,7 @@ import clsx from "clsx";
 
 const AboutStackItem = ({ img }) => {
   const { theme } = useContext(AppContext);
-  const aboutStackLinksItemLinkImg = clsx("about__stack-links-item-link-img", {
+  const linkImgS = clsx("about__stack-links-item-link-img", {
     light: theme === "dark",
   });
 
@@ -15,7 +15,7 @@ const AboutStackItem = ({ img }) => {
         target="_blank"
         className="about__stack-links-item-link"
       >
-        <img src={img.value} alt="" className={aboutStackLinksItemLinkImg} />
+        <img src={img.value} alt="" className={linkImgS} />
         <span className="about__stack-links-item-link-info">{img.info}</span>
       </a>
     </li>
