@@ -74,6 +74,12 @@
       justify-content: space-between;
       align-items: center;
       padding: rem(15) 0;
+      gap: 15px;
+
+      @include breakpoint(xsm) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
       &-item {
         padding: rem(10);

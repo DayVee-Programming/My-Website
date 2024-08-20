@@ -142,6 +142,21 @@ const App = () => {
     cards: [
       {
         id: v4(),
+        title: "Dummy Shop 🛒",
+        list: [
+          { id: v4(), value: "React" },
+          { id: v4(), value: "SASS" },
+        ],
+        liveLink: "https://dummy-shop-web.netlify.app/",
+        codeLink: "https://github.com/DayVee-Programming/Dummy-Shop",
+        images: [
+          { id: v4(), value: images.dummyShop1 },
+          { id: v4(), value: images.dummyShop2 },
+          { id: v4(), value: images.dummyShop3 },
+        ],
+      },
+      {
+        id: v4(),
         title: "Gitpod 💻",
         list: [
           { id: v4(), value: "React" },

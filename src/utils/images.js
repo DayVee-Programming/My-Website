@@ -42,6 +42,9 @@ import edusity from "../assets/images/edusity.jpg";
 import gitpod1 from "../assets/images/gitpod1.png";
 import gitpod2 from "../assets/images/gitpod2.png";
 import gitpod3 from "../assets/images/gitpod3.png";
+import dummyShop1 from "../assets/images/dummy-shop1.png";
+import dummyShop2 from "../assets/images/dummy-shop2.png";
+import dummyShop3 from "../assets/images/dummy-shop3.png";
 import selfie from "../assets/images/selfie.jpg";
 import videoGamesIcon from "../assets/images/video-games.png";
 import chessIcon from "../assets/images/chess.svg";
@@ -95,6 +98,9 @@ export const images = {
   gitpod1,
   gitpod2,
   gitpod3,
+  dummyShop1,
+  dummyShop2,
+  dummyShop3,
   selfie,
   videoGamesIcon,
   chessIcon,
