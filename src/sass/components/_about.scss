@@ -72,7 +72,7 @@
     &-links {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      gap: rem(30);
+      gap: rem(60) rem(30);
       align-items: center;
       padding-left: rem(45);
 

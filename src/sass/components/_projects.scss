@@ -40,52 +40,72 @@
         flex-wrap: wrap;
       }
 
-      &:hover &-img {
+      &:hover &-slider-img {
         transform: scale(1.05);
       }
 
       &-slider {
         width: min(100%, rem(600));
-        min-height: rem(300);
-        max-height: rem(500);
+        height: rem(350);
         display: flex;
+        justify-content: center;
+        position: relative;
+        user-select: none;
         z-index: 10;
-        transition: 0.3s;
-        animation: scale 1s;
-        object-fit: cover;
-        border-radius: rem(20);
-        box-shadow: 0 0 rem(10) $clr-1;
 
-        .slick-list {
-          display: -webkit-box;
+        @include breakpoint(576) {
+          height: rem(300);
         }
 
-        .slick-slide {
-          & > div {
-            height: 100%;
+        &-arrow {
+          position: absolute;
+          z-index: 10;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          transition: 0.3s;
+          padding: 5px;
+          background: $clr-2;
+          border-radius: 50%;
+          border: rem(2) solid $clr-1;
+
+          &:hover {
+            color: $clr-2;
+            background: $clr-4;
+          }
+
+          &.left {
+            top: 50%;
+            left: 0%;
+          }
+
+          &.right {
+            top: 50%;
+            right: 0%;
+          }
+
+          &.light {
+            color: $clr-1;
+
+            &:hover {
+              color: $clr-2;
+              background: $clr-4;
+            }
           }
         }
 
-        .slick-arrow {
-          display: none !important;
-        }
+        &-img {
+          width: inherit;
+          min-height: inherit;
+          max-height: inherit;
+          border-radius: rem(20);
+          box-shadow: 0 0 rem(10) $clr-1;
+          object-fit: cover;
+          transition: 0.3s;
 
-        .slick-dots button::before {
-          font-size: rem(10);
-        }
-      }
-
-      &-img {
-        width: min(100%, rem(600));
-        min-height: rem(300);
-        max-height: rem(400);
-        border-radius: rem(20);
-        box-shadow: 0 0 rem(10) $clr-1;
-        transition: 0.3s;
-        object-fit: cover;
-
-        &.light {
-          box-shadow: 0 0 rem(10) $clr-2;
+          &.light {
+            box-shadow: 0 0 rem(10) $clr-2;
+          }
         }
       }
 

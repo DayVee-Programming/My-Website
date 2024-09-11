@@ -81,6 +81,18 @@ const App = () => {
         link: "https://sass-lang.com/",
         info: "Sass",
       },
+      {
+        id: v4(),
+        value: images.vueIcon,
+        link: "https://vuejs.org/",
+        info: "Vue.js",
+      },
+      {
+        id: v4(),
+        value: images.tailwindIcon,
+        link: "https://tailwindcss.com/",
+        info: "Tailwind CSS",
+      },
     ],
     toolsLinks: [
       {

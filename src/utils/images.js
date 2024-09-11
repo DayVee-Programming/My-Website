@@ -10,6 +10,8 @@ import telegramIcon from "../assets/images/telegram.png";
 import whatsAppIcon from "../assets/images/whatsapp.png";
 import typescriptIcon from "../assets/images/typescript.png";
 import sassIcon from "../assets/images/sass.png";
+import vueIcon from "../assets/images/vue.svg";
+import tailwindIcon from "../assets/images/tailwindcss.svg";
 import figmaIcon from "../assets/images/figma.svg";
 import viteIcon from "../assets/images/vite.svg";
 import reduxIcon from "../assets/images/redux.svg";
@@ -69,6 +71,8 @@ export const images = {
   whatsAppIcon,
   typescriptIcon,
   sassIcon,
+  vueIcon,
+  tailwindIcon,
   figmaIcon,
   viteIcon,
   reduxIcon,
