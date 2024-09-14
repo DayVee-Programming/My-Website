@@ -14,9 +14,17 @@ const resources = {
   },
 };
 
+const LanguageDetector = new languageDetector(null, {
+  order: ["localStorage", "navigator"],
+  lookupFromLocalStorage: "i18nextLng",
+  caches: ["localStorage"],
+  checkWhitelist: true,
+  whitelist: ["en", "ru"],
+});
+
 i18n
   .use(backend)
-  .use(languageDetector)
+  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
@@ -30,6 +38,7 @@ i18n
     backend: {
       loadPath: TRANSLATION_PATH + "/{{lng}}/translation.json",
     },
+    load: "languageOnly",
   });
 
 export default i18n;

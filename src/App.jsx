@@ -184,6 +184,21 @@ const App = () => {
       },
       {
         id: v4(),
+        title: "CrypAppy 💰",
+        list: [
+          { id: v4(), value: "Vue.js" },
+          { id: v4(), value: "CSS" },
+        ],
+        liveLink: "https://crypappy-web.netlify.app/",
+        codeLink: "https://github.com/DayVee-Programming/CrypAppy",
+        images: [
+          { id: v4(), value: images.crypAppy1 },
+          { id: v4(), value: images.crypAppy2 },
+          { id: v4(), value: images.crypAppy3 },
+        ],
+      },
+      {
+        id: v4(),
         title: "Zone 🎥",
         list: [
           { id: v4(), value: "HTML" },
@@ -229,21 +244,6 @@ const App = () => {
           { id: v4(), value: images.antools1 },
           { id: v4(), value: images.antools2 },
           { id: v4(), value: images.antools3 },
-        ],
-      },
-      {
-        id: v4(),
-        title: "CrypAppy 💰",
-        list: [
-          { id: v4(), value: "HTML" },
-          { id: v4(), value: "CSS" },
-        ],
-        liveLink: "https://crypappy-web.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/CrypAppy",
-        images: [
-          { id: v4(), value: images.crypAppy1 },
-          { id: v4(), value: images.crypAppy2 },
-          { id: v4(), value: images.crypAppy3 },
         ],
       },
     ],
