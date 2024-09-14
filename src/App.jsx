@@ -246,60 +246,6 @@ const App = () => {
           { id: v4(), value: images.crypAppy3 },
         ],
       },
-      {
-        id: v4(),
-        title: "Nike 👟",
-        list: [
-          { id: v4(), value: "HTML" },
-          { id: v4(), value: "CSS" },
-        ],
-        liveLink: "https://nike-big-web.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/Nike-Big",
-        images: [
-          { id: v4(), value: images.nike1 },
-          { id: v4(), value: images.nike2 },
-          { id: v4(), value: images.nike3 },
-        ],
-      },
-      {
-        id: v4(),
-        title: "Soundtrack 🎧",
-        list: [
-          { id: v4(), value: "HTML" },
-          { id: v4(), value: "CSS" },
-        ],
-        liveLink: "https://soundtrack-web.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/Soundtrack",
-        images: [
-          { id: v4(), value: images.soundtrack1 },
-          { id: v4(), value: images.soundtrack2 },
-          { id: v4(), value: images.soundtrack3 },
-        ],
-      },
-      {
-        id: v4(),
-        title: "Pokemon Fighter 🃏",
-        list: [
-          { id: v4(), value: "HTML" },
-          { id: v4(), value: "CSS" },
-          { id: v4(), value: "JS" },
-        ],
-        liveLink: "https://pokemon-fighter-web.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/Pokemon-Fighter",
-        images: [{ id: v4(), value: images.pokemon }],
-      },
-      {
-        id: v4(),
-        title: "Simon 👨‍🔬",
-        list: [
-          { id: v4(), value: "HTML" },
-          { id: v4(), value: "CSS" },
-          { id: v4(), value: "JS" },
-        ],
-        liveLink: "https://simon-game-webs.netlify.app/",
-        codeLink: "https://github.com/DayVee-Programming/Simon-Game",
-        images: [{ id: v4(), value: images.simon }],
-      },
     ],
   });
   const [contact, setContact] = useState({

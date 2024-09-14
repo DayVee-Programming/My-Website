@@ -29,14 +29,7 @@ import blueCollar4 from "../assets/images/blue-collar4.png";
 import crypAppy1 from "../assets/images/crypappy1.jpg";
 import crypAppy2 from "../assets/images/crypappy2.jpg";
 import crypAppy3 from "../assets/images/crypappy3.jpg";
-import nike1 from "../assets/images/nike1.jpg";
-import nike2 from "../assets/images/nike2.jpg";
-import nike3 from "../assets/images/nike3.jpg";
-import pokemon from "../assets/images/pokemon.png";
 import simon from "../assets/images/simon.png";
-import soundtrack1 from "../assets/images/soundtrack1.jpg";
-import soundtrack2 from "../assets/images/soundtrack2.jpg";
-import soundtrack3 from "../assets/images/soundtrack3.jpg";
 import zone1 from "../assets/images/zone1.png";
 import zone2 from "../assets/images/zone2.png";
 import zone3 from "../assets/images/zone3.png";
@@ -87,14 +80,7 @@ export const images = {
   crypAppy1,
   crypAppy2,
   crypAppy3,
-  nike1,
-  nike2,
-  nike3,
-  pokemon,
   simon,
-  soundtrack1,
-  soundtrack2,
-  soundtrack3,
   zone1,
   zone2,
   zone3,
