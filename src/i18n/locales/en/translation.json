@@ -19,9 +19,10 @@
   },
   "about": {
     "mainDescTitle": "Love coding 💻",
-    "mainDescText": "I'm a highly motivated junior front-end developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating user-friendly and responsive web interfaces. While I'm new to the professional world, I'm a quick learner and eager to contribute to a team environment. My toolbox is stocked with the modern technologies like TypeScript, React, SASS. I'm always looking for opportunities to expand my knowledge and take on new challenges in the ever-evolving world of web development.",
-    "stackText": "Tech Stack",
-    "toolsText": "Tools Stack",
+    "mainDescText": "I'm a junior frontend developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating user-friendly and responsive web interfaces. I'm a quick learner and eager to contribute to a team environment, seeking opportunities to expand my experience. My toolbox is stocked with the modern technologies such as TypeScript, React, Vue, SASS. I have tried many tools and among them 'BEM' methodology, 'gulp.js' toolkit, 'ApexCharts.js' library are not my favorite ones. In addition to developing websites, I've had the opportunity to design several.",
+    "stackText": "Frontend Tech Stack",
+    "toolsText": "Frontend Tools Stack",
+    "designerStackText": "Designer Stack",
     "interestsText": "Interests 🖐️",
     "interests": [
       {
@@ -36,7 +37,7 @@
     ]
   },
   "projects": {
-    "title": "Each project is a unique piece of development 📋",
+    "title": "List of personal projects 📋",
     "cards": [
       {
         "text": "Get ready to be amazed! Our shop is a treasure trove of unique and exciting products. You won't be disappointed."
@@ -71,8 +72,8 @@
     "formBtn": "Submit"
   },
   "footer": {
-    "info": "©️ 2024 DayVee Programming. All rights reserved.",
-    "contentServices": "Terms of Services",
+    "info": "©️ 2025 DayVee Programming. All rights reserved.",
+    "contentServices": "Terms of Service",
     "contentPolicy": "Privacy Policy"
   },
   "notfound": {

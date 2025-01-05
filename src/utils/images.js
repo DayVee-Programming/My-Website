@@ -12,6 +12,7 @@ import typescriptIcon from "../assets/images/typescript.png";
 import sassIcon from "../assets/images/sass.png";
 import vueIcon from "../assets/images/vue.svg";
 import tailwindIcon from "../assets/images/tailwindcss.svg";
+import bootstrapIcon from "../assets/images/bootstrap.png";
 import figmaIcon from "../assets/images/figma.svg";
 import viteIcon from "../assets/images/vite.svg";
 import reduxIcon from "../assets/images/redux.svg";
@@ -47,6 +48,12 @@ import cardGamesIcon from "../assets/images/card-games.png";
 import logo from "../assets/images/logo.svg";
 import logo2 from "../assets/images/logo2.svg";
 import logo3 from "../assets/images/logo3.png";
+import postmanIcon from "../assets/images/postman.jpg";
+import pnpmIcon from "../assets/images/pnpm.png";
+import antDesignIcon from "../assets/images/ant-design.svg";
+import chartJsIcon from "../assets/images/charts-js.png";
+import html2PdfJsIcon from "../assets/images/html2pdf-js.png";
+import gitlabIcon from "../assets/images/gitlab.png";
 
 export const images = {
   antools1,
@@ -66,6 +73,7 @@ export const images = {
   sassIcon,
   vueIcon,
   tailwindIcon,
+  bootstrapIcon,
   figmaIcon,
   viteIcon,
   reduxIcon,
@@ -98,4 +106,10 @@ export const images = {
   logo,
   logo2,
   logo3,
+  postmanIcon,
+  pnpmIcon,
+  antDesignIcon,
+  chartJsIcon,
+  html2PdfJsIcon,
+  gitlabIcon,
 };

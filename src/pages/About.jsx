@@ -73,6 +73,14 @@ const About = () => {
               ))}
             </ul>
           </div>
+          <div className="about__stack">
+            <p className="about__stack-text">{t(aboutT.designerStackText)}</p>
+            <ul className="about__stack-links">
+              {about.designerStackLinks?.map((img) => (
+                <AboutStackItem img={img} key={img.id} />
+              ))}
+            </ul>
+          </div>
           <div className="about__interests">
             <h2 className="about__interests-title title">
               {t(aboutT.interestsText)}

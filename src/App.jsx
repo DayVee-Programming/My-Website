@@ -38,6 +38,11 @@ const App = () => {
       },
       {
         id: v4(),
+        value: images.gitlabIcon,
+        link: "https://gitlab.com/DayVee",
+      },
+      {
+        id: v4(),
         value: images.linkedInIcon,
         link: "https://www.linkedin.com/in/dayvee-programming-7b7664228/",
       },
@@ -77,15 +82,21 @@ const App = () => {
       },
       {
         id: v4(),
+        value: images.vueIcon,
+        link: "https://vuejs.org/",
+        info: "Vue.js",
+      },
+      {
+        id: v4(),
         value: images.sassIcon,
         link: "https://sass-lang.com/",
         info: "Sass",
       },
       {
         id: v4(),
-        value: images.vueIcon,
-        link: "https://vuejs.org/",
-        info: "Vue.js",
+        value: images.bootstrapIcon,
+        link: "https://getbootstrap.com/",
+        info: "Bootstrap",
       },
       {
         id: v4(),
@@ -103,15 +114,9 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.reduxIcon,
-        link: "https://redux-toolkit.js.org/",
-        info: "Redux Toolkit",
-      },
-      {
-        id: v4(),
-        value: images.figmaIcon,
-        link: "https://www.figma.com/",
-        info: "Figma",
+        value: images.postmanIcon,
+        link: "https://www.postman.com/",
+        info: "Postman",
       },
       {
         id: v4(),
@@ -121,15 +126,47 @@ const App = () => {
       },
       {
         id: v4(),
+        value: images.pnpmIcon,
+        link: "https://pnpm.io/",
+        info: "pnpm",
+      },
+      {
+        id: v4(),
         value: images.gitIcon,
         link: "https://www.git-scm.com/",
         info: "Git",
       },
       {
         id: v4(),
-        value: images.bemIcon,
-        link: "https://en.bem.info/methodology/",
-        info: "BEM",
+        value: images.reduxIcon,
+        link: "https://redux-toolkit.js.org/",
+        info: "Redux Toolkit",
+      },
+      {
+        id: v4(),
+        value: images.antDesignIcon,
+        link: "https://ant.design/",
+        info: "Ant Design",
+      },
+      {
+        id: v4(),
+        value: images.chartJsIcon,
+        link: "https://www.chartjs.org/",
+        info: "Chart.js",
+      },
+      {
+        id: v4(),
+        value: images.html2PdfJsIcon,
+        link: "https://ekoopmans.github.io/html2pdf.js/",
+        info: "html2pdf.js",
+      },
+    ],
+    designerStackLinks: [
+      {
+        id: v4(),
+        value: images.figmaIcon,
+        link: "https://www.figma.com/",
+        info: "Figma",
       },
     ],
     interestsLinks: [

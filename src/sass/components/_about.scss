@@ -46,6 +46,7 @@
       &-text {
         font-size: $fsr-4;
         z-index: 1;
+        text-align: justify;
       }
     }
   }
@@ -54,7 +55,6 @@
     display: flex;
     gap: rem(15);
     justify-content: space-between;
-    align-items: center;
     padding-bottom: rem(20);
 
     @include breakpoint(770) {
@@ -65,8 +65,13 @@
       font-weight: $fw-2;
       border-right: rem(2) solid $clr-3;
       padding-right: rem(15);
-      text-align: center;
       font-size: $fs-2;
+      min-width: rem(250);
+      text-align: right;
+
+      @include breakpoint(992) {
+        min-width: unset;
+      }
     }
 
     &-links {
@@ -74,7 +79,7 @@
       grid-template-columns: repeat(6, 1fr);
       gap: rem(60) rem(30);
       align-items: center;
-      padding-left: rem(45);
+      padding-left: rem(35);
 
       @include breakpoint(770) {
         grid-template-columns: repeat(3, 1fr);
