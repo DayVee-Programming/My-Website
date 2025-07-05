@@ -76,15 +76,15 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.reactIcon,
-        link: "https://react.dev/",
-        info: "React",
-      },
-      {
-        id: v4(),
         value: images.vueIcon,
         link: "https://vuejs.org/",
         info: "Vue.js",
+      },
+      {
+        id: v4(),
+        value: images.reactIcon,
+        link: "https://react.dev/",
+        info: "React",
       },
       {
         id: v4(),
