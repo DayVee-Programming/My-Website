@@ -27,9 +27,10 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    resources,
-    defaultLocale: "en",
+    lng: 'en',
     fallbackLng: "en",
+    load: "languageOnly",
+    resources,
     debug: false,
     interpolation: {
       escapeValue: false,
@@ -38,7 +39,6 @@ i18n
     backend: {
       loadPath: TRANSLATION_PATH + "/{{lng}}/translation.json",
     },
-    load: "languageOnly",
   });
 
 export default i18n;
