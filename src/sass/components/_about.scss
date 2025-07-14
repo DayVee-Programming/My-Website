@@ -157,10 +157,11 @@
 
       &-item {
         &-link {
+          min-width: rem(150);
           display: flex;
           flex-direction: column;
           align-items: center;
-          gap: rem(10);
+          gap: rem(15);
           border: rem(2) solid $clr-1;
           padding: rem(10);
           border-radius: rem(10);

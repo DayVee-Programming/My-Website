@@ -54,6 +54,11 @@ import antDesignIcon from "../assets/images/ant-design.svg";
 import chartJsIcon from "../assets/images/charts-js.png";
 import html2PdfJsIcon from "../assets/images/html2pdf-js.png";
 import gitlabIcon from "../assets/images/gitlab.png";
+import musicIcon from "../assets/images/music.png";
+import galleryIcon from "../assets/images/gallery.png";
+import piniaIcon from "../assets/images/pinia.png";
+import muiIcon from "../assets/images/mui.jpg";
+import vitestIcon from "../assets/images/vitest.png";
 
 export const images = {
   antools1,
@@ -112,4 +117,9 @@ export const images = {
   chartJsIcon,
   html2PdfJsIcon,
   gitlabIcon,
+  musicIcon,
+  galleryIcon,
+  piniaIcon,
+  muiIcon,
+  vitestIcon,
 };

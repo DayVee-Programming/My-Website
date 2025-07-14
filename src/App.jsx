@@ -76,15 +76,15 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.vueIcon,
-        link: "https://vuejs.org/",
-        info: "Vue.js",
-      },
-      {
-        id: v4(),
         value: images.reactIcon,
         link: "https://react.dev/",
         info: "React",
+      },
+      {
+        id: v4(),
+        value: images.vueIcon,
+        link: "https://vuejs.org/",
+        info: "Vue.js",
       },
       {
         id: v4(),
@@ -144,9 +144,27 @@ const App = () => {
       },
       {
         id: v4(),
+        value: images.piniaIcon,
+        link: "https://pinia.vuejs.org/",
+        info: "Pinia",
+      },
+      {
+        id: v4(),
+        value: images.muiIcon,
+        link: "https://mui.com/",
+        info: "Material UI",
+      },
+      {
+        id: v4(),
         value: images.antDesignIcon,
         link: "https://ant.design/",
         info: "Ant Design",
+      },
+      {
+        id: v4(),
+        value: images.vitestIcon,
+        link: "https://vitest.dev/",
+        info: "Vitest",
       },
       {
         id: v4(),
@@ -172,18 +190,18 @@ const App = () => {
     interestsLinks: [
       {
         id: v4(),
+        value: images.musicIcon,
+        link: `https://en.wikipedia.org/wiki/Music`,
+      },
+      {
+        id: v4(),
         value: images.videoGamesIcon,
         link: `https://en.wikipedia.org/wiki/Video_game`,
       },
       {
         id: v4(),
-        value: images.chessIcon,
-        link: `https://en.wikipedia.org/wiki/Chess`,
-      },
-      {
-        id: v4(),
-        value: images.cardGamesIcon,
-        link: `https://en.wikipedia.org/wiki/Card_game`,
+        value: images.galleryIcon,
+        link: `https://en.wikipedia.org/wiki/Image_editing`,
       },
     ],
   });
