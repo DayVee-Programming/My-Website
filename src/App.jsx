@@ -224,6 +224,21 @@ const App = () => {
       },
       {
         id: v4(),
+        title: "Pick Stuff 🔢",
+        list: [
+          { id: v4(), value: "React" },
+          { id: v4(), value: "SASS" },
+        ],
+        liveLink: "https://pick-stuff.netlify.app/",
+        codeLink: "https://github.com/DayVee-Programming/Pick-Stuff-frontend",
+        images: [
+          { id: v4(), value: images.pickstuff1 },
+          { id: v4(), value: images.pickstuff2 },
+          { id: v4(), value: images.pickstuff3 },
+        ],
+      },
+      {
+        id: v4(),
         title: "Gitpod 💻",
         list: [
           { id: v4(), value: "React" },

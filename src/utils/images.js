@@ -59,6 +59,9 @@ import galleryIcon from "../assets/images/gallery.png";
 import piniaIcon from "../assets/images/pinia.png";
 import muiIcon from "../assets/images/mui.jpg";
 import vitestIcon from "../assets/images/vitest.png";
+import pickstuff1 from "../assets/images/pickstuff1.png";
+import pickstuff2 from "../assets/images/pickstuff2.png";
+import pickstuff3 from "../assets/images/pickstuff3.png";
 
 export const images = {
   antools1,
@@ -122,4 +125,7 @@ export const images = {
   piniaIcon,
   muiIcon,
   vitestIcon,
+  pickstuff1,
+  pickstuff2,
+  pickstuff3
 };
