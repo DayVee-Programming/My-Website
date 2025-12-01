@@ -41,6 +41,7 @@ import gitpod3 from "../assets/images/gitpod3.png";
 import dummyShop1 from "../assets/images/dummy-shop1.png";
 import dummyShop2 from "../assets/images/dummy-shop2.png";
 import dummyShop3 from "../assets/images/dummy-shop3.png";
+import dashStack1 from "../assets/images/dash-stack1.png";
 import selfie from "../assets/images/selfie.jpg";
 import videoGamesIcon from "../assets/images/video-games.png";
 import chessIcon from "../assets/images/chess.svg";
@@ -62,6 +63,10 @@ import vitestIcon from "../assets/images/vitest.png";
 import pickstuff1 from "../assets/images/pickstuff1.png";
 import pickstuff2 from "../assets/images/pickstuff2.png";
 import pickstuff3 from "../assets/images/pickstuff3.png";
+import phpIcon from "../assets/images/php.svg";
+import laravelIcon from "../assets/images/laravel.png";
+import mysqlIcon from "../assets/images/mysql.png";
+import postgresqlIcon from "../assets/images/postgresql.png";
 
 export const images = {
   antools1,
@@ -127,5 +132,10 @@ export const images = {
   vitestIcon,
   pickstuff1,
   pickstuff2,
-  pickstuff3
+  pickstuff3,
+  dashStack1,
+  phpIcon,
+  laravelIcon,
+  mysqlIcon,
+  postgresqlIcon,
 };

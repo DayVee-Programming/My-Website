@@ -49,7 +49,7 @@ const App = () => {
     ],
   });
   const [about, setAbout] = useState({
-    stackLinks: [
+    frontendStackLinks: [
       {
         id: v4(),
         value: images.htmlIcon,
@@ -105,7 +105,7 @@ const App = () => {
         info: "Tailwind CSS",
       },
     ],
-    toolsLinks: [
+    frontendToolsLinks: [
       {
         id: v4(),
         value: images.viteIcon,
@@ -187,6 +187,32 @@ const App = () => {
         info: "Figma",
       },
     ],
+    backendStackLinks: [
+      {
+        id: v4(),
+        value: images.phpIcon,
+        link: "https://www.php.net/",
+        info: "PHP",
+      },
+      {
+        id: v4(),
+        value: images.laravelIcon,
+        link: "https://laravel.com/",
+        info: "Laravel",
+      },
+      {
+        id: v4(),
+        value: images.mysqlIcon,
+        link: "https://www.mysql.com/",
+        info: "MySQL",
+      },
+      {
+        id: v4(),
+        value: images.postgresqlIcon,
+        link: "https://www.postgresql.org/",
+        info: "PostgreSQL",
+      },
+    ],
     interestsLinks: [
       {
         id: v4(),
@@ -207,6 +233,19 @@ const App = () => {
   });
   const [projects, setProjects] = useState({
     cards: [
+      {
+        id: v4(),
+        title: "Dash Stack 📊",
+        list: [
+          { id: v4(), value: "React" },
+          { id: v4(), value: "SASS" },
+        ],
+        liveLink: "https://dash-stack-ashen.vercel.app/",
+        codeLink: "https://github.com/DayVee-Programming/Dash-Stack",
+        images: [
+          { id: v4(), value: images.dashStack1 },
+        ],
+      },
       {
         id: v4(),
         title: "Dummy Shop 🛒",

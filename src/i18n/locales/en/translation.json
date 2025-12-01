@@ -18,11 +18,12 @@
     "mainContentText": "Hi, I'm Davronbek Reyimbaev. A passionate front-end developer based in Uzbekistan 🎈 Let's get to know each other 🤝"
   },
   "about": {
-    "mainDescTitle": "Love coding 💻",
-    "mainDescText": "I'm a middle frontend developer with a strong foundation in HTML, CSS, and JavaScript. I'm passionate about creating user-friendly and responsive web interfaces. I'm a quick learner and eager to contribute to a team environment, seeking opportunities to expand my experience. My toolbox is stocked with the modern technologies such as TypeScript, React, Vue, SASS, Tailwind CSS. In addition to developing websites, I've had the opportunity to design several.",
-    "stackText": "Frontend Tech Stack",
+    "mainDescTitle": "Love creating 🔨",
+    "mainDescText": "I'm a full stack developer with a strong foundation in HTML, CSS, JavaScript and PHP. I'm passionate about creating user-friendly and responsive web interfaces. I'm a quick learner and eager to contribute to a team environment, seeking opportunities to expand my experience. My toolbox is stocked with the modern technologies such as TypeScript, React, Vue, Laravel, PostgreSQL. In addition to developing websites, I've had the opportunity to design several.",
+    "frontendStackText": "Frontend Tech Stack",
     "toolsText": "Frontend Tools Stack",
     "designerStackText": "Designer Stack",
+    "backendStackText": "Backend Tech Stack",
     "interestsText": "Interests 🖐️",
     "interests": [
       {
@@ -39,6 +40,9 @@
   "projects": {
     "title": "List of personal projects 📋",
     "cards": [
+      {
+        "text": "A single, customizable view that turns your data into faster decisions."
+      },
       {
         "text": "Get ready to be amazed! Our shop is a treasure trove of unique and exciting products. You won't be disappointed."
       },

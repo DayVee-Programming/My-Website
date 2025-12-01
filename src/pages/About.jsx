@@ -58,9 +58,9 @@ const About = () => {
             </div>
           </div>
           <div className="about__stack">
-            <p className="about__stack-text">{t(aboutT.stackText)}</p>
+            <p className="about__stack-text">{t(aboutT.frontendStackText)}</p>
             <ul className="about__stack-links">
-              {about.stackLinks?.map((img) => (
+              {about.frontendStackLinks?.map((img) => (
                 <AboutStackItem img={img} key={img.id} />
               ))}
             </ul>
@@ -68,7 +68,7 @@ const About = () => {
           <div className="about__stack">
             <p className="about__stack-text">{t(aboutT.toolsText)}</p>
             <ul className="about__stack-links">
-              {about.toolsLinks?.map((img) => (
+              {about.frontendToolsLinks?.map((img) => (
                 <AboutStackItem img={img} key={img.id} />
               ))}
             </ul>
@@ -77,6 +77,14 @@ const About = () => {
             <p className="about__stack-text">{t(aboutT.designerStackText)}</p>
             <ul className="about__stack-links">
               {about.designerStackLinks?.map((img) => (
+                <AboutStackItem img={img} key={img.id} />
+              ))}
+            </ul>
+          </div>
+          <div className="about__stack">
+            <p className="about__stack-text">{t(aboutT.backendStackText)}</p>
+            <ul className="about__stack-links">
+              {about.backendStackLinks?.map((img) => (
                 <AboutStackItem img={img} key={img.id} />
               ))}
             </ul>
