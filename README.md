@@ -18,4 +18,4 @@ Welcome to my website 👋
 
 ## Find a bug?
 
-If you found an issue or would like to suggest an improvement, please feel free to submit an issue using the issues tab above or submit a pull request with a fix. Additionally, you can contact me through my website - https://dayvee-programming.netlify.app/contact  
+If you found an issue or would like to suggest an improvement, please feel free to submit an issue using the issues tab above or submit a pull request with a fix. Additionally, you can contact me through my website - https://dayvee-programming.vercel.app/contact 
