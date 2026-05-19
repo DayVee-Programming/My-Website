@@ -76,15 +76,15 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.reactIcon,
-        link: "https://react.dev/",
-        info: "React",
-      },
-      {
-        id: v4(),
         value: images.vueIcon,
         link: "https://vuejs.org/",
         info: "Vue.js",
+      },
+      {
+        id: v4(),
+        value: images.reactIcon,
+        link: "https://react.dev/",
+        info: "React",
       },
       {
         id: v4(),
@@ -104,6 +104,12 @@ const App = () => {
         link: "https://tailwindcss.com/",
         info: "Tailwind CSS",
       },
+      {
+        id: v4(),
+        value: images.fastApiIcon,
+        link: "https://fastapi.tiangolo.com/",
+        info: "FastAPI",
+      },
     ],
     frontendToolsLinks: [
       {
@@ -120,15 +126,15 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.npmIcon,
-        link: "https://www.npmjs.com/",
-        info: "npm",
-      },
-      {
-        id: v4(),
         value: images.pnpmIcon,
         link: "https://pnpm.io/",
         info: "pnpm",
+      },
+      {
+        id: v4(),
+        value: images.npmIcon,
+        link: "https://www.npmjs.com/",
+        info: "npm",
       },
       {
         id: v4(),
@@ -138,27 +144,27 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.reduxIcon,
-        link: "https://redux-toolkit.js.org/",
-        info: "Redux Toolkit",
-      },
-      {
-        id: v4(),
         value: images.piniaIcon,
         link: "https://pinia.vuejs.org/",
         info: "Pinia",
       },
       {
         id: v4(),
-        value: images.muiIcon,
-        link: "https://mui.com/",
-        info: "Material UI",
+        value: images.reduxIcon,
+        link: "https://redux-toolkit.js.org/",
+        info: "Redux Toolkit",
       },
       {
         id: v4(),
         value: images.antDesignIcon,
         link: "https://ant.design/",
         info: "Ant Design",
+      },
+      {
+        id: v4(),
+        value: images.muiIcon,
+        link: "https://mui.com/",
+        info: "Material UI",
       },
       {
         id: v4(),
@@ -186,6 +192,12 @@ const App = () => {
         link: "https://www.figma.com/",
         info: "Figma",
       },
+      {
+        id: v4(),
+        value: images.stitchIcon,
+        link: "https://stitch.withgoogle.com/",
+        info: "Stitch",
+      },
     ],
     backendStackLinks: [
       {
@@ -202,15 +214,21 @@ const App = () => {
       },
       {
         id: v4(),
-        value: images.mysqlIcon,
-        link: "https://www.mysql.com/",
-        info: "MySQL",
+        value: images.pythonIcon,
+        link: "https://www.python.org/",
+        info: "Python",
       },
       {
         id: v4(),
         value: images.postgresqlIcon,
         link: "https://www.postgresql.org/",
         info: "PostgreSQL",
+      },
+      {
+        id: v4(),
+        value: images.mysqlIcon,
+        link: "https://www.mysql.com/",
+        info: "MySQL",
       },
     ],
     interestsLinks: [

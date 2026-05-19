@@ -67,6 +67,9 @@ import phpIcon from "../assets/images/php.svg";
 import laravelIcon from "../assets/images/laravel.png";
 import mysqlIcon from "../assets/images/mysql.png";
 import postgresqlIcon from "../assets/images/postgresql.png";
+import fastApiIcon from "../assets/images/fastapi.png";
+import stitchIcon from "../assets/images/stitch.png";
+import pythonIcon from "../assets/images/python.png";
 
 export const images = {
   antools1,
@@ -138,4 +141,7 @@ export const images = {
   laravelIcon,
   mysqlIcon,
   postgresqlIcon,
+  fastApiIcon,
+  stitchIcon,
+  pythonIcon,
 };

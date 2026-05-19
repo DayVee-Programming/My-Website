@@ -15,11 +15,11 @@
   },
   "home": {
     "mainContentTitle": "Welcome to my website 👋",
-    "mainContentText": "Hi, I'm Davronbek Reyimbaev. A passionate full stack developer based in Uzbekistan 🎈 Let's get to know each other 🤝"
+    "mainContentText": "Hi, I'm Davronbek Reyimbaev. A passionate web developer based in Uzbekistan 🎈 Let's get to know each other 🤝"
   },
   "about": {
     "mainDescTitle": "Love creating 🔨",
-    "mainDescText": "I'm a full stack developer with a strong foundation in HTML, CSS, JavaScript and PHP. I'm passionate about creating user-friendly and responsive web interfaces. I'm a quick learner and eager to contribute to a team environment, seeking opportunities to expand my experience. My toolbox is stocked with the modern technologies such as TypeScript, React, Vue, Laravel, PostgreSQL. In addition to developing websites, I've had the opportunity to design several.",
+    "mainDescText": "I'm a full stack developer with a strong foundation in HTML, CSS, JavaScript, PHP and Python. I'm passionate about creating user-friendly and responsive web interfaces. I'm a quick learner and eager to contribute to a team environment, seeking opportunities to expand my experience. My toolbox is stocked with the modern technologies such as TypeScript, Vue, Laravel, PostgreSQL, FastAPI. In addition to developing websites, I've had the opportunity to design several.",
     "frontendStackText": "Frontend Tech Stack",
     "toolsText": "Frontend Tools Stack",
     "designerStackText": "Designer Stack",
@@ -79,7 +79,7 @@
     "formBtn": "Submit"
   },
   "footer": {
-    "info": "©️ 2025 DayVee Programming. All rights reserved.",
+    "info": "©️ 2026 DayVee Programming. All rights reserved.",
     "contentServices": "Terms of Service",
     "contentPolicy": "Privacy Policy"
   },
